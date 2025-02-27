@@ -1,0 +1,49 @@
+[
+  { 
+    "name": "Início", 
+    "href": "/", 
+    "current": true 
+  },
+  {
+    "name": "Fones de Ouvido",
+    "children": [
+      {
+        "id": 1,
+        "product": "Fone 1",
+        "href": "fone-1"
+      },
+      {
+        "id": 2,
+        "product": "Fone 2",
+        "href": "fone-2"
+      }
+    ],
+    "current": false
+  },
+  { 
+    "name": "HeadPhones",
+    "children": [
+      {
+        "id": 1,
+        "product": "HeadPhone 1",
+        "href": "headphone-1"
+      },
+      {
+        "id": 2,
+        "product": "HeadPhone 2",
+        "href": "headphone-2"
+      },
+      {
+        "id": 3,
+        "product": "HeadPhone 3",
+        "href": "headphone-3"
+      }
+    ],
+    "current": false 
+  },
+  { 
+    "name": "Contate-nos", 
+    "href": "contate-nos", 
+    "current": false 
+  }
+]

@@ -1,14 +1,27 @@
-import './App.css'
-import MainSwiper from './components/MainSwiper/MainSwiper'
-import Navbar from './components/Navbar'
+import './App.css';
+import Arrivals from './components/Arrivals';
+import BestSeller from './components/BestSeller';
+import Logos from './components/Logos';
+import Hero from './components/Hero/Hero';
+import Navbar from './components/Navbar';
+import ShopCollection from './components/ShopCollection';
+import Promotions from './components/Promotions';
+import IconCards from './components/IconCards';
+import Socials from './components/Socials';
+import Newsletter from './components/Newsletter';
+import Footer from './components/Footer';
+import Dropdown from './components/Dropdown';
+import { Outlet } from 'react-router-dom';
 
 function App() {
   return (
-    <div className="container">
+    <>
       <Navbar />
-      <MainSwiper />
-    </div>
+      <div className="container">
+        <Outlet />
+      </div>
+    </>
   )
 }
 
-export default App
+export default App;
