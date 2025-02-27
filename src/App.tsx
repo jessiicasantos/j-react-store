@@ -10,15 +10,24 @@ import IconCards from './components/IconCards';
 import Socials from './components/Socials';
 import Newsletter from './components/Newsletter';
 import Footer from './components/Footer';
-import Dropdown from './components/Dropdown';
-import { Outlet } from 'react-router-dom';
 
 function App() {
   return (
     <>
       <Navbar />
       <div className="container">
-        <Outlet />
+        <Hero />
+        <Logos />
+        <Arrivals />
+        <ShopCollection />
+        <BestSeller />
+        <Promotions />
+        <IconCards />
+        <Socials />
+        <Newsletter />
+        <Footer />
+        {/* <Dropdown /> */}
+        {/* <Outlet /> */}
       </div>
     </>
   )
