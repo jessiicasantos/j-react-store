@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import LogoIpsum1 from '../assets/img/logoipsum-1.svg';
 import LogoIpsum2 from '../assets/img/logoipsum-2.svg';
 import LogoIpsum3 from '../assets/img/logoipsum-3.svg';
@@ -46,17 +47,22 @@ const listLogos: any = [
 
 const Logos = () => {
   return (
-    <div className="mx-auto max-w-7xl px-6 lg:px-8 py-24 sm:py-32">
+    <div className="mx-auto max-w-7xl px-6 lg:px-8 pb-20 pt-5">
       <div className="mx-auto mt-10 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-6">
         {listLogos.map((list: any, i: any) => (
-          <img
+          <Link 
             key={`list-${i}`}
-            alt={list.alt}
-            src={list.src}
-            width={158}
-            height={48}
-            className="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
-          />
+            to={list.href}
+            target="_blank"
+          >
+            <img
+              alt={list.alt}
+              src={list.src}
+              width={158}
+              height={48}
+              className="col-span-2 max-h-12 w-full object-contain lg:col-span-1 max-w-[170px]"
+            />
+          </Link>
         ))}
       </div>
     </div>

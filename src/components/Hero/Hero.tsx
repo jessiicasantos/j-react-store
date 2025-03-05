@@ -8,7 +8,7 @@ const Hero = () => {
   return (
     <div className="relative bg-white px-6 pt-14 lg:px-8 text-left max-w-7xl grid md:grid-cols-2 mx-auto">
       <div className="md:max-w-md">
-        <h6 className="mb-4 font-extrabold">HBL Authentics</h6>
+        <h6 className="mb-4 font-extrabold text-[#FF5630]">HBL Authentics</h6>
         <h1 className="mb-14 text-5xl font-black tracking-tight text-balance text-gray-900 sm:text-7xl">
           The Sound That Touches Your Heart.
         </h1>

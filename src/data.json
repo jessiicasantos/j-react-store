@@ -1,49 +1,119 @@
-[
-  { 
-    "name": "Início", 
-    "href": "/", 
-    "current": true 
-  },
-  {
-    "name": "Fones de Ouvido",
-    "children": [
-      {
-        "id": 1,
-        "product": "Fone 1",
-        "href": "fone-1"
-      },
-      {
-        "id": 2,
-        "product": "Fone 2",
-        "href": "fone-2"
-      }
-    ],
-    "current": false
-  },
-  { 
-    "name": "HeadPhones",
-    "children": [
-      {
-        "id": 1,
-        "product": "HeadPhone 1",
-        "href": "headphone-1"
-      },
-      {
-        "id": 2,
-        "product": "HeadPhone 2",
-        "href": "headphone-2"
-      },
-      {
-        "id": 3,
-        "product": "HeadPhone 3",
-        "href": "headphone-3"
-      }
-    ],
-    "current": false 
-  },
-  { 
-    "name": "Contate-nos", 
-    "href": "contate-nos", 
-    "current": false 
-  }
-]
+{
+  "navigationData": [
+    { 
+      "name": "Início", 
+      "href": "/", 
+      "current": true 
+    },
+    {
+      "name": "Fones de Ouvido",
+      "children": [
+        {
+          "id": 1,
+          "product": "Fone 1",
+          "href": "fone-1"
+        },
+        {
+          "id": 2,
+          "product": "Fone 2",
+          "href": "fone-2"
+        }
+      ],
+      "current": false
+    },
+    { 
+      "name": "HeadPhones",
+      "children": [
+        {
+          "id": 1,
+          "product": "HeadPhone 1",
+          "href": "headphone-1"
+        },
+        {
+          "id": 2,
+          "product": "HeadPhone 2",
+          "href": "headphone-2"
+        },
+        {
+          "id": 3,
+          "product": "HeadPhone 3",
+          "href": "headphone-3"
+        }
+      ],
+      "current": false 
+    },
+    { 
+      "name": "Contate-nos", 
+      "href": "contate-nos", 
+      "current": false 
+    }
+  ],
+  "swiperData": [
+    {
+      "id": 1,
+      "name": "Basic Tee",
+      "href": "x",
+      "imageSrc": "https://tailwindui.com/plus-assets/img/ecommerce-images/product-page-01-related-product-01.jpg",
+      "imageAlt": "Front of men's Basic Tee in black.",
+      "price": "$35",
+      "color": "Black",
+      "reviews": 0,
+      "rating": [1, 2, 3, 4, 5]
+    },
+    {
+      "id": 2,
+      "name": "Teste 2",
+      "href": "xx",
+      "imageSrc": "https://tailwindui.com/plus-assets/img/ecommerce-images/product-page-01-related-product-01.jpg",
+      "imageAlt": "Front of men's Basic Tee in black.",
+      "price": "$35",
+      "color": "Red",
+      "reviews": 100,
+      "rating": [1, 2, 3, 4, 5]
+    },
+    {
+      "id": 3,
+      "name": "Teste 3",
+      "href": "xxx",
+      "imageSrc": "https://tailwindui.com/plus-assets/img/ecommerce-images/product-page-01-related-product-01.jpg",
+      "imageAlt": "Front of men's Basic Tee in black.",
+      "price": "$35",
+      "color": "Yellow",
+      "reviews": 3,
+      "rating": [1, 2, 3, 4, 5]
+    },
+    {
+      "id": 4,
+      "name": "Basic Tee",
+      "href": "#",
+      "imageSrc": "https://tailwindui.com/plus-assets/img/ecommerce-images/product-page-01-related-product-01.jpg",
+      "imageAlt": "Front of men's Basic Tee in black.",
+      "price": "$35",
+      "color": "Black",
+      "reviews": 1,
+      "rating": [1, 2, 3, 4, 5]
+    },
+    {
+      "id": 5,
+      "name": "Basic Tee",
+      "href": "#",
+      "imageSrc": "https://tailwindui.com/plus-assets/img/ecommerce-images/product-page-01-related-product-01.jpg",
+      "imageAlt": "Front of men's Basic Tee in black.",
+      "price": "$35",
+      "color": "Black",
+      "reviews": 0,
+      "rating": [1, 2, 3, 4, 5]
+    },
+    {
+      "id": 6,
+      "name": "Basic Tee",
+      "href": "#",
+      "imageSrc": "https://tailwindui.com/plus-assets/img/ecommerce-images/product-page-01-related-product-01.jpg",
+      "imageAlt": "Front of men's Basic Tee in black.",
+      "price": "$35",
+      "color": "Black",
+      "reviews": 0,
+      "rating": [1, 2, 3, 4, 5]
+    }
+  ]
+}

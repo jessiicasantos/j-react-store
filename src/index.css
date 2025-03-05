@@ -23,11 +23,6 @@ h1 {
   line-height: 1.1;
 }
 
-h6 {
-  color: #FF5630;
-}
-
-button:not(nav *),
 .shopnow {
   background: #FF5630;
   color: #fafafa;

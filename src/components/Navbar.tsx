@@ -2,7 +2,7 @@ import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuIt
 import { Bars3Icon, ChevronDownIcon, XMarkIcon } from '@heroicons/react/24/outline';
 import Glass from '../assets/img/glass.svg';
 import logoLorem from '../assets/img/logo-lorem.png';
-import navigationData from '../data.json';
+import { navigationData } from '../data.json';
 import { Link } from "react-router";
 
 function classNames(...classes: string[]) {
@@ -38,7 +38,7 @@ const Navbar = () => {
           </div>
 
           <div className="hidden lg:flex lg:items-center">
-            {navigationData?.map((item, i) => (
+            {navigationData?.map((item: any, i: any) => (
               <div key={`item-${i}`}>
                 {!item.children ? 
                   (
@@ -152,7 +152,7 @@ const Navbar = () => {
 
       <DisclosurePanel className="lg:hidden">
         <div className="space-y-1 px-2 pt-2 pb-3">
-          {navigationData.map((item, i) => {
+          {navigationData.map((item: any, i: any) => {
             return (
               <div key={item.name} className="flex flex-col">
                 {!item.children ? 
