@@ -1,18 +1,20 @@
-import WomanHeadphone from "../assets/img/woman-headphone.jpg";
+import RedHeadphone from "../assets/img/red-headphone.jpg";
 
 const Promotions = () => {
   return (
-    <div className="grid grid-cols-2 items-center max-w-2xl lg:max-w-7xl mx-auto">
+    <div className="grid grid-cols-2 items-center max-w-2xl lg:max-w-7xl mx-auto bg-yellow-200 text-left my-12">
         <div>
-            <img src={WomanHeadphone} alt="" className="w-full object-cover" />
+            <img src={RedHeadphone} alt="" className="w-full object-cover" />
         </div>
-        <div>
-            <h6>Promotion</h6>
-            <h3>Hurry up! 40% OFF</h3>
-            <p>Thousands of high tech are waiting for you</p>
+        <div className="p-15 h-full">
+            <h6 className="text-cyan-600 font-bold uppercase">Promotion</h6>
+            <h3 className="text-3xl font-semibold my-3">Hurry up! 40% OFF</h3>
+            <p className="mb-3">Thousands of high tech are waiting for you</p>
+            <p className="text-base">Offer expires in:</p>
 
             {/* TIMER */}
-            <a href="x">Shop now</a>
+            
+            <a href="x" className="bg-black text-white p-3 rounded-md block mt-3 w-[30%] text-center">Shop now</a>
         </div>
     </div>
   )
