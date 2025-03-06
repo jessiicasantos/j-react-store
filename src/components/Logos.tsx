@@ -48,7 +48,7 @@ const listLogos: any = [
 const Logos = () => {
   return (
     <div className="mx-auto max-w-7xl px-6 lg:px-8 pb-20 pt-5">
-      <div className="mx-auto mt-10 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-6">
+      <div className="mx-auto mt-10 grid items-center justify-items-center max-w-lg grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-10 sm:max-w-xl sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-6">
         {listLogos.map((list: any, i: any) => (
           <Link 
             key={`list-${i}`}

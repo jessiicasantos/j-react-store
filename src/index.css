@@ -6,14 +6,14 @@
   font-weight: 400;
 }
 
-a,
+nav a,
 .menubtn {
   font-weight: 500;
   color: #646cff;
   text-decoration: inherit;
 }
 
-a:hover,
+nav a:hover,
 .menubtn:hover {
   color: #535bf2;
 }
@@ -21,6 +21,15 @@ a:hover,
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+}
+
+h2 {
+  margin-bottom: 50px;
+  font-size: var(--text-3xl);
+  line-height: var(--text-3xl--line-height);
+  font-weight: bold;
+  letter-spacing: var(--tracking-tight);
+  color: var(--color-gray-900);
 }
 
 .shopnow {
