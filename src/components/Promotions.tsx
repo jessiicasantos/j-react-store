@@ -2,7 +2,7 @@ import RedHeadphone from "../assets/img/red-headphone.jpg";
 
 const Promotions = () => {
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-2 items-center max-w-2xl lg:max-w-7xl mx-auto bg-yellow-200 text-left my-12">
+    <div className="grid grid-cols-1 lg:grid-cols-2 items-center mx-auto bg-yellow-200 text-left my-5">
         <div>
             <img src={RedHeadphone} alt="" className="w-full object-cover" />
         </div>

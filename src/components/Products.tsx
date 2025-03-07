@@ -10,7 +10,7 @@ import Socials from "./Socials";
 
 const Products = () => {
   return (
-    <div className="container mx-auto">
+    <div className="mx-auto">
         <Hero />
         <Logos />
         <Arrivals />
