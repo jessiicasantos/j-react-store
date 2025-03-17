@@ -12,6 +12,7 @@ import './styles.css';
 
 import Heart from "../../assets/img/heart.svg";
 import Star from '../../assets/img/star';
+import { Link } from 'react-router-dom';
 
 const ArrivalsSwiper = ({ products }: any) => {
   return (
@@ -42,7 +43,7 @@ const ArrivalsSwiper = ({ products }: any) => {
     >
       {products?.map((product: any) => (
         <SwiperSlide key={product.id} className="flex flex-col bg-gray-200">
-            <a href={product.href}>
+            <Link to={product.href}>
               <div className="relative">
                 <h5 className="absolute top-[10px] left-[10px] bg-white rounded-full text-sm text-black font-bold p-2 drop-shadow-xl">NEW</h5>
                 <img src={product.imageSrc} alt={product.imageAlt} className="aspect-square w-full rounded-md object-cover group-hover:opacity-75 lg:aspect-auto lg:h-80" />
@@ -67,7 +68,7 @@ const ArrivalsSwiper = ({ products }: any) => {
                 </h3>
                 <p className="text-sm font-medium">{product.price}</p>
               </div>
-            </a>
+            </Link>
           </SwiperSlide>
       ))}
 

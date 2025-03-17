@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import RedHeadphone from "../assets/img/red-headphone.jpg";
 
 const Promotions = () => {
@@ -14,7 +15,7 @@ const Promotions = () => {
 
             {/* TIMER */}
             
-            <a href="x" className="bg-black text-white p-3 rounded-md block mt-3 w-[30%] text-center">Shop now</a>
+            <Link to="x" className="bg-black text-white p-3 rounded-md block mt-3 w-[30%] text-center">Shop now</Link>
         </div>
     </div>
   )
