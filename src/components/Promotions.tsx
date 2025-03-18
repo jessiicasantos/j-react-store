@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import RedHeadphone from "../assets/img/red-headphone.jpg";
+import Countdown from "./Countdown";
 
 const Promotions = () => {
   return (
@@ -10,12 +11,12 @@ const Promotions = () => {
         <div className="p-15 h-full">
             <h6 className="text-cyan-600 font-bold uppercase">Promotion</h6>
             <h3 className="text-3xl font-semibold my-3">Hurry up! 40% OFF</h3>
-            <p className="mb-3">Thousands of high tech are waiting for you</p>
-            <p className="text-base">Offer expires in:</p>
+            <p className="mb-6">Thousands of high tech are waiting for you</p>
 
             {/* TIMER */}
+            <Countdown />
             
-            <Link to="x" className="bg-black text-white p-3 rounded-md block mt-3 w-[30%] text-center">Shop now</Link>
+            <Link to="x" className="bg-black text-white p-3 rounded-md block mt-6 w-fit px-10 text-center">Shop now</Link>
         </div>
     </div>
   )
