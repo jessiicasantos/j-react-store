@@ -6,38 +6,722 @@
   font-weight: 400;
 }
 
-nav a,
-.menubtn {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+@theme {
+  /* --spacing: 1px;  */
+  --font-display: "Inter", sans-serif;
+  --color-light-blue-100: #646cff;
+  --color-light-blue-200: #535bf2;
+  --color-orange-authentic: #FF5630;
 }
 
-nav a:hover,
-.menubtn:hover {
-  color: #535bf2;
+@utility container {
+  margin: 0 auto;
+  padding: 70px 15px 90px;
+  max-width: var(--container-7xl);
+}
+
+h1, h2, h3, h4, h5 {
+  @apply text-gray-900;
 }
 
 h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+  @apply text-5xl font-black tracking-tight text-balance text-gray-900 sm:text-6xl;
 }
 
 h2 {
-  margin-bottom: 50px;
-  font-size: var(--text-3xl);
-  line-height: var(--text-3xl--line-height);
-  font-weight: bold;
-  letter-spacing: var(--tracking-tight);
-  color: var(--color-gray-900);
+  @apply text-5xl font-bold;
 }
 
-.newsletter h2 {
-  margin: 0;
-  color: #fafafa;
+h3 {
+  @apply mb-12 text-3xl text-3xl/6 font-bold tracking-tight text-gray-900;
+}
+
+button {
+  @apply cursor-pointer;
+}
+
+nav {
+  @apply bg-gray-800;
+}
+
+nav .nav-wrapper {
+  @apply mx-auto max-w-full px-2 relative flex h-16 items-center justify-between sm:px-6 lg:px-8;
+}
+
+nav .mb-btn {
+  @apply absolute inset-y-0 left-0 flex items-center lg:hidden;
+}
+
+nav .mb-btn > button {
+  @apply relative inline-flex items-center justify-center rounded-md p-4 text-gray-100 hover:bg-gray-700 hover:text-white focus:ring-2 focus:ring-white focus:outline-hidden focus:ring-inset;
+}
+
+nav .mb-btn span,
+nav .nav-right span,
+nav .profile-wrapper span {
+  @apply absolute -inset-0.5 sr-only;
+}
+
+nav .mb-btn svg:first-of-type {
+  @apply block size-6 group-data-open:hidden;
+}
+
+nav .mb-btn svg:last-of-type {
+  @apply hidden size-6 group-data-open:block;
+}
+
+nav .logo-wrapper {
+  @apply mx-auto lg:mx-[0];
+}
+
+nav .logo-wrapper .link-item {
+  @apply p-1.5 block;
+}
+
+nav .logo-wrapper a > span {
+  @apply sr-only;
+}
+
+nav .logo-wrapper img {
+  @apply max-h-[50px] object-contain;
+}
+
+nav .links-wrapper {
+  @apply hidden lg:flex lg:items-center;
+}
+
+nav .submenu {
+  @apply relative inline-block text-left;
+}
+
+nav .submenu > div {
+  @apply mx-[5px];
+}
+
+nav .submenu svg {
+  @apply -mr-1 size-5 text-gray-400;
+}
+
+nav .submenu-items {
+  @apply absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white ring-1 shadow-lg ring-black/5 transition focus:outline-hidden data-closed:scale-95 data-closed:transform data-closed:opacity-0 data-enter:duration-100 data-enter:ease-out data-leave:duration-75 data-leave:ease-in;
+}
+
+nav .submenu-items > div {
+  @apply py-1;
+}
+
+nav .submenu-items {
+  @apply absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white ring-1 shadow-lg ring-black/5 transition focus:outline-hidden data-closed:scale-95 data-closed:transform data-closed:opacity-0 data-enter:duration-100 data-enter:ease-out data-leave:duration-75 data-leave:ease-in;
+}
+
+nav .submenu .submenu-items .link-item {
+  @apply block px-4 py-2 text-sm data-focus:bg-gray-100 data-focus:outline-hidden;
+}
+
+nav .nav-right {
+  @apply absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0;
+}
+
+nav .nav-right {
+  @apply relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800 focus:outline-hidden cursor-pointer;
+}
+
+nav .nav-right img {
+  @apply w-[30px] h-[30px];
+}
+
+nav .modal-search {
+  @apply hidden absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 ring-1 shadow-lg ring-black/5 transition focus:outline-hidden data-closed:scale-95 data-closed:transform data-closed:opacity-0 data-enter:duration-100 data-enter:ease-out data-leave:duration-75 data-leave:ease-in;
+}
+
+nav .modal-search form {
+  @apply block px-4 py-2 text-sm text-gray-700 data-focus:bg-gray-100 data-focus:outline-hidden;
+}
+
+nav .modal-search form > input {
+  @apply w-full p-3;
+}
+
+nav .modal-search form > input {
+  @apply w-full p-3;
+}
+
+nav .modal-search form button {
+  @apply h-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 cursor-pointer;
+}
+
+/* profile dropdown */
+nav .profile-menu {
+  @apply relative ml-3;
+}
+
+nav .profile-menu {
+  @apply relative ml-3;
+}
+
+nav .profile-menu button {
+  @apply relative flex rounded-full bg-gray-800 text-sm focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800 focus:outline-hidden cursor-pointer;
+}
+
+nav .profile-menu img {
+  @apply size-8 rounded-full;
+}
+
+nav .profile-menu > div {
+  @apply absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 ring-1 shadow-lg ring-black/5 transition focus:outline-hidden data-closed:scale-95 data-closed:transform data-closed:opacity-0 data-enter:duration-100 data-enter:ease-out data-leave:duration-75 data-leave:ease-in;
+}
+
+nav .profile-menu h3 {
+  @apply block px-4 py-2 text-sm text-light-blue-200 m-0;
+}
+
+nav .profile-menu a {
+  @apply block px-4 py-2 text-sm text-red-700 data-focus:bg-gray-100 data-focus:outline-hidden;
+}
+
+nav .mb-nav {
+  @apply lg:hidden space-y-1 px-2 pt-2 pb-3;
+}
+
+nav .mb-nav > div {
+  @apply flex flex-col justify-center;
+}
+
+nav .mb-nav .submenu {
+  @apply inline-flex w-full justify-center gap-x-1.5 rounded-md px-3 py-2 shadow-xs text-base font-medium hover:bg-gray-700 cursor-pointer;
+}
+
+nav .mb-nav .submenu svg {
+  @apply -mr-1 size-5 text-gray-400;
+}
+
+nav .mb-nav .submenu-group > div {
+  @apply py-1;
+}
+
+nav .link-item,
+.menubtn {
+  @apply font-medium text-[var(--color-light-blue-100)] hover:text-[var(--color-light-blue-200)] decoration-inherit;
+}
+
+nav .menubtn {
+  @apply inline-flex w-full justify-center gap-x-1.5 rounded-md px-3 py-2 shadow-xs text-base font-medium hover:bg-gray-700 cursor-pointer data-active:bg-gray-900;
+}
+
+nav .link-item.active,
+nav .menubtn.active {
+  @apply bg-gray-900 hover:bg-gray-700 rounded-md px-3 py-2 mx-[5px];
+}
+
+footer {
+  @apply px-4 bg-white sm:px-6 pt-18 pb-12 dark:bg-gray-800;
+}
+
+footer > div {
+  @apply mx-auto max-w-screen-xl;
+}
+
+footer .left {
+  @apply md:flex md:justify-between;
+}
+
+footer .left {
+  @apply md:flex md:justify-between;
+}
+
+footer .left > div {
+  @apply mb-6 md:mb-0;
+}
+
+footer .left a {
+  @apply flex items-center;
+}
+
+footer .left img {
+  @apply mr-3 h-8;
+}
+
+footer .left span {
+  @apply self-center text-2xl font-semibold whitespace-nowrap dark:text-white;
+}
+
+footer .center ul {
+  @apply flex flex-wrap gap-8 text-gray-600 dark:text-gray-400;
+}
+
+footer .center ul > li > a {
+  @apply hover:underline;
+}
+
+footer hr {
+  @apply my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8;
+}
+
+footer .right {
+  @apply sm:flex sm:items-center sm:justify-between;
+}
+
+footer .right span {
+  @apply text-sm text-gray-500 sm:text-center dark:text-gray-400;
+}
+
+footer .right > div {
+  @apply flex mt-4 space-x-6 sm:justify-center sm:mt-0;
+}
+
+footer .right a {
+  @apply text-gray-500 hover:text-gray-900 dark:hover:text-white;
+}
+
+footer .right a > svg {
+  @apply w-5 h-5;
+}
+
+footer .right {
+  @apply hover:underline;
+}
+
+.hero {
+  @apply relative mx-auto px-6 pt-14 lg:px-8 text-left max-w-7xl grid md:grid-cols-2 justify-items-center lg:justify-items-normal bg-gray-50;
+}
+
+.hero .left svg {
+  @apply ml-[10px];
+}
+
+.hero .persons img {
+  @apply w-10 h-10 rounded-full mr-[-10px] object-contain;
+}
+
+.hero .left {
+  @apply md:max-w-md;
+}
+
+.customersCircle {
+  @apply md:absolute mx-auto bottom-0 md:left-[30%] z-9 max-w-sm w-fit lg:max-w-full lg:flex border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t bg-gray-50 rounded-full p-4 flex flex-col justify-between leading-normal;
+}
+
+.customersCircle > .persons {
+  @apply flex items-center;
+}
+
+.customersCircle > .persons >  p {
+  @apply flex justify-center items-center mr-[10px] font-bold border-r border-b border-gray-400 rounded-full w-[40px] h-[40px] bg-[#000] text-[#fafafa];
+}
+
+.customersCircle .txt {
+  @apply text-sm;
+}
+
+.customersCircle .txt p {
+  @apply text-gray-900 font-bold leading-none;
+}
+
+.partners {
+  @apply  mx-auto max-w-7xl px-6 lg:px-8 pb-20 pt-5;
+}
+
+.partners > div {
+  @apply mx-auto mt-10 grid items-center justify-items-center max-w-lg grid-cols-2 gap-x-8 gap-y-10 sm:max-w-xl sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-6;
+}
+
+.partners a > img {
+  @apply col-span-2 max-h-12 w-full object-contain lg:col-span-1 max-w-[170px];
+}
+
+.arrivals {
+  @apply mx-auto max-w-2xl px-6 lg:px-8 lg:max-w-7xl lg:px-8 text-left;
+}
+
+.hero .right {
+  @apply relative mt-[30px] md:mt-0 flex justify-end items-end;
+}
+
+.hero .right .imgTop {
+  @apply object-cover w-[100px] h-[100px] lg:w-[150px] lg:h-[150px] rounded-full absolute top-0 left-0 lg:left-[60px] z-9;
+}
+
+.hero .right .imgCenter {
+  @apply w-[500px] object-cover object-[center_top] rounded-full;
+}
+
+.hero .right .imgBottom {
+  @apply object-cover w-[100px] h-[100px] lg:w-[150px] lg:h-[150px] rounded-full absolute bottom-[30px] right-0 z-9;
+}
+
+.hero > div h6 {
+  @apply mb-4 font-extrabold text-orange-authentic;
+}
+
+.hero h1 {
+  @apply mb-14;
 }
 
 .shopnow {
-  background: #FF5630;
-  color: #fafafa;
+  @apply flex mb-15 rounded-xl px-3.5 py-2.5 text-sm font-semibold text-gray-50 shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 w-fit;
+}
+
+.shopnow {
+  @apply bg-orange-authentic text-gray-50;
+}
+
+.shopCollection {
+  @apply flex flex-col justify-center items-center mx-auto py-12 px-6 lg:px-8 w-full max-w-2xl lg:max-w-7xl;
+}
+
+.shopCollection {
+  @apply flex flex-col justify-center items-center mx-auto py-12 px-6 lg:px-8 w-full max-w-2xl lg:max-w-7xl;
+}
+
+.shopGrid {
+  @apply grid grid-cols-1 md:grid-cols-2 md:gap-x-4 md:gap-x-8 w-full;
+}
+
+.shopGrid > div {
+  @apply relative flex justify-center items-center h-full w-full;
+}
+
+.shopGrid > div > img {
+  @apply object-center object-cover h-full w-full max-h-[450px] object-cover lg:max-h-[initial];
+}
+
+.shopGrid a {
+  @apply dark:bg-gray-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400 bottom-4 z-10 absolute text-base font-medium leading-none text-gray-800 py-3 w-36 bg-white;
+}
+
+.shopGrid .right {
+  @apply flex flex-col space-y-4 md:space-y-8 mt-4 md:mt-0;
+}
+
+.shopGrid .right > div {
+  @apply relative flex justify-center items-center h-full w-full;
+}
+
+.shopGrid .right > div > img {
+  @apply object-cover h-full w-full scale-x-[-1] object-[50%_34%] max-h-[40vh];
+}
+
+.shopGrid .right > div > a {
+  @apply dark:bg-gray-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400 bottom-4 z-10 absolute text-base font-medium leading-none text-gray-800 py-3 w-36 bg-white;
+}
+
+.bestSeller {
+  @apply mx-auto max-w-2xl px-4 py-12 sm:px-6 lg:max-w-7xl lg:px-8 text-left;
+}
+
+.bestSeller > div {
+  @apply grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8;
+}
+
+.bestSeller > div > a {
+  @apply relative;
+}
+
+.bestSeller > div h5 {
+  @apply absolute top-[10px] left-[10px] bg-white rounded-full text-sm text-black font-bold p-2 drop-shadow-xl;
+}
+
+.bestSeller > div img {
+  @apply aspect-square w-full rounded-lg bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-7/8;
+}
+
+.bestSeller .rating {
+  @apply flex mt-2;
+}
+
+.bestSeller .rating svg {
+  @apply w-[20px] h-[20px];
+}
+
+.bestSeller h4 {
+  @apply mt-4 text-sm text-black;
+}
+
+.bestSeller p {
+  @apply mt-1 text-lg font-medium text-black;
+}
+
+.promotions {
+  @apply grid grid-cols-1 lg:grid-cols-2 items-center mx-auto bg-yellow-200 text-left my-5;
+}
+
+.promotions img {
+  @apply w-full object-cover object-top max-h-[64vh] w-full;
+}
+
+.promotions > .right {
+  @apply p-15 h-full flex flex-col justify-center;
+}
+
+.promotions > .right > h6 {
+  @apply text-cyan-600 font-bold uppercase;
+}
+
+.promotions > .right > h3 {
+  @apply text-3xl font-semibold my-3;
+}
+
+.promotions > .right > p {
+  @apply mb-6;
+}
+
+.promotions > .right > a {
+  @apply bg-black text-white p-3 rounded-md block mt-6 w-fit px-10 text-center;
+}
+
+.countdown p {
+  @apply text-base mb-2;
+}
+
+.countdown > div {
+  @apply flex flex-wrap justify-center md:justify-start;
+}
+
+.iconCards {
+  @apply max-w-7xl mx-auto px-6 lg:px-8 grid grid-cols-1 gap-x-8 gap-y-6 lg:gap-y-16 py-10 lg:grid-cols-4 text-left justify-items-center;
+}
+
+.iconCards article {
+  @apply flex max-w-xl flex-col items-start justify-between bg-gray-100 px-5 py-10 rounded-xl w-full;
+}
+
+.iconCards .icon {
+  @apply flex items-center gap-x-4;
+}
+
+.iconCards .icon > img {
+  @apply size-10 rounded-full bg-gray-50;
+}
+
+.iconCards h4 {
+  @apply mt-3 text-lg/6 font-semibold text-gray-900;
+}
+
+.iconCards p {
+  @apply mt-2 line-clamp-3 text-sm/6 text-gray-600;
+}
+
+.socials {
+  @apply bg-gray-50 py-12 sm:py-22 flex items-center justify-center;
+}
+
+.socials {
+  @apply bg-gray-50 py-12 sm:py-22 flex items-center justify-center;
+}
+
+.socials > div {
+  @apply max-w-2xl px-6 lg:max-w-7xl lg:px-8;
+}
+
+.socials h6 {
+  @apply text-base/7 font-semibold text-indigo-600 uppercase;
+}
+
+.socials h4 {
+  @apply mt-2 max-w-lg font-semibold tracking-tight text-gray-950 mx-auto sm:text-4xl;
+}
+
+.socials p {
+  @apply my-5;
+}
+
+.socials .grid-cards {
+  @apply mt-10 grid gap-4 sm:mt-16 lg:grid-cols-4;
+}
+
+.socials .grid-cards > div {
+  @apply shadow-2xl;
+}
+
+.socials .grid-cards img {
+  @apply object-cover rounded-xl h-[200px] lg:h-[300px] w-full;
+}
+
+.newsletter {
+  @apply flex justify-center items-center bg-gray-900 w-full lg:px-10;
+}
+
+.newsletter .left,
+.newsletter .right {
+  @apply hidden lg:block;
+}
+
+.newsletter .center {
+  @apply flex flex-col items-center lg:mx-30 p-10 lg:p-0;
+}
+
+.newsletter .center h3 {
+  @apply text-4xl font-semibold tracking-tight text-gray-50 mb-0;
+}
+
+.newsletter .center p {
+  @apply mt-4 text-lg text-gray-300 mb-4;
+}
+
+.newsletter form {
+  @apply relative flex flex-col justify-center items-center lg:flex-row w-full gap-x-4 mt-6 mb-[30px] lg:w-[125%];
+} 
+
+.newsletter form label {
+  @apply w-full;
+}
+
+.newsletter form label > input {
+  @apply min-w-0 w-full flex-auto rounded-md bg-white/5 px-3.5 py-2 text-base text-white outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6;
+}
+
+.newsletter form p {
+  @apply absolute bottom-[-35px] lg:bottom-[-45px] text-red-500;
+}
+
+.newsletter form button {
+  @apply flex-none rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500 mx-auto mt-6 lg:mt-0;
+}
+
+.newsletter .right img {
+  @apply max-h-[50vh];
+}
+
+.contact-us input,
+.contact-us select,
+.contact-us textarea {
+  @apply block w-full rounded-md text-base text-gray-900 placeholder:text-gray-400 sm:text-sm/6;
+}
+
+.contact-us input:not([type="checkbox"]) {
+  @apply bg-gray-50 px-3 py-1.5 outline-1 -outline-offset-1 outline-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600;
+}
+
+.contact-us input[type="text"],
+.contact-us input[type="email"],
+.contact-us input[type="tel"],
+.contact-us select, 
+.contact-us textarea {
+  @apply block w-full rounded-md bg-gray-50 px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-400 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6;
+}
+
+.contact-us label {
+  @apply block text-sm/6 font-medium text-gray-900;
+}
+
+.contact-us .select-wrapper {
+  @apply grid grid-cols-1;
+}
+
+.contact-us input + p,
+.contact-us textarea + p,
+.contact-us .select-wrapper + p {
+  @apply text-red-500;
+}
+
+.contact-us .form-wrapper {
+  @apply space-y-5 mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6;
+}
+
+.contact-us .two-cols {
+  @apply sm:col-span-3;
+}
+
+.contact-us .three-cols {
+  @apply sm:col-span-2;
+}
+
+.contact-us .select-wrapper > select {
+  @apply col-start-1 row-start-1 w-full appearance-none rounded-md py-1.5 pr-8 pl-3 text-base text-gray-900 sm:text-sm/6;
+}
+
+.contact-us .select-wrapper > select + svg {
+  @apply pointer-events-none col-start-1 row-start-1 mr-2 size-5 self-center justify-self-end text-gray-500 sm:size-4;
+}
+
+.subject > label {
+  @apply h-full;
+}
+
+.one-col {
+  @apply sm:col-span-full w-full;
+}
+
+.agree-wrapper {
+  @apply flex items-center;
+}
+
+.agree-wrapper > div {
+  @apply flex shrink-0 items-center;
+}
+
+.agree-wrapper > div {
+  @apply flex shrink-0 items-center;
+}
+
+.check-wrapper {
+  @apply grid grid-cols-1;
+}
+
+.check-wrapper > input {
+  @apply col-start-1 row-start-1 appearance-none rounded-sm border border-light-blue-100 bg-white outline-2 outline-light-blue-200 checked:bg-light-blue-100 forced-colors:appearance-auto p-2 cursor-pointer;
+}
+
+.agree-wrapper > div {
+  @apply flex shrink-0 items-center;
+}
+
+.check-wrapper {
+  @apply grid grid-cols-1;
+}
+
+.check-wrapper input {
+  @apply col-start-1 row-start-1 appearance-none rounded-sm border border-light-blue-100 bg-white outline-2 outline-light-blue-200 checked:bg-light-blue-100 forced-colors:appearance-auto p-2 cursor-pointer;
+}
+
+.agree-wrapper > div > label {
+  @apply ml-2 text-gray-500 text-sm/6;
+}
+
+.cancel {
+  @apply mt-14 flex items-center justify-center gap-x-6;
+}
+
+.save {
+  @apply rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600;
+}
+
+.upload {
+  @apply col-span-full border-b border-light-blue-100 mb-2 pb-12;
+}
+
+.box {
+  @apply mt-2 flex justify-center rounded-lg border border-dashed border-gray-400 outline-1 -outline-offset-1 outline-gray-400 px-6 py-10 w-[50%] mx-auto;
+}
+
+.box > div {
+  @apply text-center;
+}
+
+.box > label {
+  @apply relative cursor-pointer rounded-md bg-white font-semibold text-indigo-600 focus-within:ring-2 focus-within:ring-indigo-600 focus-within:ring-offset-2 focus-within:outline-hidden hover:text-indigo-500;
+}
+
+.box input {
+  @apply sr-only;
+}
+
+.box img {
+  @apply mx-auto;
+}
+
+.file-upload-wrapper {
+  @apply mt-4 flex text-sm/6 text-gray-600;
+}
+
+.file-upload-wrapper > label > span {
+  @apply text-light-blue-200 cursor-pointer;
+}
+
+.file-upload-wrapper > p {
+  @apply pl-1;
+}
+
+.box > div > p {
+  @apply text-xs/5 text-gray-600;
 }

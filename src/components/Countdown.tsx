@@ -1,3 +1,4 @@
+ import { promotions } from "../data.json";
  import { useEffect, useState } from "react";
  import TimeBox from "./TimeBox";
 
@@ -35,9 +36,9 @@
      }, []);
     
      return (
-        <div>
-            <p className="text-base mb-2">Offer expires in:</p>
-            <div className="flex flex-wrap justify-center md:justify-start">
+        <div className="countdown">
+            <p>Offer expires in:</p>
+            <div>
                 <TimeBox label="Days" value={days} />
                 <TimeBox label="Hours" value={timer.hours} />
                 <TimeBox label="Minutes" value={timer.minutes} />

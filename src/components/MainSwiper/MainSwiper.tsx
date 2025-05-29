@@ -10,7 +10,7 @@ import '../../../node_modules/swiper/modules/pagination.scss';
 
 import './styles.css';
 
-import Heart from "../../assets/img/heart.svg";
+import Heart from "../../assets/img/heart";
 import Star from '../../assets/img/star';
 import { Link } from 'react-router-dom';
 
@@ -41,32 +41,34 @@ const ArrivalsSwiper = ({ products }: any) => {
       }}
       className="arrivalsSwiper"
     >
-      {products?.map((product: any) => (
-        <SwiperSlide key={product.id} className="flex flex-col bg-gray-200">
-            <Link to={product.href}>
-              <div className="relative">
-                <h5 className="absolute top-[10px] left-[10px] bg-white rounded-full text-sm text-black font-bold p-2 drop-shadow-xl">NEW</h5>
-                <img src={product.imageSrc} alt={product.imageAlt} className="aspect-square w-full rounded-md object-cover group-hover:opacity-75 lg:aspect-auto lg:h-80" />
-                <button className="absolute bottom-[10px] left-1/2 transform -translate-x-1/2 bg-[#000] p-2 w-[90%] rounded-lg text-white text-sm">Add to cart</button>
+      {products?.map((p: any) => (
+        <SwiperSlide key={p.id}>
+            <Link to={p.href}>
+              <div className="top">
+                {p.new === true ? (
+                  <h5>New</h5>
+                ) : null}
+                <img src={p.src} alt={p.alt} />
+                <button>Add to cart</button>
                 
-                <div className="absolute top-[10px] right-[10px] bg-white rounded-full p-1 drop-shadow-xl">
-                  <img src={Heart} alt="" width={20} height={20} />
+                <div className="like">
+                  <Heart fill={p.like === false ? "transparent" : "red"} />
                 </div>
               </div>
 
-              <div className="p-5 text-left text-black">
-                <div className="flex items-center">                    
-                  {product?.rating.map((r: any) => (
-                    <Star key={`r-${r}`} fill="yellow" stroke="gray" className="w-[20px] h-[20px]" />
+              <div className="bottom">
+                <div className="rating">                    
+                  {p?.rating.map((r: any) => (
+                    <Star key={`r-${r}`} fill="yellow" stroke="gray" />
                   ))}
-                  <h6 className="text-sm text-black ml-2">{product.reviews} avaliações</h6>
+                  <h6>{p.reviews} avaliações</h6>
                 </div>
 
-                <h3 className="text-sm">
-                  <span aria-hidden="true" className="absolute inset-0" />
-                  {product.name}
-                </h3>
-                <p className="text-sm font-medium">{product.price}</p>
+                <h4>
+                  <span aria-hidden="true" />
+                  {p.name}
+                </h4>
+                <p>{p.price}</p>
               </div>
             </Link>
           </SwiperSlide>

@@ -1,6 +1,6 @@
 import Arrivals from "./Arrivals";
 import BestSeller from "./BestSeller";
-import Hero from "./Hero/Hero";
+import Hero from "./Hero";
 import IconCards from "./IconCards";
 import Logos from "./Logos";
 import Newsletter from "./Newsletter";
@@ -10,7 +10,7 @@ import Socials from "./Socials";
 
 const Products = () => {
   return (
-    <div className="mx-auto">
+    <div>
         <Hero />
         <Logos />
         <Arrivals />

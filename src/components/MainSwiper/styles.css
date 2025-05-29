@@ -1,32 +1,87 @@
+@reference "../../index.css";
+
+.swiper .like {
+    @apply absolute top-[10px] right-[10px] bg-white rounded-full p-1 drop-shadow-xl;
+}
+
+.swiper .like svg {
+    @apply size-5;
+}
+
+.swiper .bottom {
+    @apply p-5 text-left text-black;
+}
+
+.swiper .rating {
+    @apply flex items-center;
+}
+
+.swiper .rating h6 {
+    @apply text-sm text-black ml-2;
+}
+
+.swiper .rating svg {
+    @apply w-[20px] h-[20px];
+}
+
+.swiper .bottom h4 {
+    @apply text-sm my-2 whitespace-nowrap overflow-hidden text-ellipsis max-w-[180px];
+}
+
+.swiper .bottom h4 > span {
+    @apply absolute inset-0;
+}
+
+.swiper .bottom p {
+    @apply text-sm font-medium;
+}
+
+.swiper-button-prev:after, 
+.swiper-button-next:after {
+    @apply text-xl font-bold;
+}
+
 .arrivalsSwiper {
-    width: 100%;
-    height: 100%;
+    @apply w-full h-full;
 }
 
 .arrivalsSwiper .swiper-wrapper {
-    margin: 0 0 50px;
+    @apply mb-[50px];
 }
 
 .arrivalsSwiper .swiper-slide {
-    font-size: 18px;
-    
-    /* Center slide text vertically */
-    display: flex;
-    justify-content: center;
+    @apply text-lg flex flex-col justify-between bg-gray-200 h-[355px] lg:h-[455px];
 }
 
-.arrivalsSwiper .swiper-slide h5 + img {
-    display: block;
-    width: 100%;
-    object-fit: cover;
+.arrivalsSwiper .swiper-slide .top {
+    @apply relative;
 }
+
+.arrivalsSwiper .swiper-slide h5 {
+    @apply absolute top-[10px] left-[10px] bg-gray-50 rounded-full text-sm text-black font-bold p-2 drop-shadow-xl;
+  }
+
+.arrivalsSwiper .swiper-slide a {
+    @apply h-full flex flex-col justify-between;
+}
+
+.arrivalsSwiper .top > img {
+    @apply aspect-square w-full rounded-md object-cover group-hover:opacity-75 lg:aspect-auto lg:h-80;
+}
+
+.arrivalsSwiper .top > button {
+    @apply absolute bottom-[10px] left-1/2 transform -translate-x-1/2 bg-[#000] p-2 w-[90%] rounded-lg text-white text-sm;
+}
+/* .arrivalsSwiper .swiper-slide h5 + img {
+    @apply block w-full object-cover;
+} */
 
 .arrivalsSwiper .swiper-button-next {
-    padding: 20px 19px 20px 20px;
+    @apply p-[20px_19px_20px_20px];
 }
 
 .arrivalsSwiper .swiper-button-prev {
-    padding: 20px 20px 20px 19px;
+    @apply p-[20px_20px_20px_19px];
 }
 
 .arrivalsSwiper .swiper-button-next,
@@ -37,10 +92,4 @@
     border-radius: calc(infinity * 1px);
     background: #000;
     color: #fafafa;
-}
-
-.swiper-button-prev:after, 
-.swiper-button-next:after {
-    font-size: 20px;
-    font-weight: bold;
 }

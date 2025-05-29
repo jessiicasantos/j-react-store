@@ -1,212 +1,180 @@
 import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react';
 import { Bars3Icon, ChevronDownIcon, XMarkIcon } from '@heroicons/react/24/outline';
 import Glass from '../assets/img/glass.svg';
-import logoLorem from '../assets/img/logo-lorem.png';
-import { navigationData } from '../data.json';
-import { Link } from "react-router";
+import { logoLorem, navigation, userProfile } from '../data.json';
+import { Link, NavLink } from "react-router";
 
-function classNames(...classes: string[]) {
-  return classes.filter(Boolean).join(' ')
-}
+// function classNames(...classes: string[]) {
+//   return classes.filter(Boolean).join(' ')
+// }
 
 const Navbar = () => {
   return (
-    <Disclosure as="nav" className="bg-gray-800">
-      <div className="mx-auto max-w-full px-2 sm:px-6 lg:px-8">
-        <div className="relative flex h-16 items-center justify-between">
-          <div className="absolute inset-y-0 left-0 flex items-center lg:hidden">
-            {/* Mobile menu button*/}
-            <DisclosureButton className="group relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:ring-2 focus:ring-white focus:outline-hidden focus:ring-inset">
-              <span className="absolute -inset-0.5" />
-              <span className="sr-only">Open main menu</span>
-              <Bars3Icon aria-hidden="true" className="block size-6 group-data-open:hidden" />
-              <XMarkIcon aria-hidden="true" className="hidden size-6 group-data-open:block" />
-            </DisclosureButton>
-          </div>
-          <div className="mx-auto lg:mx-[0]">
-            <Link 
-              to="/" 
-              className="p-1.5 block"
-            >
-              <span className="sr-only">Lorem</span>
-              <img
-                alt="Logo Lorem"
-                src={logoLorem}
-                className="max-h-[50px] object-contain"
-              />
-            </Link>
-          </div>
+    <Disclosure as="nav">
+      <div className="nav-wrapper">
+        <div className="mb-btn">
+          {/* Mobile menu button*/}
+          <DisclosureButton>
+            <span>Open main menu</span>
+            <Bars3Icon aria-hidden="true" />
+            <XMarkIcon aria-hidden="true" />
+          </DisclosureButton>
+        </div>
+        <div className="logo-wrapper">
+          <Link 
+            to={logoLorem.href}
+            className="link-item"
+          >
+            <span>Lorem</span>
+            <img
+              alt={logoLorem.alt}
+              src={logoLorem.src}
+            
+            />
+          </Link>
+        </div>
 
-          <div className="hidden lg:flex lg:items-center">
-            {navigationData?.map((item: any, i: any) => (
-              <div key={`item-${i}`}>
-                {!item.children ? 
-                  (
-                    <Link
-                      to={item.href}
-                      aria-current={item.current ? 'page' : undefined}
-                      className={classNames(
-                        item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                        'rounded-md px-3 py-2 text-base font-medium mx-[5px]',
-                      )}
+        <div className="links-wrapper">
+          {navigation?.map((item: any, i: any) => (
+            <div key={`item-${i}`}>
+              {!item.children ? 
+                (
+                  <NavLink
+                    to={item.href}
+                    className="link-item"
+                  >
+                    {item.name}
+                  </NavLink>
+                ) 
+                : (
+                  <Menu key={`c-${i}`} as="div" className="submenu">
+                    <div>
+                      <MenuButton className="menubtn">
+                        {item.name}
+                        <ChevronDownIcon aria-hidden="true" />
+                      </MenuButton>
+                    </div>
+                    <MenuItems
+                      transition
+                      className="submenu-items"
                     >
-                      {item.name}
-                    </Link>
-                  ) 
-                  : (
-                    <Menu key={`c-${i}`} as="div" className="relative inline-block text-left">
-                      <div className="mx-[5px]">
-                        <MenuButton className="menubtn inline-flex w-full justify-center gap-x-1.5 rounded-md px-3 py-2 shadow-xs text-base font-medium hover:bg-gray-700 cursor-pointer">
-                          {item.name}
-                          <ChevronDownIcon aria-hidden="true" className="-mr-1 size-5 text-gray-400" />
-                        </MenuButton>
-                      </div>
-                      <MenuItems
-                        transition
-                        className="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white ring-1 shadow-lg ring-black/5 transition focus:outline-hidden data-closed:scale-95 data-closed:transform data-closed:opacity-0 data-enter:duration-100 data-enter:ease-out data-leave:duration-75 data-leave:ease-in"
-                        
-                      >
-                          {item.children?.map((c: any) => {
-                            return (
-                              <div className="py-1" key={c.id}>
-                                <MenuItem>
-                                  <Link
-                                    to={c.href}
-                                    // className={classNames(
-                                    //   item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                                    //   'rounded-md px-3 py-2 text-base font-medium mx-[5px]',
-                                    // )}
-                                    className="block px-4 py-2 text-sm text-gray-700 data-focus:bg-gray-100 data-focus:text-gray-900 data-focus:outline-hidden"
-                                  >
-                                    {c.product}
-                                  </Link>
-                                </MenuItem>
-                              </div>
-                            )
-                          }
-                        )}
-                      </MenuItems>
-                    </Menu>
-                  )
-                }
-              </div>
-            ))}
-          </div>
+                        {item.children?.map((c: any) => {
+                          return (
+                            <div key={c.id}>
+                              <MenuItem>
+                                <NavLink
+                                  to={c.href}
+                                  className="link-item"
+                                >
+                                  {c.product}
+                                </NavLink>
+                              </MenuItem>
+                            </div>
+                          )
+                        }
+                      )}
+                    </MenuItems>
+                  </Menu>
+                )
+              }
+            </div>
+          ))}
+        </div>
  
-          <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-            <button
-              type="button"
-              className="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800 focus:outline-hidden cursor-pointer"
-            >
-              <span className="absolute -inset-1.5" />
-              <span className="sr-only">View notifications</span>
-              {<img src={Glass} alt="" className="w-[30px] h-[30px]" />}
-            </button>
+        <div className="nav-right">
+          <div>
+            <div>
+              <button
+                type="button"
+              >
+                <span>Search</span>
+                {<img src={Glass} alt="" />}
+              </button>
+            </div>
 
-            {/* Profile dropdown */}
-            <Menu as="div" className="relative ml-3">
-              <div>
-                <MenuButton className="relative flex rounded-full bg-gray-800 text-sm focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800 focus:outline-hidden cursor-pointer">
-                  <span className="absolute -inset-1.5" />
-                  <span className="sr-only">Open user menu</span>
-                  <img
-                    alt=""
-                    src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                    className="size-8 rounded-full"
-                  />
-                </MenuButton>
-              </div>
+            <div className="modal-search">
+              <form id="search-form">
+                <input type="search" placeholder="Search for..." id="nav-search" required /> {/* value="" onChange="" */} 
+                <button type="submit">Search</button>
+              </form>
+            </div>
+          </div>
+
+          {/* Profile dropdown */}
+          {userProfile?.map((u: any) => (
+            <Menu as="div" key={`user-${u.id}`} className="profile-menu">
+              <MenuButton>
+                <span>Open user menu</span>
+                <img
+                  alt={`${u.alt} ${u.name}`}
+                  src={u.src}
+                
+                />
+              </MenuButton>
               <MenuItems
                 transition
-                className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 ring-1 shadow-lg ring-black/5 transition focus:outline-hidden data-closed:scale-95 data-closed:transform data-closed:opacity-0 data-enter:duration-100 data-enter:ease-out data-leave:duration-75 data-leave:ease-in"
               >
                 <MenuItem>
-                  <a
-                    href="#"
-                    className="block px-4 py-2 text-sm text-gray-700 data-focus:bg-gray-100 data-focus:outline-hidden"
-                  >
-                    Your Profile
-                  </a>
+                  <h3>
+                    {u.name}
+                  </h3>
                 </MenuItem>
                 <MenuItem>
                   <a
                     href="#"
-                    className="block px-4 py-2 text-sm text-gray-700 data-focus:bg-gray-100 data-focus:outline-hidden"
-                  >
-                    Settings
-                  </a>
-                </MenuItem>
-                <MenuItem>
-                  <a
-                    href="#"
-                    className="block px-4 py-2 text-sm text-gray-700 data-focus:bg-gray-100 data-focus:outline-hidden"
                   >
                     Sign out
                   </a>
                 </MenuItem>
               </MenuItems>
             </Menu>
-          </div>
+          ))}
         </div>
       </div>
 
-      <DisclosurePanel className="lg:hidden">
-        <div className="space-y-1 px-2 pt-2 pb-3">
-          {navigationData.map((item: any, i: any) => {
-            return (
-              <div key={item.name} className="flex flex-col">
-                {!item.children ? 
-                  (
-                    <DisclosureButton
-                      as="a"
-                      href={item.href}
-                      aria-current={item.current ? 'page' : undefined}
-                      className={classNames(
-                        item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                        'block rounded-md px-3 py-2 text-base font-medium',
-                      )}
-                    >
+      {/* Mobile Navigation */}
+      <DisclosurePanel className="mb-nav">
+        {navigation.map((item: any, i: any) => {
+          return (
+            <div key={item.name}>
+              {!item.children ? 
+                (
+                  <NavLink
+                    to={item.href}
+                    className="link-item"
+                  >
+                    {item.name}
+                  </NavLink>
+                ) :
+                (
+                  <Menu key={`c-${i}`} as="div">
+                    <MenuButton className="submenu link-item">
                       {item.name}
-                    </DisclosureButton>
-                  ) :
-                  (
-                    <Menu key={`c-${i}`} as="div" className="flex flex-col justify-center">
-                      <div className="mx-[5px]">
-                        <MenuButton className="menubtn inline-flex w-full justify-center gap-x-1.5 rounded-md px-3 py-2 shadow-xs text-base font-medium hover:bg-gray-700 cursor-pointer">
-                          {item.name}
-                          <ChevronDownIcon aria-hidden="true" className="-mr-1 size-5 text-gray-400" />
-                        </MenuButton>
-                      </div>
-                      <MenuItems
-                        transition
-                      >
-                        {item.children?.map((c: any) => {
-                          return (
-                            <div className="py-1" key={c.id}>
-                              <DisclosureButton
-                                as="a"
-                                href={c.href}
-                                aria-current={item.current ? 'page' : undefined}
-                                className={classNames(
-                                  item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                                  'block rounded-md px-3 py-2 text-base font-medium m-auto',
-                                )}
-                              >
-                                {/* <MenuItem> */}
-                                  {c.product}
-                                {/* </MenuItem> */}
-                              </DisclosureButton>
-                            </div>
-                          )
-                        })}
-                      </MenuItems>
-                    </Menu>
-                  )
-                }
-              </div>
-            )
-          })}
-        </div>
+                      <ChevronDownIcon aria-hidden="true" />
+                    </MenuButton>
+                    <MenuItems
+                      transition
+                      className="submenu-group"
+                    >
+                      {item.children?.map((c: any) => {
+                        return (
+                          <div key={c.id}>
+                            <NavLink
+                              to={c.href}
+                              className="link-item"
+                            >
+                              {c.product}
+                            </NavLink>
+                          </div>
+                        )
+                      })}
+                    </MenuItems>
+                  </Menu>
+                )
+              }
+            </div>
+          )
+        })}
       </DisclosurePanel>
     </Disclosure>
   )

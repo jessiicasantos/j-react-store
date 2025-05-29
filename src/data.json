@@ -1,119 +1,513 @@
 {
-  "navigationData": [
+  "logoLorem": {
+      "href": "/",
+      "src": "src/assets/img/logo-lorem.png",
+      "alt": "Logo Lorem"
+  },
+  "userProfile": [
+    {
+      "id": 0,
+      "name": "Joaquim Trindade",
+      "src": "src/assets/img/joaquim-trindade.avif",
+      "alt": "Imagem de perfil de "
+    }
+  ],
+  "navigation": [
     { 
-      "name": "Início", 
+      "name": "Home", 
       "href": "/", 
-      "current": true 
+      "current": ""
     },
     {
-      "name": "Fones de Ouvido",
+      "name": "Earbuds",
       "children": [
         {
           "id": 1,
-          "product": "Fone 1",
-          "href": "fone-1"
+          "product": "earbud 1",
+          "href": "earbud-1",
+          "current": ""
         },
         {
           "id": 2,
-          "product": "Fone 2",
-          "href": "fone-2"
+          "product": "earbud 2",
+          "href": "earbud-2",
+          "current": ""
         }
-      ],
-      "current": false
+      ]
     },
     { 
-      "name": "HeadPhones",
+      "name": "Headphones",
       "children": [
         {
           "id": 1,
           "product": "HeadPhone 1",
-          "href": "headphone-1"
+          "href": "headphone-1",
+          "current": ""
         },
         {
           "id": 2,
           "product": "HeadPhone 2",
-          "href": "headphone-2"
+          "href": "headphone-2",
+          "current": ""
         },
         {
           "id": 3,
           "product": "HeadPhone 3",
-          "href": "headphone-3"
+          "href": "headphone-3",
+          "current": ""
         }
-      ],
-      "current": false 
+      ]    
     },
     { 
-      "name": "Contate-nos", 
-      "href": "contate-nos", 
-      "current": false 
+      "name": "Contact us", 
+      "href": "contact-us", 
+      "current": "" 
     }
   ],
-  "swiperData": [
+  "hero": [
+    {
+      "subTitle": "HBL Authentics",
+      "title": "The Sound That Touches Your Heart.",
+      "href": "/earbud-1",
+      "hrefText": "Shop now",
+      "text": "72k+ Happy Customers",
+      "customers": [
+        {
+          "id": 0,
+          "src": "src/assets/img/dread-man-and-headphone.png",
+          "alt": "Man with headphone"
+        },
+        {
+          "id": 1,
+          "src": "src/assets/img/style-man-with-headphone.png",
+          "alt": "Man with headphone"
+        },
+        {
+          "id": 2,
+          "src": "src/assets/img/blue-hair-woman-with-headphone.png",
+          "alt": "Blue hair woman with headphone"
+        },
+        {
+          "id": 3,
+          "src": "src/assets/img/man-with-gray-headphone.png",
+          "alt": "Man with gray headphone"
+        }
+      ],
+      "banner": [
+        {
+          "id": 0,
+          "src": "src/assets/img/model-with-white-headphone.png",
+          "alt": "Woman with white sunglasses and headphone"
+        },
+        {
+          "id": 1,
+          "src": "src/assets/img/style-woman-with-headphone.png",
+          "alt": "Woman with red headphone"
+        },
+        {
+          "id": 2,
+          "src": "src/assets/img/model-rose-with-headphone.png",
+          "alt": "Model with pink hair, jacket and heaphone gold"
+        }
+      ]
+    }
+  ],
+  "logos": [
     {
       "id": 1,
-      "name": "Basic Tee",
-      "href": "x",
-      "imageSrc": "https://tailwindui.com/plus-assets/img/ecommerce-images/product-page-01-related-product-01.jpg",
-      "imageAlt": "Front of men's Basic Tee in black.",
-      "price": "$35",
-      "color": "Black",
-      "reviews": 0,
-      "rating": [1, 2, 3, 4, 5]
+      "src": "src/assets/img/logoipsum-1.svg",
+      "alt": "Logo Logoipsum azul",
+      "href": "https://www.lipsum.com/"
     },
     {
       "id": 2,
-      "name": "Teste 2",
-      "href": "xx",
-      "imageSrc": "https://tailwindui.com/plus-assets/img/ecommerce-images/product-page-01-related-product-01.jpg",
-      "imageAlt": "Front of men's Basic Tee in black.",
-      "price": "$35",
-      "color": "Red",
-      "reviews": 100,
-      "rating": [1, 2, 3, 4, 5]
+      "src": "src/assets/img/logoipsum-2.svg",
+      "alt": "Logo Logoipsum azul rosa",
+      "href": "https://pt.wikipedia.org/wiki/Lorem_ipsum"
     },
     {
       "id": 3,
-      "name": "Teste 3",
-      "href": "xxx",
-      "imageSrc": "https://tailwindui.com/plus-assets/img/ecommerce-images/product-page-01-related-product-01.jpg",
-      "imageAlt": "Front of men's Basic Tee in black.",
-      "price": "$35",
-      "color": "Yellow",
-      "reviews": 3,
-      "rating": [1, 2, 3, 4, 5]
+      "src": "src/assets/img/logoipsum-3.svg",
+      "alt": "Logo Logoipsum preto e branco",
+      "href": "https://www.lipsum.com/feed/html"
     },
     {
       "id": 4,
-      "name": "Basic Tee",
-      "href": "#",
-      "imageSrc": "https://tailwindui.com/plus-assets/img/ecommerce-images/product-page-01-related-product-01.jpg",
-      "imageAlt": "Front of men's Basic Tee in black.",
-      "price": "$35",
-      "color": "Black",
-      "reviews": 1,
-      "rating": [1, 2, 3, 4, 5]
+      "src": "src/assets/img/logoipsum-4.svg",
+      "alt": "Logo Logoipsum multicolorida",
+      "href": "https://www.loremipzum.com/pt/gerador-de-texto"
     },
     {
       "id": 5,
-      "name": "Basic Tee",
-      "href": "#",
-      "imageSrc": "https://tailwindui.com/plus-assets/img/ecommerce-images/product-page-01-related-product-01.jpg",
-      "imageAlt": "Front of men's Basic Tee in black.",
-      "price": "$35",
-      "color": "Black",
-      "reviews": 0,
-      "rating": [1, 2, 3, 4, 5]
+      "src": "src/assets/img/logoipsum-5.svg",
+      "alt": "Logo Logoipsum verde e cinza",
+      "href": "https://support.microsoft.com/pt-br/topic/descri%C3%A7%C3%A3o-do-texto-lorem-ipsum-dolor-sit-amet-que-aparece-na-ajuda-do-windows-bf3b0a9e-8f6b-c2ab-edd9-41c1f9aa2ea0"
     },
     {
       "id": 6,
-      "name": "Basic Tee",
-      "href": "#",
-      "imageSrc": "https://tailwindui.com/plus-assets/img/ecommerce-images/product-page-01-related-product-01.jpg",
-      "imageAlt": "Front of men's Basic Tee in black.",
-      "price": "$35",
-      "color": "Black",
-      "reviews": 0,
-      "rating": [1, 2, 3, 4, 5]
+      "src": "src/assets/img/logoipsum-6.svg",
+      "alt": "Logo Logoipsum multicolorida",
+      "href": "https://oquequerdizer.com.br/lorem-ipsum-significado/"
+    }
+  ],
+  "arrivals": [
+    {
+      "title": "New Arrivals",
+      "swiperList": [
+        {
+          "id": 0,
+          "name": "Headphone Tech Logo Neon",
+          "href": "/neon-headphone",
+          "src": "src/assets/img/headphone-tech-logo-neon.png",
+          "alt": "Headphone Tech Logo Neon",
+          "price": "$35",
+          "color": "Black",
+          "reviews": 0,
+          "new": true,
+          "like": true,
+          "rating": [1, 2, 3, 4, 5]
+        },
+        {
+          "id": 1,
+          "name": "Headphone Tech Logo Neon v2",
+          "href": "neon-headphone-v2",
+          "src": "src/assets/img/headphone-tech-logo-neon-v2.png",
+          "alt": "Headphone Tech Logo Neon v2",
+          "price": "$35",
+          "color": "Red",
+          "reviews": 100,
+          "new": false,
+          "like": true,
+          "rating": [1, 2, 3, 4, 5]
+        },
+        {
+          "id": 2,
+          "name": "Headphone Minimalist Black Brown",
+          "href": "xxx",
+          "src": "src/assets/img/headphone-minimalist-black-brown.png",
+          "alt": "Headphone Minimalist Black Brown",
+          "price": "$35",
+          "color": "Yellow",
+          "reviews": 3,
+          "new": true,
+          "like": false,
+          "rating": [1, 2, 3, 4, 5]
+        },
+        {
+          "id": 3,
+          "name": "Basic Black Headphone",
+          "href": "#",
+          "src": "src/assets/img/basic-black-headphone.png",
+          "alt": "Basic Black Headphone",
+          "price": "$35",
+          "color": "Black",
+          "reviews": 1,
+          "new": true,
+          "like": false,
+          "rating": [1, 2, 3, 4, 5]
+        },
+        {
+          "id": 4,
+          "name": "Minimalist White Headphone",
+          "href": "#",
+          "src": "src/assets/img/minimalist-white-headphone.png",
+          "alt": "Minimalist White Headphone",
+          "price": "$35",
+          "color": "Black",
+          "reviews": 0,
+          "new": false,
+          "like": true,
+          "rating": [1, 2, 3, 4, 5]
+        },
+        {
+          "id": 5,
+          "name": "Headphone White Wine Gold",
+          "href": "#",
+          "src": "src/assets/img/headphone-white-wine-gold.png",
+          "alt": "Headphone White Wine Gold",
+          "price": "$35",
+          "color": "Black",
+          "reviews": 0,
+          "new": false,
+          "like": false,
+          "rating": [1, 2, 3, 4, 5]
+        },
+        {
+          "id": 6,
+          "name": "Headphone White Gold v2",
+          "href": "#",
+          "src": "src/assets/img/headphone-pegasus.png",
+          "alt": "Headphone White Gold v2",
+          "price": "$35",
+          "color": "Black",
+          "reviews": 0,
+          "new": false,
+          "like": false,
+          "rating": [1, 2, 3, 4, 5]
+        },
+        {
+          "id": 7,
+          "name": "Headphone Gold",
+          "href": "#",
+          "src": "src/assets/img/headphone-gold.png",
+          "alt": "Headphone Gold",
+          "price": "$35",
+          "color": "Black",
+          "reviews": 0,
+          "new": false,
+          "like": false,
+          "rating": [1, 2, 3, 4, 5]
+        }
+      ]
+    }
+  ],
+  "shop": [
+    {
+      "title": "Shop Collection",
+      "shopCollection": [
+        {
+          "id": 0,
+          "category": "Headset Gamer",
+          "href": "/headset-gamer",
+          "src": "src/assets/img/headset-gamer-azul-neon.png",
+          "alt": "Headset gamer with microphone azul neon"
+        },
+        {
+          "id": 1,
+          "category": "Headphones",
+          "href": "/headphones",
+          "src": "src/assets/img/headphone-pegasus.png",
+          "alt": "Headphone white gold v2"
+        },
+        {
+          "id": 2,
+          "category": "Earbuds",
+          "href": "/earbuds",
+          "src": "src/assets/img/earbuds-bluetooth-gold.png",
+          "alt": "Earbuds bluetooth gold"
+        }
+      ]
+    }
+  ],
+  "bestSeller": [
+    {
+      "title": "Best Seller",
+      "bestSellerList": [
+        {
+          "id": 1,
+          "name": "Headphone White Gold",
+          "href": "#",
+          "price": "$48",
+          "src": "src/assets/img/headphone-white-gold.png",
+          "alt": "Tall slender porcelain bottle with natural clay textured body and cork stopper",
+          "rating": [1, 2, 3, 4, 5]
+        },
+        {
+          "id": 2,
+          "name": "Headphone Gold",
+          "href": "#",
+          "price": "$35",
+          "src": "src/assets/img/headphone-gold.png",
+          "alt": "Olive drab green insulated bottle with flared screw lid and flat top",
+          "rating": [1, 2, 3, 4, 5]
+        },
+        {
+          "id": 3,
+          "name": "Headphone Tech Logo Neon v2",
+          "href": "#",
+          "price": "$89",
+          "src": "src/assets/img/headphone-tech-logo-neon-v2.png",
+          "alt": "Person using a pen to cross a task off a productivity paper card",
+          "rating": [1, 2, 3, 4, 5]
+        },
+        {
+          "id": 4,
+          "name": "Headphone Tech Logo Neon",
+          "href": "#",
+          "price": "$35",
+          "src": "src/assets/img/headset-gamer-azul-neon.png",
+          "alt": "Hand holding black machined steel mechanical pencil with brass tip and top",
+          "rating": [1, 2, 3, 4, 5]
+        },
+        {
+          "id": 5,
+          "name": "Item 5",
+          "href": "#",
+          "price": "$48",
+          "src": "src/assets/img/earbuds-bluetooth-gold.png",
+          "alt": "Tall slender porcelain bottle with natural clay textured body and cork stopper",
+          "rating": [1, 2, 3, 4, 5]
+        },
+        {
+          "id": 6,
+          "name": "Item 6",
+          "href": "#",
+          "price": "$35",
+          "src": "src/assets/img/headphone-white-wine-gold.png",
+          "alt": "Olive drab green insulated bottle with flared screw lid and flat top",
+          "rating": [1, 2, 3, 4, 5]
+        },
+        {
+          "id": 7,
+          "name": "Headphone Pegasus",
+          "href": "#",
+          "price": "$89",
+          "src": "src/assets/img/headphone-pegasus.png",
+          "alt": "Person using a pen to cross a task off a productivity paper card",
+          "rating": [1, 2, 3, 4, 5]
+        },
+        {
+          "id": 8,
+          "name": "Machined Mechanical Pencil",
+          "href": "#",
+          "price": "$35",
+          "src": "src/assets/img/headphone-tech-logo-neon.png",
+          "alt": "Hand holding black machined steel mechanical pencil with brass tip and top",
+          "rating": [1, 2, 3, 4, 5]
+        }
+      ]
+    }
+  ],
+  "promotions": [
+    {
+      "tag": "Promotions",
+      "src": "src/assets/img/man-with-gray-headphone.png",
+      "alt": "Smart girl with red headphone",
+      "title": "Hurry up! 40% OFF",
+      "text": "Thousands of high tech are waiting for you",
+      "countDownText": "Offer expires in:",
+      "targetDay": "March 24 2025",
+      "hrefText": "Shop now",
+      "href": "/xxx"
+    }
+  ],
+  "iconCards": [
+    {
+      "id": 0,
+      "title": "Free Shipping",
+      "src": "src/assets/img/truck.svg",
+      "alt": "Truck icon",
+      "text": "Order above $200"
+    },
+    {
+      "id": 1,
+      "title": "Money-back",
+      "src": "src/assets/img/money.svg",
+      "alt": "Money icon",
+      "text": "30 days guarante"
+    },
+    {
+      "id": 2,
+      "title": "Secure payments",
+      "src": "src/assets/img/lock.svg",
+      "alt": "Lock icon",
+      "text": "Secured by Stripe"
+    },
+    {
+      "id": 3,
+      "title": "24/7 Support",
+      "src": "src/assets/img/phone.svg",
+      "alt": "Phone icon",
+      "text": "Phone and Email support"
+    }
+  ],
+  "newSpeed": [
+    {
+      "tag": "Newspeed",
+      "title": "Instagram",
+      "text": "Follow us on social media for more discount & promotions",
+      "hrefText": "@instagram",
+      "href": "https://www.instagram.com/",
+      "imgGroup": [
+        {
+          "id": 0,
+          "src": "src/assets/img/woman-headphone-city.jpg",
+          "alt": "City girl listening music"
+        },
+        {
+          "id": 1,
+          "src": "src/assets/img/young-woman-headphone-city.jpg",
+          "alt": "City woman listening music "
+        },
+        {
+          "id": 2,
+          "src": "src/assets/img/snoop-dogg-headphone.jpg",
+          "alt": "Snoop Dogg with a nice headphone"
+        },
+        {
+          "id": 3,
+          "src": "src/assets/img/mowalola-beats.jpg",
+          "alt": "Mowaloi in a futuristic photo with her style headphone and rainbow hair"
+        }
+      ]
+    }
+  ],
+  "newsLetter": [
+    {
+      "title": "Subscribe to our newsletter",
+      "text": "Sign up for deals, new products and promotions",
+      "mail": "",
+      "imgs": [
+        {
+          "id": 0,
+          "src": "src/assets/img/white-headphone.png",
+          "alt": "Heaphone white"
+        },
+        {
+          "id": 1,
+          "src": "src/assets/img/young-woman-enjoying-music-headphone.png",
+          "alt": "Happy woman with phone and headphone"
+        }
+      ]
+    }
+  ],
+  "logoFooter": [
+    {
+      "href": "https://flowbite.com",
+      "src": "https://flowbite.com/docs/images/logo.svg",
+      "text": "Flowbite"
+    }
+  ],
+  "linksFooter": [
+    {
+      "href": "https://tailwindcss.com/",
+      "text": "Home"
+    },
+    {
+      "href": "https://discord.gg/4eeurUVvTy",
+      "text": "Headphones"
+    },
+    {
+      "href": "/test-1",
+      "text": "Earbuds"
+    },
+    {
+      "href": "/test-3",
+      "text": "Contact us"
+    }
+  ],
+  "allRights": {
+    "date": "© 2024",
+    "href": "https://flowbite.com",
+    "company": "Flowbite™",
+    "text": "All Rights Reserved."
+  },
+  "socials": [
+    {
+      "href": "https://facebook.com/",
+      "svg": "src/assets/img/facebook.svg"
+    },
+    {
+      "href": "https://www.instagram.com/",
+      "svg": "src/assets/img/instagram.svg"
+    },
+    {
+      "href": "https://x.com/",
+      "svg": "src/assets/img/twitter.svg"
+    },
+    {
+      "href": "https://github.com/",
+      "svg": "src/assets/img/github.svg"
     }
   ]
 }

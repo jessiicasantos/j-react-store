@@ -1,24 +1,28 @@
+import { promotions } from "../data.json";
 import { Link } from "react-router-dom";
-import RedHeadphone from "../assets/img/red-headphone.jpg";
 import Countdown from "./Countdown";
 
 const Promotions = () => {
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-2 items-center mx-auto bg-yellow-200 text-left my-5">
-        <div>
-            <img src={RedHeadphone} alt="" className="w-full object-cover" />
-        </div>
-        <div className="p-15 h-full">
-            <h6 className="text-cyan-600 font-bold uppercase">Promotion</h6>
-            <h3 className="text-3xl font-semibold my-3">Hurry up! 40% OFF</h3>
-            <p className="mb-6">Thousands of high tech are waiting for you</p>
+    <>
+      {promotions.map((p: any, i: number) => (
+        <div key={`p-${i}`} className="promotions">
+            <div>
+              <img src={p.src} alt={p.alt} />
+            </div>
+            <div className="right">
+                <h6>{p.tag}</h6>
+                <h3>{p.title}</h3>
+                <p>{p.text}</p>
 
-            {/* TIMER */}
-            <Countdown />
-            
-            <Link to="x" className="bg-black text-white p-3 rounded-md block mt-6 w-fit px-10 text-center">Shop now</Link>
+                {/* TIMER */}
+                <Countdown />
+                
+                <Link to={p.href}>{p.hrefText}</Link>
+            </div>
         </div>
-    </div>
+      ))}    
+    </>
   )
 };
 

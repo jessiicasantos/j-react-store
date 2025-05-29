@@ -1,6 +1,8 @@
 const SingleProduct = () => {
   return (
-    <h1>Single Product</h1>
+    <div className="product container">
+      <h2>Single Product</h2>
+    </div>
   )
 };
 
