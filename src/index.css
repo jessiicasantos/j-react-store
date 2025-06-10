@@ -6,6 +6,10 @@
   font-weight: 400;
 }
 
+#root > div {
+  flex: 1;
+}
+
 @theme {
   /* --spacing: 1px;  */
   --font-display: "Inter", sans-serif;
@@ -286,7 +290,7 @@ footer .right {
 }
 
 .hero {
-  @apply relative mx-auto px-6 pt-14 lg:px-8 text-left grid md:grid-cols-2 justify-items-center lg:justify-items-normal bg-gray-50;
+  @apply relative mx-auto px-6 pt-14 lg:px-8 text-left grid md:grid-cols-2 justify-items-center lg:justify-items-normal bg-gray-50 max-w-7xl;
 }
 
 .hero .left svg {
