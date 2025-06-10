@@ -43,7 +43,7 @@ const ArrivalsSwiper = ({ products }: any) => {
     >
       {products?.map((p: any) => (
         <SwiperSlide key={p.id}>
-            <Link to={p.href}>
+            <Link to={`/products/${p.id}`}>
               <div className="top">
                 {p.new === true ? (
                   <h5>New</h5>

@@ -63,7 +63,7 @@ const Navbar = () => {
                             <div key={c.id}>
                               <MenuItem>
                                 <NavLink
-                                  to={c.href}
+                                  to={`category/${c.category}`}
                                   className="link-item"
                                 >
                                   {c.product}
@@ -83,7 +83,7 @@ const Navbar = () => {
  
         <div className="nav-right">
           <div>
-            <div>
+            <div className="search">
               <button
                 type="button"
               >
@@ -160,7 +160,7 @@ const Navbar = () => {
                         return (
                           <div key={c.id}>
                             <NavLink
-                              to={c.href}
+                              to={`category/${c.category}`}
                               className="link-item"
                             >
                               {c.product}

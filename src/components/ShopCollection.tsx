@@ -5,35 +5,36 @@ const ShopCollection = () => {
   return (
     <>
       {shop.map((s: any) => (
-        <div className="shopCollection">
+        <div key={`s-${s.id}`} className="shopCollection">
           <h3>{s.title}</h3>
 
           <div className="shopGrid">
-            {s.shopCollection?.map((c: any, i: number) => (
-              <>
-                {c.id === 0 &&
-                  <div key={`c-${i}`} className="left">
-                    <img src={c.src} alt={c.alt} />
-                    <Link to={c.href}>
-                      {c.category}
-                    </Link>
-                  </div>
-                }
-              </>
-            ))}
-
-            <div className="right">
+            <div className="left">
               {s.shopCollection?.map((c: any, i: number) => (
-                <>
-                  {c.id !== 0 &&
-                    <div key={`c-${i}`}>
+                <div key={`c-${i}`}>
+                  {c.id == 0 &&
+                    <div className="left-wrapper">
                       <img src={c.src} alt={c.alt} />
-                      <Link to={c.href}>
+                      <Link to={`category/${c.category}`}>
                         {c.category}
                       </Link>
                     </div>
                   }
-                </>
+                </div>
+              ))}
+            </div>
+            <div className="right">
+              {s.shopCollection?.map((c: any, i: number) => (
+                <div key={`c-${i}`}>
+                  {c.id !== 0 &&
+                    <div className="right-wrapper">
+                      <img src={c.src} alt={c.alt} />
+                      <Link to={`category/${c.category}`}>
+                        {c.category}
+                      </Link>
+                    </div>
+                  }
+                </div>
               ))}
             </div>
           </div>

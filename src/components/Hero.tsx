@@ -15,7 +15,7 @@ const Hero = () => {
               {h.title}
             </h1>
             <Link
-              to={h.href}
+              to={`category/${h.category}`}
               className="shopnow"
             >
               {h.hrefText}

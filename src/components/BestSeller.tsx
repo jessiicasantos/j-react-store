@@ -1,16 +1,17 @@
 import { bestSeller } from '../data.json';
 import Star from '../assets/img/star';
+import { Link } from 'react-router-dom';
   
   export default function BestSeller() {
     return (
       <>
         {bestSeller.map((b: any, i: number) => (
-          <div key={`b-${i}`} className="bestSeller">
+          <div key={`b-${i}`} className="grid-four-columns">
             <h3>{b.title}</h3>
 
             <div>
               {b.bestSellerList?.map((s: any) => (
-                <a key={s.id} href={s.href}>
+                <Link key={s.id} to={`products/${s.id}`}>
                   <h5>HOT</h5>
                   <img
                     alt={s.alt}
@@ -23,7 +24,7 @@ import Star from '../assets/img/star';
                   </div>
                   <h4>{s.name}</h4>
                   <p>{s.price}</p>
-                </a>
+                </Link>
               ))}
             </div>
           </div>
