@@ -14,7 +14,7 @@ import Heart from "../../assets/img/heart";
 import Star from '../../assets/img/star';
 import { Link } from 'react-router-dom';
 
-const ArrivalsSwiper = ({ products }: any) => {
+const ArrivalsSwiper = ({ products, setOpen }: any) => {
   return (
     <Swiper
       slidesPerView={4.5}
@@ -43,38 +43,39 @@ const ArrivalsSwiper = ({ products }: any) => {
     >
       {products?.map((p: any) => (
         <SwiperSlide key={p.id}>
-            <Link to={`/products/${p.id}`}>
-              <div className="top">
-                {p.new === true ? (
-                  <h5>New</h5>
-                ) : null}
-                <img src={p.src} alt={p.alt} />
-                <button>Add to cart</button>
-                
-                <div className="like">
-                  <Heart fill={p.like === false ? "transparent" : "red"} />
-                </div>
+          <Link to={`/products/${p.id}`}>
+            <div className="top">
+              {p.new === true ? (
+                <h5>New</h5>
+              ) : null}
+              <img src={p.src} alt={p.alt} />
+              <button className="cart-btn" onClick={setOpen}>Add to cart</button>
+              
+              <div className="like">
+                <Heart fill={p.like === false ? "transparent" : "red"} />
+              </div>
+            </div>
+
+            <div className="bottom">
+              <div className="rating">                    
+                {p?.rating.map((r: any) => (
+                  <Star key={`r-${r}`} fill="yellow" stroke="gray" />
+                ))}
+                <h6>{p.reviews} avaliações</h6>
               </div>
 
-              <div className="bottom">
-                <div className="rating">                    
-                  {p?.rating.map((r: any) => (
-                    <Star key={`r-${r}`} fill="yellow" stroke="gray" />
-                  ))}
-                  <h6>{p.reviews} avaliações</h6>
-                </div>
-
-                <h4>
-                  <span aria-hidden="true" />
-                  {p.name}
-                </h4>
-                <p>{p.price}</p>
-              </div>
-            </Link>
-          </SwiperSlide>
+              <h4>
+                <span aria-hidden="true" />
+                {p.name}
+              </h4>
+              <p>{p.price}</p>
+            </div>
+          </Link>
+        </SwiperSlide>
       ))}
 
       <div className="swiper-pagination" />
+
     </Swiper>
   );
 };

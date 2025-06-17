@@ -341,6 +341,10 @@ footer .right {
   @apply mx-auto max-w-2xl px-6 lg:px-8 lg:max-w-7xl lg:px-8 text-left;
 }
 
+.cart-btn {
+  @apply absolute bottom-[10px] left-1/2 transform -translate-x-1/2 bg-gray-800 p-2 w-[90%] rounded-lg text-white text-sm z-40 hover:bg-light-blue-200;
+}
+
 .hero .right {
   @apply relative mt-[30px] md:mt-0 flex justify-end items-end;
 }
@@ -916,7 +920,7 @@ footer .right {
   @apply cursor-not-allowed bg-gray-50 text-gray-200;
 }
 
-.add-bag {
+.add-cart {
   @apply  mt-10 flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-8 py-3 text-base font-medium text-white hover:bg-indigo-700 focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:outline-hidden
 }
 

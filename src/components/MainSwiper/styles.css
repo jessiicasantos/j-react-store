@@ -69,13 +69,6 @@
     @apply aspect-square w-full rounded-md object-cover group-hover:opacity-75 lg:aspect-auto lg:h-80;
 }
 
-.arrivalsSwiper .top > button {
-    @apply absolute bottom-[10px] left-1/2 transform -translate-x-1/2 bg-[#000] p-2 w-[90%] rounded-lg text-white text-sm;
-}
-/* .arrivalsSwiper .swiper-slide h5 + img {
-    @apply block w-full object-cover;
-} */
-
 .arrivalsSwiper .swiper-button-next {
     @apply p-[20px_19px_20px_20px];
 }

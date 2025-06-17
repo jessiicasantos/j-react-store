@@ -1,7 +1,7 @@
 import ArrivalsSwiper from "./MainSwiper/MainSwiper";
 import { arrivals } from "../data.json";
 
-const Arrivals = () => {
+const Arrivals = ({ setOpen }: any) => {
   return (
     <>
       {arrivals.map((a: any, i: number) => (
@@ -9,7 +9,7 @@ const Arrivals = () => {
           <h3>{a.title}</h3>
           
             <div>
-              <ArrivalsSwiper products={a.swiperList} />
+              <ArrivalsSwiper setOpen={setOpen} products={a.swiperList} />
             </div>
         </div>
       ))}
