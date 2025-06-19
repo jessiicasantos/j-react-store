@@ -6,8 +6,8 @@ const Hero = () => {
   return (
     <>
       {hero?.map((h: any, i: number) => (
-        <div className="hero-bg">
-          <div key={`h-${i}`} className="hero">
+        <div key={`h-${i}`} className="hero-bg">
+          <div className="hero">
             <div key={h.id} className="left">
               <h6>
                 {h.subTitle}
