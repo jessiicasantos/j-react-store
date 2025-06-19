@@ -11,27 +11,17 @@ import ShopCollection from "./ShopCollection";
 import Socials from "./Socials";
 
 const Products = () => {
-  const [open, setOpen] = useState<any>(false);
-
-  const handleOpen = (e: any) => {
-    e.preventDefault();
-    
-    setOpen(true);
-  }
-
   return (
     <div>
         <Hero />
         <Logos />
-        <Arrivals setOpen={handleOpen} />
+        <Arrivals />
         <ShopCollection />
         <BestSeller />
         <Promotions />
         <IconCards />
         <Socials />
         <Newsletter />
-        
-        <Cart open={open} setOpen={setOpen} />
     </div>
   )
 };

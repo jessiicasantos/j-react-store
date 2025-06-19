@@ -13,8 +13,9 @@ import './styles.css';
 import Heart from "../../assets/img/heart";
 import Star from '../../assets/img/star';
 import { Link } from 'react-router-dom';
+import BtnCart from '../BtnCart';
 
-const ArrivalsSwiper = ({ products, setOpen }: any) => {
+const ArrivalsSwiper = ({ products }: any) => {
   return (
     <Swiper
       slidesPerView={4.5}
@@ -49,7 +50,8 @@ const ArrivalsSwiper = ({ products, setOpen }: any) => {
                 <h5>New</h5>
               ) : null}
               <img src={p.src} alt={p.alt} />
-              <button className="cart-btn" onClick={setOpen}>Add to cart</button>
+
+              <BtnCart className="cart-btn" />
               
               <div className="like">
                 <Heart fill={p.like === false ? "transparent" : "red"} />

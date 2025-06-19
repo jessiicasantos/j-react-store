@@ -1,20 +1,3 @@
-/*
-  This SingleProduct requires some changes to your \config:
-  
-  ```
-  // tailwind.config.js
-  module.exports = {
-    // ...
-    theme: {
-      extend: {
-        gridTemplateRows: {
-          '[auto,auto,1fr]': 'auto auto 1fr',
-        },
-      },
-    },
-  }
-  ```
-*/
 'use client'
 
 import { useState } from 'react';
@@ -22,7 +5,7 @@ import { StarIcon } from '@heroicons/react/20/solid';
 import { Radio, RadioGroup } from '@headlessui/react';
 import { singleProduct } from '../data.json';
 import { Link, useParams } from 'react-router-dom';
-import Cart from './Cart';
+import BtnCart from './BtnCart';
 
 const reviews = { href: '#', average: 4, totalCount: 117 }
 
@@ -40,13 +23,6 @@ export default function SingleProduct() {
   const { productId } = useParams();
   const product = singleProduct.find((product: any) => product.id === productId);
   const { name, price, breadcrumbs, images, colors, accessories, description, highlights, details } = product || {};
-  const [open, setOpen] = useState<any>(false);
-
-  const handleOpen = (e: any) => {
-    e.preventDefault();
-
-    setOpen(true);
-  }
   
   return (
     <div className="single-product">
@@ -221,11 +197,7 @@ export default function SingleProduct() {
               </fieldset>
             </div>
 
-            <button
-              className="add-cart"
-              onClick={handleOpen}>
-              Add to cart
-            </button>
+            <BtnCart className="add-cart" />
           </form>
         </div>
 
@@ -260,8 +232,6 @@ export default function SingleProduct() {
               <p>{details}</p>
             </div>
           </div>
-
-          <Cart open={open} setOpen={setOpen} />
         </div>
       </div>
     </div>

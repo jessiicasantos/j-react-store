@@ -958,5 +958,25 @@
         { "id": 3, "name": "Earbud", "category": "earbud" }
       ]
     }
+  ],
+  "cartItems": [
+    {
+      "id": "headset-unicorn-id",
+      "name": "Headset Unicorn",
+      "color": "Pink",
+      "price": "$80.00",
+      "quantity": 2,
+      "src": "../src/assets/img/products/headset-unicorn/headset-unicorn-pink.png",
+      "alt": "Headset Unicorn Pink"
+    },
+    {
+      "id": "gold-exp-headphone-id",
+      "name": "Gold Exp Headphone",
+      "color": "Blue",
+      "price": "$20.00",
+      "quantity": 1,
+      "src": "../src/assets/img/products/gold-exp-headphone/gold-exp-headphone-blue.png",
+      "alt": "Gold EXP Headphone Blue"
+    }
   ]
 }
