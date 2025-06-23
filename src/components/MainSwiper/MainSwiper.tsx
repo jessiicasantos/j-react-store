@@ -13,7 +13,7 @@ import './styles.css';
 import Heart from "../../assets/img/heart";
 import Star from '../../assets/img/star';
 import { Link } from 'react-router-dom';
-import BtnCart from '../BtnCart';
+import BtnCart from '../BtnCart/BtnCart';
 
 const ArrivalsSwiper = ({ products }: any) => {
   return (

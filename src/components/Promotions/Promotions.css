@@ -1,0 +1,29 @@
+@reference "../../index.css";
+
+.promotions {
+  @apply grid grid-cols-1 lg:grid-cols-2 items-center mx-auto bg-yellow-200 text-left my-5;
+}
+
+.promotions img {
+  @apply w-full object-cover object-top max-h-[64vh] w-full;
+}
+
+.promotions > .right {
+  @apply p-15 h-full flex flex-col justify-center;
+}
+
+.promotions > .right > h6 {
+  @apply text-cyan-600 font-bold uppercase;
+}
+
+.promotions > .right > h3 {
+  @apply text-3xl font-semibold my-3;
+}
+
+.promotions > .right > p {
+  @apply mb-6;
+}
+
+.promotions > .right > a {
+  @apply bg-black text-white p-3 rounded-md block mt-6 w-fit px-10 text-center;
+}

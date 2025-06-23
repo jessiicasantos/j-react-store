@@ -1,0 +1,65 @@
+@reference "../../index.css";
+
+.hero-bg {
+  @apply bg-gray-50;
+}
+
+.hero {
+  @apply relative mx-auto px-6 pt-14 lg:px-8 text-left grid md:grid-cols-2 justify-items-center lg:justify-items-normal max-w-7xl;
+}
+
+.hero .left svg {
+  @apply ml-[10px];
+}
+
+.hero .persons img {
+  @apply w-10 h-10 rounded-full mr-[-10px] object-contain;
+}
+
+.hero .left {
+  @apply md:max-w-md;
+}
+
+.hero .right {
+  @apply relative mt-[30px] md:mt-0 flex justify-end items-end;
+}
+
+.hero .right .imgTop {
+  @apply object-cover w-[100px] h-[100px] lg:w-[150px] lg:h-[150px] rounded-full absolute top-0 left-0 lg:left-[60px] z-9;
+}
+
+.hero .right .imgCenter {
+  @apply w-[500px] object-cover object-[center_top] rounded-full;
+}
+
+.hero .right .imgBottom {
+  @apply object-cover w-[100px] h-[100px] lg:w-[150px] lg:h-[150px] rounded-full absolute bottom-[30px] right-0 z-9;
+}
+
+.hero > div h6 {
+  @apply mb-4 font-extrabold text-orange-authentic;
+}
+
+.hero h1 {
+  @apply mb-14;
+}
+
+.customersCircle {
+  @apply md:absolute mx-auto bottom-0 md:left-[30%] z-9 max-w-sm w-fit lg:max-w-full lg:flex border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t bg-gray-50 rounded-full p-4 flex flex-col justify-between leading-normal;
+}
+
+.customersCircle > .persons {
+  @apply flex items-center;
+}
+
+.customersCircle > .persons >  p {
+  @apply flex justify-center items-center mr-[10px] font-bold border-r border-b border-gray-400 rounded-full w-[40px] h-[40px] bg-[#000] text-[#fafafa];
+}
+
+.customersCircle .txt {
+  @apply text-sm;
+}
+
+.customersCircle .txt p {
+  @apply text-gray-900 font-bold leading-none;
+}

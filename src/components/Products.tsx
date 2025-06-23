@@ -1,20 +1,18 @@
-import { useEffect, useState } from "react";
-import Arrivals from "./Arrivals";
-import BestSeller from "./BestSeller";
-import Cart from "./Cart";
-import Hero from "./Hero";
-import IconCards from "./IconCards";
-import Logos from "./Logos";
-import Newsletter from "./Newsletter";
-import Promotions from "./Promotions";
-import ShopCollection from "./ShopCollection";
-import Socials from "./Socials";
+import Arrivals from "./Arrivals/Arrivals";
+import BestSeller from "./BestSeller/BestSeller";
+import Hero from "./Hero/Hero";
+import IconCards from "./IconCards/IconCards";
+import Newsletter from "./Newsletter/Newsletter";
+import Partners from "./Partners/Partners";
+import Promotions from "./Promotions/Promotions";
+import ShopCollection from "./ShopCollection/ShopCollection";
+import Socials from "./Socials/Socials";
 
 const Products = () => {
   return (
     <div>
         <Hero />
-        <Logos />
+        <Partners />
         <Arrivals />
         <ShopCollection />
         <BestSeller />

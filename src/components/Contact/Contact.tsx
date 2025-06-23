@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import { userValidationSchema } from "../../validation/userValidation";
 import { ChevronDownIcon } from '@heroicons/react/16/solid';
 import ContactUpload from "./ContactUpload";
+import "./Contact.css";
 
 const Contact = () => {
   const { register, handleSubmit, formState: { errors } } = useForm({

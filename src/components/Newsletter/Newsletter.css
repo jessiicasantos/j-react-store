@@ -1,0 +1,46 @@
+@reference "../../index.css";
+
+.newsletter {
+  @apply flex justify-center items-center bg-gray-900 w-full lg:px-10;
+}
+
+.newsletter .left,
+.newsletter .right {
+  @apply hidden lg:block;
+}
+
+.newsletter .center {
+  @apply flex flex-col items-center lg:mx-30 p-10 lg:p-0;
+}
+
+.newsletter .center h3 {
+  @apply text-4xl font-semibold tracking-tight text-gray-50 mb-0;
+}
+
+.newsletter .center p {
+  @apply mt-4 text-lg text-gray-300 mb-4;
+}
+
+.newsletter form {
+  @apply relative flex flex-col justify-center items-center lg:flex-row w-full gap-x-4 mt-6 mb-[30px] lg:w-[125%];
+} 
+
+.newsletter form label {
+  @apply w-full;
+}
+
+.newsletter form label > input {
+  @apply min-w-0 w-full flex-auto rounded-md bg-white/5 px-3.5 py-2 text-base text-white outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6;
+}
+
+.newsletter form p {
+  @apply absolute bottom-[-35px] lg:bottom-[-45px] text-red-500;
+}
+
+.newsletter form button {
+  @apply flex-none rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500 mx-auto mt-6 lg:mt-0;
+}
+
+.newsletter .right img {
+  @apply max-h-[50vh];
+}

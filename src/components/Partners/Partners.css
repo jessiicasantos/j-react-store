@@ -1,0 +1,13 @@
+@reference "../../index.css";
+
+.partners {
+  @apply  mx-auto max-w-7xl px-6 lg:px-8 pb-20 pt-5;
+}
+
+.partners > div {
+  @apply mx-auto mt-10 grid items-center justify-items-center max-w-lg grid-cols-2 gap-x-8 gap-y-10 sm:max-w-xl sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-6;
+}
+
+.partners a > img {
+  @apply col-span-2 max-h-12 w-full object-contain lg:col-span-1 max-w-[170px];
+}

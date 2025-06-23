@@ -1,0 +1,165 @@
+@reference "../../index.css";
+
+.single-product {
+  @apply pt-6;
+}
+
+.single-product form {
+  @apply mt-10;
+}
+
+.product-gallery {
+  @apply mx-auto mt-6 max-w-2xl sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-3 lg:gap-x-8 lg:px-8;
+}
+
+.product-gallery img {
+  @apply object-cover h-full;
+}
+
+.product-gallery .product-img:first-of-type {
+  @apply hidden size-full rounded-lg lg:block row-start-1 row-end-3;
+}
+
+.product-gallery .product-img:nth-child(2) {
+  @apply not-last-of-type:mb-8;
+}
+
+.product-gallery .product-img .center-imgs > img {
+  @apply aspect-3/2 w-full rounded-lg hidden lg:block;
+}
+
+.product-gallery .product-img:last-of-type {
+  @apply aspect-4/5 size-full sm:rounded-lg lg:aspect-auto row-start-1 row-end-3 col-start-3;
+}
+
+.product-info {
+  @apply mx-auto max-w-2xl px-4 pt-10 pb-16 sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-3 lg:grid-rows-[auto_auto_1fr] lg:gap-x-8 lg:px-8 lg:pt-16 lg:pb-24;
+}
+
+.title {
+  @apply lg:col-span-2 lg:border-r lg:border-gray-200 lg:pr-8;
+}
+
+.product-info .title h1,
+.highlights h3,
+.details h2 {
+  @apply text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl;
+}
+
+.options {
+  @apply mt-4 lg:row-span-3 lg:mt-0;
+}
+
+.options > p {
+  @apply text-3xl tracking-tight text-gray-900;
+}
+
+.options > h2,
+.reviews > h3,
+.reviews > div > p,
+.description .title > h3 {
+  @apply sr-only;
+}
+
+.reviews {
+  @apply mt-6;
+}
+
+.reviews > div,
+.reviews .star-icon {
+  @apply flex items-center;
+}
+
+.reviews a {
+  @apply ml-3 text-indigo-600 hover:text-indigo-500;
+}
+
+.colors h3 {
+  @apply text-gray-900;
+}
+
+.reviews a,
+.colors h3,
+.accessories h3 {
+  @apply text-lg font-medium text-gray-900;
+}
+
+.colors fieldset {
+  @apply mt-4;
+}
+
+.colors .radiogroup {
+  @apply flex items-center gap-x-3;
+}
+
+.colors .radiogroup .colorSelected {
+  @apply relative -m-0.5 flex cursor-pointer items-center justify-center rounded-full p-0.5 focus:outline-hidden data-checked:ring-2 data-focus:data-checked:ring-3 data-focus:data-checked:ring-offset-1;
+}
+
+.colors .radiogroup .colorSelected > .colorCircle {
+  @apply size-8 rounded-full border border-black/10;
+}
+
+.accessories {
+  @apply mt-10;
+}
+
+.accessories .title {
+  @apply flex items-center justify-between;
+}
+
+.accessories fieldset {
+  @apply mt-4;
+}
+
+.accessories .radio-group {
+  @apply grid grid-cols-4 gap-4 sm:grid-cols-8 lg:grid-cols-4;
+}
+
+.accessories .radio-group {
+  @apply grid grid-cols-4 gap-4 sm:grid-cols-8 lg:grid-cols-4;
+}
+
+.accessories .active {
+  @apply cursor-pointer bg-white text-gray-900 shadow-xs;
+}
+
+.accessories .inactive {
+  @apply cursor-not-allowed bg-gray-50 text-gray-200;
+}
+
+.description {
+  @apply py-10 lg:col-span-2 lg:col-start-1 lg:border-r lg:border-gray-200 lg:pt-6 lg:pr-8 lg:pb-16;
+}
+
+.description .content {
+  @apply space-y-6;
+}
+
+.description .content > p {
+  @apply text-base text-gray-900;
+}
+
+.highlights {
+  @apply mt-10;
+}
+
+.highlights .content {
+  @apply mt-4;
+}
+
+.highlights .content ul {
+  @apply list-disc space-y-2 pl-4 text-sm;
+}
+
+.details {
+  @apply mt-10;
+}
+
+.details > div {
+  @apply mt-4 space-y-6;
+}
+
+.details > div > p {
+  @apply text-sm text-gray-600;
+}

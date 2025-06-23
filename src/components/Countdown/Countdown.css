@@ -1,0 +1,9 @@
+@reference "../../index.css";
+
+.countdown p {
+  @apply text-base mb-2;
+}
+
+.countdown > div {
+  @apply flex flex-wrap justify-center md:justify-start;
+}

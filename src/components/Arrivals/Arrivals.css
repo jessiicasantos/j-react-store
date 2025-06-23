@@ -1,0 +1,5 @@
+@reference "../../index.css";
+
+.arrivals {
+  @apply mx-auto max-w-2xl px-6 lg:px-8 lg:max-w-7xl lg:px-8 text-left;
+}

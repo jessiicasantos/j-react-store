@@ -1,4 +1,5 @@
 import ArrowUpTrayIcon from "../../assets/img/arrow-up-tray.svg";
+import "../../index.css";
 
 const ContactUpload = () => {
   return (

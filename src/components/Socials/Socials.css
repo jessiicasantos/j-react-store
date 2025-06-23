@@ -1,0 +1,38 @@
+
+@reference "../../index.css";
+
+.socials {
+  @apply bg-gray-50 py-12 sm:py-22 flex items-center justify-center;
+}
+
+.socials {
+  @apply bg-gray-50 py-12 sm:py-22 flex items-center justify-center;
+}
+
+.socials > div {
+  @apply max-w-2xl px-6 lg:max-w-7xl lg:px-8;
+}
+
+.socials h6 {
+  @apply text-base/7 font-semibold text-indigo-600 uppercase;
+}
+
+.socials h4 {
+  @apply mt-2 max-w-lg font-semibold tracking-tight text-gray-950 mx-auto sm:text-4xl;
+}
+
+.socials p {
+  @apply my-5;
+}
+
+.socials .grid-cards {
+  @apply mt-10 grid gap-4 sm:mt-16 lg:grid-cols-4;
+}
+
+.socials .grid-cards > div {
+  @apply shadow-2xl;
+}
+
+.socials .grid-cards img {
+  @apply object-cover rounded-xl h-[200px] lg:h-[300px] w-full;
+}

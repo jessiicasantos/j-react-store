@@ -1,0 +1,178 @@
+@reference "../../index.css";
+
+nav:not(.breadcrumb) {
+  @apply bg-gray-800;
+}
+
+nav .nav-wrapper {
+  @apply mx-auto max-w-full px-2 relative flex h-16 items-center justify-between sm:pr-6 lg:px-8;
+}
+
+nav .mb-btn {
+  @apply inset-y-0 left-0 flex items-center lg:hidden;
+}
+
+nav .mb-btn > button {
+  @apply relative inline-flex items-center justify-center rounded-md p-4 text-gray-100 hover:bg-gray-700 hover:text-white focus:ring-2 focus:ring-white focus:outline-hidden focus:ring-inset;
+}
+
+nav .search {
+  @apply pl-6;
+}
+
+nav .mb-btn span,
+nav .nav-right span,
+nav .profile-wrapper span {
+  @apply absolute -inset-0.5 sr-only;
+}
+
+nav .mb-btn svg:first-of-type {
+  @apply block size-6 group-data-open:hidden;
+}
+
+nav .mb-btn svg:last-of-type {
+  @apply hidden size-6 group-data-open:block;
+}
+
+nav .logo-wrapper {
+  @apply mx-auto lg:mx-[0];
+}
+
+nav .logo-wrapper .link-item {
+  @apply p-1.5 block;
+}
+
+nav .logo-wrapper a > span {
+  @apply sr-only;
+}
+
+nav .logo-wrapper img {
+  @apply max-h-[50px] object-contain;
+}
+
+nav .links-wrapper {
+  @apply hidden lg:flex lg:items-center;
+}
+
+nav .submenu {
+  @apply relative inline-block text-left;
+}
+
+nav .submenu > div {
+  @apply mx-[5px];
+}
+
+nav .submenu svg {
+  @apply -mr-1 size-5 text-gray-400;
+}
+
+nav .submenu-items {
+  @apply absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white ring-1 shadow-lg ring-black/5 transition focus:outline-hidden data-closed:scale-95 data-closed:transform data-closed:opacity-0 data-enter:duration-100 data-enter:ease-out data-leave:duration-75 data-leave:ease-in;
+}
+
+nav .submenu-items > div {
+  @apply py-1;
+}
+
+nav .submenu-items {
+  @apply absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white ring-1 shadow-lg ring-black/5 transition focus:outline-hidden data-closed:scale-95 data-closed:transform data-closed:opacity-0 data-enter:duration-100 data-enter:ease-out data-leave:duration-75 data-leave:ease-in;
+}
+
+nav .submenu .submenu-items .link-item {
+  @apply block px-4 py-2 text-sm data-focus:bg-gray-100 data-focus:outline-hidden;
+}
+
+nav .nav-right {
+  @apply absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0;
+}
+
+nav .nav-right {
+  @apply relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800 focus:outline-hidden cursor-pointer;
+}
+
+nav .nav-right img {
+  @apply w-[30px] h-[30px];
+}
+
+nav .modal-search {
+  @apply hidden absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 ring-1 shadow-lg ring-black/5 transition focus:outline-hidden data-closed:scale-95 data-closed:transform data-closed:opacity-0 data-enter:duration-100 data-enter:ease-out data-leave:duration-75 data-leave:ease-in;
+}
+
+nav .modal-search form {
+  @apply block px-4 py-2 text-sm text-gray-700 data-focus:bg-gray-100 data-focus:outline-hidden;
+}
+
+nav .modal-search form > input {
+  @apply w-full p-3;
+}
+
+nav .modal-search form > input {
+  @apply w-full p-3;
+}
+
+nav .modal-search form button {
+  @apply h-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 cursor-pointer;
+}
+
+/* profile dropdown */
+nav .profile-menu {
+  @apply relative ml-3;
+}
+
+nav .profile-menu {
+  @apply relative ml-3;
+}
+
+nav .profile-menu button {
+  @apply relative flex rounded-full bg-gray-800 text-sm focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800 focus:outline-hidden cursor-pointer;
+}
+
+nav .profile-menu img {
+  @apply size-8 rounded-full;
+}
+
+nav .profile-menu > div {
+  @apply absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 ring-1 shadow-lg ring-black/5 transition focus:outline-hidden data-closed:scale-95 data-closed:transform data-closed:opacity-0 data-enter:duration-100 data-enter:ease-out data-leave:duration-75 data-leave:ease-in;
+}
+
+nav .profile-menu h3 {
+  @apply block px-4 py-2 text-sm text-light-blue-200 m-0;
+}
+
+nav .profile-menu a {
+  @apply block px-4 py-2 text-sm text-red-700 data-focus:bg-gray-100 data-focus:outline-hidden;
+}
+
+nav .mb-nav {
+  @apply lg:hidden space-y-1 px-2 pt-2 pb-3;
+}
+
+nav .mb-nav > div {
+  @apply flex flex-col justify-center;
+}
+
+nav .mb-nav .submenu {
+  @apply inline-flex w-full justify-center gap-x-1.5 rounded-md px-3 py-2 shadow-xs text-base font-medium hover:bg-gray-700 cursor-pointer;
+}
+
+nav .mb-nav .submenu svg {
+  @apply -mr-1 size-5 text-gray-400;
+}
+
+nav .mb-nav .submenu-group > div {
+  @apply py-1;
+}
+
+nav .link-item,
+.menubtn {
+  @apply font-medium text-[var(--color-light-blue-100)] hover:text-[var(--color-light-blue-200)] decoration-inherit;
+}
+
+nav .menubtn {
+  @apply inline-flex w-full justify-center gap-x-1.5 rounded-md px-3 py-2 shadow-xs text-base font-medium hover:bg-gray-700 cursor-pointer data-active:bg-gray-900;
+}
+
+nav .link-item.active,
+nav .menubtn.active {
+  @apply bg-gray-900 hover:bg-gray-700 rounded-md px-3 py-2 mx-[5px] block;
+}

@@ -1,0 +1,125 @@
+@reference "../../index.css";
+
+.shop-cart {
+    @apply relative z-10;
+}
+
+.dialog-backdrop {
+    @apply fixed inset-0 bg-gray-500/75 transition-opacity duration-500 ease-in-out data-closed:opacity-0;
+}
+
+.fixedOvHidden {
+    @apply fixed inset-0 overflow-hidden;
+}
+
+.absOvHidden {
+    @apply absolute inset-0 overflow-hidden;
+}
+
+.fixedPointerNone {
+    @apply  pointer-events-none fixed inset-y-0 right-0 flex max-w-full pl-10 sm:pl-16;
+}
+
+.dialog-panel {
+    @apply pointer-events-auto w-screen max-w-md transform transition duration-500 ease-in-out data-closed:translate-x-full sm:duration-700;
+}
+
+.flex-bg-shadow {
+    @apply flex h-full flex-col overflow-y-scroll bg-white shadow-xl;
+}
+
+.shop-cart .product  {
+    @apply flex-1 overflow-y-auto px-4 py-6 sm:px-6;
+}
+
+.shop-cart .top-cart {
+    @apply flex items-start justify-between;
+}
+
+.shop-cart .top-cart h2 {
+    @apply text-lg font-medium text-gray-900;
+}
+
+.close-btn-wrapper {
+    @apply ml-3 flex h-7 items-center;
+}
+
+.close-btn-wrapper button {
+    @apply relative -m-2 p-2 text-gray-400 hover:text-gray-500;
+}
+
+.shop-cart .products {
+    @apply mt-8;
+}
+
+.products .divider-gray {
+    @apply -my-6 divide-y divide-gray-200;
+}
+
+.products li {
+    @apply flex py-6;
+}
+
+.products .img-wrapper {
+    @apply size-24 shrink-0 overflow-hidden rounded-md border border-gray-200;
+}
+
+.products .img-wrapper > img {
+    @apply size-full object-cover;
+}
+
+.products .content {
+    @apply ml-4 flex flex-1 flex-col;
+}
+
+.products .name-price {
+    @apply flex justify-between text-base font-medium text-gray-900;
+}
+
+.products .name-price > p {
+    @apply ml-4;
+}
+
+.products .content > div > p {
+    @apply mt-1 text-sm text-gray-500;
+}
+
+.products .qty-remove {
+    @apply flex flex-1 items-end justify-between text-sm;
+}
+
+.products .qty-remove > p {
+    @apply text-gray-500;  
+}
+
+.products .content .btn-remove {
+    @apply font-medium text-indigo-600 hover:text-indigo-500;
+}
+
+.bottom-cart {
+    @apply border-t border-gray-200 px-4 py-6 sm:px-6;
+}
+
+.bottom-cart .subtotal {
+    @apply flex justify-between text-base font-medium text-gray-900;
+}
+
+.bottom-cart > p {
+    @apply mt-0.5 text-sm text-gray-500;
+}
+
+.bottom-cart .checkout-wrapper {
+    @apply mt-6;
+}
+
+.bottom-cart .checkout-wrapper > a {
+    @apply flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium text-white shadow-xs hover:bg-indigo-700;
+}
+
+.continue-shopping {
+    @apply mt-6 flex justify-center text-center text-sm text-gray-500;
+}
+
+.continue-shopping > p > button {
+    @apply font-medium text-indigo-600 hover:text-indigo-500;
+}

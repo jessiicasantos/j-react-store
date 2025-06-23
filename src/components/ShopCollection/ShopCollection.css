@@ -1,0 +1,62 @@
+@reference "../../index.css";
+
+.shopCollection {
+  @apply flex flex-col justify-center items-center mx-auto py-12 px-6 lg:px-8 w-full max-w-2xl lg:max-w-7xl;
+}
+
+.shopCollection {
+  @apply flex flex-col justify-center items-center mx-auto py-12 px-6 lg:px-8 w-full max-w-2xl lg:max-w-7xl;
+}
+
+.shopGrid {
+  @apply grid grid-cols-1 md:grid-cols-2 md:gap-x-4 md:gap-x-8 w-full;
+}
+
+.shopGrid .left > div:not(:first-child) {
+  @apply hidden;
+}
+
+.shopGrid .left > div {
+  @apply h-full;
+}
+
+.shopGrid img {
+  @apply rounded-lg;
+}
+
+
+.shopGrid .left-wrapper {
+  @apply relative flex justify-center items-center h-full w-full;
+}
+
+.shopGrid .left-wrapper > img {
+  @apply object-center object-cover h-full w-full max-h-[450px] object-cover lg:max-h-[initial] rounded-lg;
+}
+
+.shopGrid a {
+  @apply dark:bg-gray-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400 bottom-4 z-10 absolute text-base font-medium leading-none text-gray-800 py-3 w-36 bg-white;
+}
+
+.shopGrid .right {
+  @apply flex flex-col space-y-4 md:space-y-8 mt-4 md:mt-0;
+}
+
+.shopGrid .right > div:first-child {
+  @apply hidden;
+}
+
+.shopGrid .right > div {
+  @apply h-full w-full;
+}
+
+.shopGrid .right .right-wrapper {
+  @apply relative flex justify-center items-center h-full w-full;
+}
+
+.shopGrid .right .right-wrapper > img {
+  @apply object-cover h-full w-full scale-x-[-1] object-[50%_34%] max-h-[40vh];
+}
+
+.shopGrid .right .right-wrapper > a {
+  @apply dark:bg-gray-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400 bottom-4 z-10 absolute text-base font-medium leading-none text-gray-800 py-3 w-36 bg-white;
+}
