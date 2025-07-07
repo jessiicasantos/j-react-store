@@ -1,12 +1,34 @@
-import { hero } from "../../data.json";
+// import { hero } from "../../data.json";
 import ArrowLongRight from '../../assets/img/arrow-long-right';
 import { Link } from "react-router-dom";
 import "./Hero.css";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 const Hero = () => {
+  const [data, setData] = useState<any>([]);
+
+  const getHero = async () => {
+    try {
+      let response = await axios.get('http://localhost:5000/api/hero');
+      console.log(response);
+
+      let data = await response.data;
+      console.log(data);
+
+      setData(data);
+    } catch(error) {
+      console.error('Erroo!', error);
+    }
+  }
+
+  useEffect(() => {
+    getHero();
+  }, []);
+
   return (
     <>
-      {hero?.map((h: any, i: number) => (
+      {data?.hero?.map((h: any, i: number) => (
         <div key={`h-${i}`} className="hero-bg">
           <div className="hero">
             <div key={h.id} className="left">

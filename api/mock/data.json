@@ -1,0 +1,977 @@
+{
+  "userProfile": [
+    {
+      "id": 0,
+      "name": "Joaquim Trindade",
+      "src": "../src/assets/img/joaquim-trindade.avif",
+      "alt": "Imagem de perfil de "
+    }
+  ],
+  "navigation": [
+    { 
+      "name": "Home", 
+      "href": "/", 
+      "current": ""
+    },
+    { 
+      "name": "Categories",
+      "children": [
+        {
+          "id": 1,
+          "product": "Headsets",
+          "category": "headset",
+          "current": ""
+        },
+        {
+          "id": 2,
+          "product": "Headphones",
+          "category": "headphone",
+          "current": ""
+        },
+        {
+          "id": 3,
+          "product": "Earbuds",
+          "category": "earbud",
+          "current": ""
+        }
+      ]    
+    },
+    { 
+      "name": "Contact us", 
+      "href": "contact-us", 
+      "current": "" 
+    }
+  ],
+  "hero": [
+    {
+      "subTitle": "HBL Authentics",
+      "title": "The Sound That Touches Your Heart.",
+      "category": "headset",
+      "hrefText": "Shop now",
+      "text": "72k+ Happy Customers",
+      "customers": [
+        {
+          "id": 0,
+          "src": "../src/assets/img/dread-man-and-headphone.png",
+          "alt": "Man with headphone"
+        },
+        {
+          "id": 1,
+          "src": "../src/assets/img/style-man-with-headphone.png",
+          "alt": "Man with headphone"
+        },
+        {
+          "id": 2,
+          "src": "../src/assets/img/blue-hair-woman-with-headphone.png",
+          "alt": "Blue hair woman with headphone"
+        },
+        {
+          "id": 3,
+          "src": "../src/assets/img/man-with-gray-headphone.png",
+          "alt": "Man with gray headphone"
+        }
+      ],
+      "banner": [
+        {
+          "id": 0,
+          "src": "../src/assets/img/model-with-white-headphone.png",
+          "alt": "Woman with white sunglasses and headphone"
+        },
+        {
+          "id": 1,
+          "src": "../src/assets/img/style-woman-with-headphone.png",
+          "alt": "Woman with red headphone"
+        },
+        {
+          "id": 2,
+          "src": "../src/assets/img/model-rose-with-headphone.png",
+          "alt": "Model with pink hair, jacket and heaphone gold"
+        }
+      ]
+    }
+  ],
+  "partners": [
+    {
+      "id": 1,
+      "src": "../src/assets/img/logoipsum-1.svg",
+      "alt": "Logo Logoipsum azul",
+      "href": "https://www.lipsum.com/"
+    },
+    {
+      "id": 2,
+      "src": "../src/assets/img/logoipsum-2.svg",
+      "alt": "Logo Logoipsum azul rosa",
+      "href": "https://pt.wikipedia.org/wiki/Lorem_ipsum"
+    },
+    {
+      "id": 3,
+      "src": "../src/assets/img/logoipsum-3.svg",
+      "alt": "Logo Logoipsum preto e branco",
+      "href": "https://www.lipsum.com/feed/html"
+    },
+    {
+      "id": 4,
+      "src": "../src/assets/img/logoipsum-4.svg",
+      "alt": "Logo Logoipsum multicolorida",
+      "href": "https://www.loremipzum.com/pt/gerador-de-texto"
+    },
+    {
+      "id": 5,
+      "src": "../src/assets/img/logoipsum-5.svg",
+      "alt": "Logo Logoipsum verde e cinza",
+      "href": "https://support.microsoft.com/pt-br/topic/descri%C3%A7%C3%A3o-do-texto-lorem-ipsum-dolor-sit-amet-que-aparece-na-ajuda-do-windows-bf3b0a9e-8f6b-c2ab-edd9-41c1f9aa2ea0"
+    },
+    {
+      "id": 6,
+      "src": "../src/assets/img/logoipsum-6.svg",
+      "alt": "Logo Logoipsum multicolorida",
+      "href": "https://oquequerdizer.com.br/lorem-ipsum-significado/"
+    }
+  ],
+  "arrivals": [
+    {
+      "title": "New Arrivals",
+      "swiperList": [
+        {
+          "id": "headset-tech-logo-neon-id",
+          "name": "Headphone Tech Logo Neon",
+          "src": "../src/assets/img/products/headset-tech-logo-neon/headset-tech-logo-neon-pink.png",
+          "alt": "Headset Tech Logo Neon",
+          "category": "headset",
+          "price": "$35",
+          "color": "Black",
+          "reviews": 0,
+          "new": true,
+          "like": true,
+          "rating": [1, 2, 3, 4, 5]
+        },
+        {
+          "id": "elegant-headset-id",
+          "name": "Elegant Headset",
+          "src": "../src/assets/img/products/elegant-headset/elegant-headset-white-brown-gold.png",
+          "alt": "Elegant Headset White Brown Gold",
+          "category": "headset",
+          "price": "$20",
+          "color": "Brown",
+          "reviews": 100,
+          "new": false,
+          "like": true,
+          "rating": [1, 2, 3, 4, 5]
+        },
+        {
+          "id": "headset-unicorn-id",
+          "name": "Headset Unicorn 🌈",
+          "src": "../src/assets/img/products/headset-unicorn/headset-unicorn-baby-yellow.png",
+          "alt": "Headset Unicorn Baby Yellow",
+          "category": "headset",
+          "price": "$80",
+          "color": "Yellow",
+          "reviews": 3,
+          "new": true,
+          "like": false,
+          "rating": [1, 2, 3, 4, 5]
+        },
+        {
+          "id": "icon-headset-id",
+          "name": "Icon Headset",
+          "src": "../src/assets/img/products/icon-headset/icon-headset-green.png",
+          "alt": "Icon Headset Green",
+          "category": "headset",
+          "price": "$15",
+          "color": "Green",
+          "reviews": 1,
+          "new": true,
+          "like": false,
+          "rating": [1, 2, 3, 4, 5]
+        },
+        {
+          "id": "minimalist-headset-neon-id",
+          "name": "Minimalist Headset Neon",
+          "src": "../src/assets/img/products/minimalist-headset-neon/minimalist-headset-neon-orange.png",
+          "alt": "Minimalist White Headphone",
+          "category": "heaphone",
+          "price": "$35",
+          "color": "Black",
+          "reviews": 0,
+          "new": false,
+          "like": true,
+          "rating": [1, 2, 3, 4, 5]
+        },
+        {
+          "id": "gold-exp-headphone-id",
+          "name": "Headphone Gold EXP",
+          "src": "../src/assets/img/products/gold-exp-headphone/gold-exp-headphone.png",
+          "alt": "Headphone Gold EXP",
+          "category": "headphone",
+          "price": "$20",
+          "color": "Yellow",
+          "reviews": 0,
+          "new": false,
+          "like": false,
+          "rating": [1, 2, 3, 4, 5]
+        },
+        {
+          "id": "neon-headphone-id",
+          "name": "Neon Headphone",
+          "src": "../src/assets/img/products/neon-headphone/neon-headphone-blue.png",
+          "alt": "Neon Headphone",
+          "category": "headphone",
+          "price": "$30",
+          "color": "Black",
+          "reviews": 0,
+          "new": false,
+          "like": false,
+          "rating": [1, 2, 3, 4, 5]
+        },
+        {
+          "id": "kawaii-headset-id",
+          "name": "Kawaii Headset",
+          "src": "../src/assets/img/products/kawaii-headset/kawaii-headset-baby-blue.png",
+          "alt": "Kawaii Headset",
+          "category": "headset",
+          "price": "$35",
+          "color": "Baby blue",
+          "reviews": 0,
+          "new": false,
+          "like": false,
+          "rating": [1, 2, 3, 4, 5]
+        }
+      ]
+    }
+  ],
+  "shop": [
+    {
+      "title": "Shop Collection",
+      "shopCollection": [
+        {
+          "id": 0,
+          "category": "headset",
+          "src": "../src/assets/img/products/headset-tech-logo-neon/headset-tech-logo-neon-pink.png",
+          "alt": "Model wearing plain white basic tee."
+        },
+        {
+          "id": 1,
+          "category": "headphone",
+          "src": "../src/assets/img/products/gold-exp-headphone/gold-exp-headphone-red.png",
+          "alt": "Gold EXP Headphone Blue"
+        },
+        {
+          "id": 2,
+          "category": "earbud",
+          "src": "../src/assets/img/earbuds-bluetooth-gold.png",
+          "alt": "Earbuds bluetooth gold"
+        }
+      ]
+    }
+  ],
+  "bestSeller": [
+    {
+      "title": "Best Seller",
+      "bestSellerList": [
+        {
+          "id": "headset-tech-logo-neon-id",
+          "name": "Headphone Tech Logo Neon Pink",
+          "src": "../src/assets/img/products/headset-tech-logo-neon/headset-tech-logo-neon-pink.png",
+          "alt": "Headset Tech Logo Neon Pink",
+          "price": "$35",
+          "reviews": 20,
+          "rating": [1, 2, 3, 4, 5]
+        },
+        {
+          "id": "gold-exp-headphone-id",
+          "name": "Headphone Gold EXP Red",
+          "src": "../src/assets/img/products/gold-exp-headphone/gold-exp-headphone-red.png",
+          "alt": "Headphone Gold EXP Red",
+          "price": "$20",
+          "reviews": 19,
+          "rating": [1, 2, 3, 4, 5]
+        },
+        {
+          "id": "kawaii-headset-id",
+          "name": "Kawaii Headset Baby Blue",
+          "src": "../src/assets/img/products/kawaii-headset/kawaii-headset-baby-blue.png",
+          "alt": "Kawaii Headset Baby Blue",
+          "price": "$35",
+          "rating": [1, 2, 3, 4, 5]
+        },
+        {
+          "id": "neon-headphone-id",
+          "name": "Neon Headphone Blue",
+          "src": "../src/assets/img/products/neon-headphone/neon-headphone-blue.png",
+          "alt": "Neon Headphone Blue",
+          "price": "$30",
+
+          "rating": [1, 2, 3, 4, 5]
+        },
+        {
+          "id": "minimalist-headset-neon-id",
+          "name": "Minimalist Headset Neon Orange",
+          "src": "../src/assets/img/products/minimalist-headset-neon/minimalist-headset-neon-orange.png",
+          "alt": "Minimalist Headset Neon Orange",
+          "price": "$35",
+          "rating": [1, 2, 3, 4, 5]
+        },
+        {
+          "id": "icon-headset-id",
+          "name": "Icon Headset Green",
+          "src": "../src/assets/img/products/icon-headset/icon-headset-green.png",
+          "alt": "Icon Headset Green",
+          "price": "$15",
+          "rating": [1, 2, 3, 4, 5]
+        },
+        {
+          "id": "headset-unicorn-id",
+          "name": "Headset Unicorn 🌈",
+          "src": "../src/assets/img/products/headset-unicorn/headset-unicorn-pink.png",
+          "alt": "Headset Unicorn Pink",
+          "price": "$80",
+          "rating": [1, 2, 3, 4, 5]
+        },
+        {
+          "id": "elegant-headset-id",
+          "name": "Elegant Headset",
+          "src": "../src/assets/img/products/elegant-headset/elegant-headset-white-brown-gold.png",
+          "alt": "Elegant Headset White Brown Gold",
+          "price": "$20",
+          "rating": [1, 2, 3, 4, 5]
+        }
+      ]
+    }
+  ],
+  "promotions": [
+    {
+      "tag": "Promotions",
+      "src": "../src/assets/img/man-with-gray-headphone.png",
+      "alt": "Smart girl with red headphone",
+      "title": "Hurry up! 40% OFF",
+      "text": "Thousands of high tech are waiting for you",
+      "countDownText": "Offer expires in:",
+      "targetDay": "March 24 2025",
+      "hrefText": "Shop now",
+      "href": "/xxx"
+    }
+  ],
+  "iconCards": [
+    {
+      "id": 0,
+      "title": "Free Shipping",
+      "src": "../src/assets/img/truck.svg",
+      "alt": "Truck icon",
+      "text": "Order above $200"
+    },
+    {
+      "id": 1,
+      "title": "Money-back",
+      "src": "../src/assets/img/money.svg",
+      "alt": "Money icon",
+      "text": "30 days guarante"
+    },
+    {
+      "id": 2,
+      "title": "Secure payments",
+      "src": "../src/assets/img/lock.svg",
+      "alt": "Lock icon",
+      "text": "Secured by Stripe"
+    },
+    {
+      "id": 3,
+      "title": "24/7 Support",
+      "src": "../src/assets/img/phone.svg",
+      "alt": "Phone icon",
+      "text": "Phone and Email support"
+    }
+  ],
+  "newSpeed": [
+    {
+      "tag": "Newspeed",
+      "title": "Instagram",
+      "text": "Follow us on social media for more discount & promotions",
+      "hrefText": "@instagram",
+      "href": "https://www.instagram.com/",
+      "imgGroup": [
+        {
+          "id": 0,
+          "src": "../src/assets/img/woman-headphone-city.jpg",
+          "alt": "City girl listening music"
+        },
+        {
+          "id": 1,
+          "src": "../src/assets/img/young-woman-headphone-city.jpg",
+          "alt": "City woman listening music "
+        },
+        {
+          "id": 2,
+          "src": "../src/assets/img/snoop-dogg-headphone.jpg",
+          "alt": "Snoop Dogg with a nice headphone"
+        },
+        {
+          "id": 3,
+          "src": "../src/assets/img/mowalola-beats.jpg",
+          "alt": "Mowaloi in a futuristic photo with her style headphone and rainbow hair"
+        }
+      ]
+    }
+  ],
+  "newsLetter": [
+    {
+      "title": "Subscribe to our newsletter",
+      "text": "Sign up for deals, new products and promotions",
+      "mail": "",
+      "imgs": [
+        {
+          "id": 0,
+          "src": "../src/assets/img/white-headphone.png",
+          "alt": "Heaphone white"
+        },
+        {
+          "id": 1,
+          "src": "../src/assets/img/young-woman-enjoying-music-headphone.png",
+          "alt": "Happy woman with phone and headphone"
+        }
+      ]
+    }
+  ],
+  "logoFooter": [
+    {
+      "href": "https://flowbite.com",
+      "src": "https://flowbite.com/docs/images/logo.svg",
+      "text": "Flowbite"
+    }
+  ],
+  "linksFooter": [
+    {
+      "href": "https://tailwindcss.com/",
+      "text": "Home"
+    },
+    {
+      "href": "https://discord.gg/4eeurUVvTy",
+      "text": "Headphones"
+    },
+    {
+      "href": "/test-1",
+      "text": "Earbuds"
+    },
+    {
+      "href": "/test-3",
+      "text": "Contact us"
+    }
+  ],
+  "allRights": {
+    "date": "© 2024",
+    "href": "https://flowbite.com",
+    "company": "Flowbite™",
+    "text": "All Rights Reserved."
+  },
+  "socials": [
+    {
+      "href": "https://facebook.com/",
+      "svg": "../src/assets/img/facebook.svg"
+    },
+    {
+      "href": "https://www.instagram.com/",
+      "svg": "../src/assets/img/instagram.svg"
+    },
+    {
+      "href": "https://x.com/",
+      "svg": "../src/assets/img/twitter.svg"
+    },
+    {
+      "href": "https://github.com/",
+      "svg": "../src/assets/img/github.svg"
+    }
+  ],
+  "singleProduct": [
+    {
+      "id": "headset-tech-logo-neon-id",
+      "name": "Headset Tech Logo Neon",
+      "price": "$32",
+      "category": "headset",
+      "hot": true,
+      "breadcrumbs": [
+        { "id": 1, "name": "Headset", "category": "headset" }
+      ],
+      "rating": [1, 2, 3, 4, 5],
+      "images": [
+        {
+          "id": 0,
+          "src": "../src/assets/img/products/headset-tech-logo-neon/headset-tech-logo-neon-blue.png",
+          "alt": "headset Tech Logo Neon"
+        },
+        {
+          "id": 1,
+          "src": "../src/assets/img/products/headset-tech-logo-neon/headset-tech-logo-neon-green.png",
+          "alt": "Model wearing plain black basic tee."
+        },
+        {
+          "id": 2,
+          "src": "../src/assets/img/products/headset-tech-logo-neon/headset-tech-logo-neon-red.png",
+          "alt": "Model wearing plain gray basic tee."
+        },
+        {
+          "id": 3,
+          "src": "../src/assets/img/products/headset-tech-logo-neon/headset-tech-logo-neon-pink.png",
+          "alt": "Model wearing plain white basic tee."
+        }
+      ],
+      "colors": [
+        { "name": "Blue", "class": "bg-blue-400", "selectedClass": "ring-blue-400" },
+        { "name": "Green", "class": "bg-green-700", "selectedClass": "ring-green-700" },
+        { "name": "Red", "class": "bg-red-500", "selectedClass": "ring-red-500" },
+        { "name": "Purple", "class": "bg-pink-700", "selectedClass": "ring-pink-700" }
+      ],
+      "accessories": [
+        { "name": "Headset", "inStock": true },
+        { "name": "Headphone", "inStock": false }
+      ],
+      "description":
+        "The Heaset Tech Logo Neon is the perfect fusion of technology and futuristic style. With a sophisticated design, it features modern curves and details illuminated by vibrant neon lights, creating an innovative and striking aesthetic. Available in different color variations and angles, this heaset exudes a high-tech look, ideal for those seeking an immersive experience combined with bold design. Whether for gaming, music, or everyday use, the Heaset Tech Logo Neon stands out as a unique accessory full of personality.",
+      "highlights": [
+        "🎧 Futuristic and Sophisticated Design – Modern lines and sleek curves combined with an innovative look.",
+        "🌟 Vibrant Neon Lighting – Light effects that add a technological and exclusive touch.",
+        "🔊 Immersive Sound Quality – Powerful and crystal-clear audio for a unique listening experience.",
+        "⚡ Comfort and Ergonomics – Perfect fit for extended use without discomfort.",
+        "🎮 Ideal for Gaming and Music – Style and performance for any occasion"
+      ],
+      "details": [
+        "The Premium Packaging includes: 📦 Premium Packaging – Sturdy and stylish box, perfect for storage and protection.",
+        "🔌 USB-C Charging Cable – Fast charging to keep you connected at all times.", 
+        "🎧 Synthetic Leather Ear Cushions – Maximum comfort for extended use without discomfort.",
+        "🎚️ Volume and Equalization Control – Precise adjustments for the best audio experience. ",
+        "🔄 Wireless & Wired Mode – Bluetooth or cable connection option for greater versatility. 🎤 Noise-Canceling Microphone – Clear voice capture, ideal for calls, gaming, and recordings. 📜 Instruction Manual – Detailed guide to help you make the most of the headset’s features. 🎁 Extra Accessories – Adapters and spare parts for increased durability."]
+    },
+    {
+      "id": "elegant-headset-id",
+      "name": "Elegant Headset",
+      "category": "headset",
+      "price": "$32",
+      "rating": [1, 2, 3, 4, 5],
+      "hot": false,
+      "breadcrumbs": [
+        { "id": 1, "name": "Headset", "category": "headset" },
+        { "id": 2, "name": "Headphone", "category": "headphone" }
+      ],
+      "images": [
+        {
+          "id": 0,
+          "src": "../src/assets/img/products/elegant-headset/elegant-headset-white-gold.png",
+          "alt": "Elegant Headset White Gold"
+        },
+        {
+          "id": 1,
+          "src": "../src/assets/img/products/elegant-headset/elegant-headset-gray-gold.png",
+          "alt": "Elegant Headset Gray Gold"
+        },
+        {
+          "id": 2,
+          "src": "../src/assets/img/products/elegant-headset/elegant-headset-brown-gold.png",
+          "alt": "Elegant Headset Brown Gold"
+        },
+        {
+          "id": 3,
+          "src": "../src/assets/img/products/elegant-headset/elegant-headset-white-brown-gold.png",
+          "alt": "Elegant Headset White Brown Gold"
+        }
+      ],
+      "colors": [
+        { "name": "White", "class": "bg-gray-200", "selectedClass": "ring-gray-400" },
+        { "name": "Gray", "class": "bg-gray-800", "selectedClass": "ring-yellow-500" },
+        { "name": "Brown", "class": "bg-linear-to-r from-gray-300 to-yellow-500", "selectedClass": "ring-gray-400" },
+        { "name": "Gold", "class": "bg-red-900", "selectedClass": "ring-gray-900" }
+      ],
+     "accessories": [
+        { "name": "Headset", "inStock": true },
+        { "name": "Headphone", "inStock": true }
+      ],
+      "description":
+        "The Elegant Headset is a premium headphone that combines sophistication and high-performance sound. Its ergonomic and modern design offers soft ear cushions, ensuring comfort for extended use. Some models include a built-in microphone, ideal for crystal-clear communication and full immersion in games or high-quality calls. Additionally, the exclusive charging stand keeps the headset protected and organized, adding practicality to its sophisticated design. Crafted to deliver an immersive audio experience, the Elegant Headset is the perfect choice for those seeking style, comfort, and cutting-edge technology. 🎧",
+      "highlights": [
+        "Sophisticated Design – Premium finish with metallic details and elegant colors, including white, gold, brown, and red.",
+        "Ultimate Comfort – Soft cushions and adjustable padded headband for a perfect ergonomic fit, ensuring hours of use without discomfort.",
+        "Exceptional Sound Quality – Immersive audio with advanced technology for powerful bass and crystal-clear highs.",
+        "High-Definition Microphone – Clear and precise communication, ideal for calls, podcasts, and multiplayer gaming."
+      ],
+      "details": [
+        "Headset Premium – Design elegante e ergonômico, com almofadas macias para conforto duradouro.",
+        "🎤 Microfone de Alta Qualidade – Embutido ou destacável, com captação cristalina para comunicação impecável.",
+        "🔌 Cabo Destacável – Flexível e resistente, proporcionando maior praticidade e mobilidade.",
+        "🔋 Base de Carregamento Exclusiva – Mantém o headset protegido e sempre pronto para uso.",
+        "🛡️ Suporte Personalizado – Estrutura robusta para armazenamento seguro e elegante.",
+        "🎛️ Controle de Ajuste Avançado – Regulagem intuitiva de volume e áudio para personalização total da experiência sonora."
+      ]
+    },
+    {
+      "id": "headset-unicorn-id",
+      "name": "Unicorn Headset 🌈",
+      "price": "$32",
+      "rating": [1, 2, 3, 4, 5],
+      "category": "headset",
+      "hot": true,
+      "breadcrumbs": [
+      { "id": 1, "name": "Headset", "category": "headset" },
+        { "id": 2, "name": "Headphone", "category": "headphone" }
+      ],
+      "images": [
+        {
+          "id": 0,
+          "src": "../src/assets/img/products/headset-unicorn/headset-unicorn-baby-blue.png",
+          "alt": "Headset Unicorn Baby Blue"
+        },
+        {
+          "id": 1,
+          "src": "../src/assets/img/products/headset-unicorn/headset-unicorn-baby-yellow.png",
+          "alt": "Headset Unicorn Baby Yellow"
+        },
+        {
+          "id": 2,
+          "src": "../src/assets/img/products/headset-unicorn/headset-unicorn-baby-pink.png",
+          "alt": "Headset Unicorn Baby Pink"
+        },
+        {
+          "id": 3,
+          "src": "../src/assets/img/products/headset-unicorn/headset-unicorn-pink.png",
+          "alt": "Headset Unicorn Baby Pink"
+        }
+      ],
+      "colors": [
+        { "name": "White", "class": "bg-blue-300", "selectedClass": "ring-gray-400" },
+        { "name": "Gray", "class": "bg-yellow-300", "selectedClass": "ring-yellow-500" },
+        { "name": "Brown", "class": "bg-pink-300", "selectedClass": "ring-gray-400" },
+        { "name": "Gold", "class": "bg-pink-600", "selectedClass": "ring-gray-900" }
+      ],
+     "accessories": [
+        { "name": "Headset", "inStock": true },
+        { "name": "Headphone", "inStock": true }
+      ],
+      "description":
+        "A premium headset that celebrates individuality, authenticity, and LGBTQI+ pride, featuring a sophisticated design inspired by unicorns—magical beings symbolizing freedom, enchantment, and uniqueness.",
+      "highlights": [
+        "✨ Colors That Express Identity – Available in pink, baby blue, yellow, and red, all accented with shimmering gold details, reflecting the vibrant diversity of the LGBTQI+ community.",
+        "🎧 Comfort for Everyone – Soft cushions and an adjustable padded headband ensure a perfect fit, promoting well-being and inclusivity.",
+        "🔊 Sound That Amplifies Voices – Immersive sound quality with advanced technology, delivering powerful bass and crystal-clear highs to enhance self-expression.",
+        "🔌 Exclusive & Functional Design – Durable construction, detachable cable, and premium stand for elegance, organization, and practicality.",
+        "🦄 Inspired by Pride & Magic – Glossy finishes and unique details that reflect the authenticity of the LGBTQI+ community, celebrating love, respect, and the freedom to be yourself."
+      ],
+      "details": [
+        "Microfone de Alta Qualidade – Embutido ou destacável, garantindo comunicação cristalina e versatilidade para chamadas e jogos.",
+        "🔌 Cabo Destacável – Flexível e resistente, proporcionando maior praticidade e mobilidade.",
+        "🔋 Base de Carregamento Exclusiva – Mantém o headset protegido e sempre pronto para uso.",
+        "🛡️ Suporte Personalizado – Estrutura elegante e funcional para armazenamento seguro.",
+        "🎛️ Controle de Ajuste Avançado – Regulagem intuitiva de volume e áudio para personalização total da experiência sonora.",
+        "🌈 Edição Especial LGBTQI+ – Acabamento brilhante e elementos que celebram diversidade, orgulho e autenticidade."
+      ]
+    },
+    {
+      "id": "icon-headset-id",
+      "name": "Icon Headset",
+      "price": "$32",
+      "rating": [1, 2, 3, 4, 5],
+      "category": "headset",
+      "hot": false,
+      "breadcrumbs": [
+        { "id": 1, "name": "Headset", "category": "headset" },
+        { "id": 2, "name": "Headphone", "category": "headphone" }
+      ],
+      "images": [
+        {
+          "id": 0,
+          "src": "../src/assets/img/products/icon-headset/icon-headset-blue.png",
+          "alt": "Icon Headset Blue"
+        },
+        {
+          "id": 1,
+          "src": "../src/assets/img/products/icon-headset/icon-headset-gold.png",
+          "alt": "Icon Headset Gold"
+        },
+        {
+          "id": 2,
+          "src": "../src/assets/img/products/icon-headset/icon-headset-green.png",
+          "alt": "Icon Headset Green"
+        },
+        {
+          "id": 3,
+          "src": "../src/assets/img/products/icon-headset/icon-headset-red.png",
+          "alt": "Icon Headset Red"
+        }
+      ],
+      "colors": [
+        { "name": "White", "class": "bg-blue-300", "selectedClass": "ring-gray-400" },
+        { "name": "Gray", "class": "bg-yellow-300", "selectedClass": "ring-yellow-500" },
+        { "name": "Brown", "class": "bg-pink-300", "selectedClass": "ring-gray-400" },
+        { "name": "Gold", "class": "bg-pink-600", "selectedClass": "ring-gray-900" }
+      ],
+     "accessories": [
+        { "name": "Headset", "inStock": true },
+        { "name": "Headphone", "inStock": true }
+      ],
+      "description":
+        "The Icon Headset is a high-quality headphone designed to deliver an immersive audio experience. With a modern and robust design, it combines style and performance to meet the needs of gamers, professionals, and music enthusiasts.",
+      "highlights": [
+        "✨ Colors That Express Identity – Available in pink, baby blue, yellow, and red, all accented with shimmering gold details, reflecting the vibrant diversity of the LGBTQI+ community.",
+        "🎧 Comfort for Everyone – Soft cushions and an adjustable padded headband ensure a perfect fit, promoting well-being and inclusivity.",
+        "🔊 Sound That Amplifies Voices – Immersive sound quality with advanced technology, delivering powerful bass and crystal-clear highs to enhance self-expression.",
+        "🔌 Exclusive & Functional Design – Durable construction, detachable cable, and premium stand for elegance, organization, and practicality.",
+        "🦄 Inspired by Pride & Magic – Glossy finishes and unique details that reflect the authenticity of the LGBTQI+ community, celebrating love, respect, and the freedom to be yourself."
+      ],
+      "details": [
+        "🎤 Adjustable Microphone – Clear and precise voice capture, ideal for calls and online gaming communication.",
+        "🔊 High-Performance Audio – Powerful bass and crystal-clear highs provide exceptional sound quality for a complete experience.",
+        "💡 Customizable LED Lighting – Side illumination available in various colors such as blue, green, gold, and red, adding style and personality to the headset."
+      ]
+    },
+    {
+      "id": "minimalist-headset-neon-id",
+      "name": "Minimalist Headset Neon",
+      "price": "$30",
+      "rating": [1, 2, 3, 4, 5],
+      "category": "headset",
+      "hot": true,
+      "breadcrumbs": [
+        { "id": 1, "name": "Headset", "category": "headset" }
+      ],
+      "images": [
+        {
+          "id": 0,
+          "src": "../src/assets/img/products/minimalist-headset-neon/minimalist-headset-neon-orange.png",
+          "alt": "minimalist Headset Neon Orange"
+        },
+        {
+          "id": 1,
+          "src": "../src/assets/img/products/minimalist-headset-neon/minimalist-headset-neon-pink.png",
+          "alt": "Minimalist Headset Neon Pink"
+        },
+        {
+          "id": 2,
+          "src": "../src/assets/img/products/minimalist-headset-neon/minimalist-headset-neon-purple.png",
+          "alt": "Minimalist Headset Neon Purple"
+        },
+        {
+          "id": 3,
+          "src": "../src/assets/img/products/minimalist-headset-neon/minimalist-headset-neon-yellow.png",
+          "alt": "Minimalist Headset Neon Yellow"
+        }
+      ],
+      "colors": [
+        { "name": "Orange", "class": "bg-orange-600", "selectedClass": "ring-orange-600" },
+        { "name": "Pink", "class": "bg-blue-300", "selectedClass": "ring-blue-300" },
+        { "name": "Purple", "class": "bg-pink-500", "selectedClass": "ring-pink-500" },
+        { "name": "Yellow", "class": "bg-orange-400", "selectedClass": "ring-orange-400" }
+      ],
+     "accessories": [
+        { "name": "Headset", "inStock": true },
+        { "name": "Headphone", "inStock": false }
+      ],
+      "description":
+        "The Minimalist Headset Neon combines technology and style with a modern and minimalist design, offering exceptional comfort and performance.",
+      "highlights": [
+        "🎧 Enhanced Ergonomics – Soft ear cushions and an adjustable headband ensure a comfortable fit, ideal for extended use without discomfort.",
+        "🎤 Integrated Microphone – Clear and precise communication, perfect for calls, recordings, and multiplayer gaming.",
+        "🔊 Advanced Sound Quality – Balanced and immersive audio with powerful bass and crystal-clear highs for a complete experience."
+      ],
+      "details": [
+        "🎤 Integrated Microphone – Clear and precise voice capture for calls, recordings, and multiplayer gaming.",
+        "🔌 Detachable Cable – Flexible and durable, ensuring practicality and mobility during use.",
+        "🛡️ Protective Case – A sturdy case for safe storage and transportation.",
+        "📄 User Manual – Detailed instructions for setup and optimal use of the headset."
+      ]
+    },
+    {
+      "id": "gold-exp-headphone-id",
+      "name": "Gold Exp Headphone",
+      "category": "headphone",
+      "price": "$20",
+      "rating": [1, 2, 3, 4, 5],
+      "hot": true,
+      "breadcrumbs": [
+        { "id": 2, "name": "Headphone", "category": "headphone" }
+      ],
+      "images": [
+        {
+          "id": 0,
+          "src": "../src/assets/img/products/gold-exp-headphone/gold-exp-headphone.png",
+          "alt": "Gold EXP Headphone"
+        },
+        {
+          "id": 1,
+          "src": "../src/assets/img/products/gold-exp-headphone/gold-exp-headphone-blue.png",
+          "alt": "Gold EXP Headphone Blue"
+        },
+        {
+          "id": 2,
+          "src": "../src/assets/img/products/gold-exp-headphone/gold-exp-headphone-brown.png",
+          "alt": "Gold EXP Headphone Brown"
+        },
+        {
+          "id": 3,
+          "src": "../src/assets/img/products/gold-exp-headphone/gold-exp-headphone-red.png",
+          "alt": "Gold EXP Headphone Red"
+        }
+      ],
+      "colors": [
+        { "name": "Gold", "class": "bg-yellow-200", "selectedClass": "ring-yellow-200" },
+        { "name": "Blue", "class": "bg-blue-500", "selectedClass": "ring-blue-500" },
+        { "name": "Brown", "class": "bg-yellow-900", "selectedClass": "ring-yellow-900" },
+        { "name": "Red", "class": "bg-red-400", "selectedClass": "ring-red-400" }
+      ],
+     "accessories": [
+       { "name": "Headphone", "inStock": true },
+        { "name": "Headset", "inStock": false }
+      ],
+      "description":
+        "The Gold Exp Headphone is a premium headset designed to deliver an immersive sound experience with comfort and style. The Gold Exp Headphone combines performance, comfort, and a striking appearance, making it the perfect choice for those seeking excellence in audio and design.",
+      "highlights": [
+        "🎧 Supreme Comfort – Cushioned ear pads ensure a perfect fit for long sessions without discomfort.",
+        "🔊 High-Quality Audio – Advanced technology delivers deep bass and crystal-clear highs, creating a powerful and immersive sound.",
+        "🏆 Sophisticated Design – A robust structure with premium finishes and a strikin"
+      ],
+      "details": [
+         "🎧 Gold Exp Headphone – A premium headset with a sophisticated design and high-quality sound.",
+          "🛡️ Protective Case – A sturdy case for safe storage and convenient transportation.",
+          "📄 User Manual – Detailed instructions for setup and optimal use of the headset."
+
+      ]
+    },
+    {
+      "id": "neon-headphone-id",
+      "name": "Neon Headphone",
+      "category": "headphone",
+      "price": "$30",
+      "rating": [1, 2, 3, 4, 5],
+      "hot": false,
+      "breadcrumbs": [
+        { "id": 2, "name": "Headphone", "category": "headphone" }
+      ],
+      "images": [
+        {
+          "id": 0,
+          "src": "../src/assets/img/products/neon-headphone/neon-headphone-blue.png",
+          "alt": "Neon Headphone Blue"
+        },
+        {
+          "id": 1,
+          "src": "../src/assets/img/products/neon-headphone/neon-headphone-green.png",
+          "alt": "Neon Headphone Green"
+        },
+        {
+          "id": 2,
+          "src": "../src/assets/img/products/neon-headphone/neon-headphone-red.png",
+          "alt": "Neon Headphone Brown"
+        },
+        {
+          "id": 3,
+          "src": "../src/assets/img/products/neon-headphone/neon-headphone-yellow.png",
+          "alt": "Neon Headphone Red"
+        }
+      ],
+      "colors": [
+        { "name": "Blue", "class": "bg-blue-500", "selectedClass": "ring-blue-500" },
+        { "name": "Green", "class": "bg-green-600", "selectedClass": "ring-green-600" },
+        { "name": "Red", "class": "bg-red-500", "selectedClass": "ring-red-500" },
+        { "name": "Brown", "class": "bg-yellow-500", "selectedClass": "ring-yellow-500" }
+      ],
+     "accessories": [
+       { "name": "Headphone", "inStock": true },
+        { "name": "Headset", "inStock": false }
+      ],
+      "description":
+        "The Neon Headphone combines technology, comfort, and style, making it the ideal choice for those who value outstanding sound quality and a striking design.",
+      "highlights": [
+        "🎧 Premium Comfort – Cushioned ear pads ensure a perfect fit, providing comfort even during long sessions.",
+        "🔊 Exceptional Sound Quality – Deep bass and crystal-clear highs for a powerful and immersive audio experience.",
+        "🔌 Reinforced Cable with Volume Control – Increased durability and practicality, allowing quick and easy adjustments."
+      ],
+      "details": [
+        "🎧 Neon Headphone – A premium headset with a modern design and vibrant neon lighting.",
+        "🔌 Detachable Cable – Flexible and durable, ensuring practicality and mobility during use.",
+        "💡 Customizable LED Lighting – Available in blue, green, orange, and red, adding a futuristic touch to the headset.",
+        "🛡️ Protective Case – A sturdy case for safe storage and convenient transportation.",
+        "📄 User Manual – Detailed instructions for setup and optimal use of the headset."
+      ]
+    },
+    {
+      "id": "kawaii-headset-id",
+      "name": "Kawaii Headset",
+      "category": "headset",
+      "price": "$35",
+      "rating": [1, 2, 3, 4, 5],
+      "hot": false,
+      "breadcrumbs": [
+        { "id": 1, "name": "Headset", "category": "headset" },
+        { "id": 2, "name": "Headphone", "category": "headphone" }
+      ],
+      "images": [
+        {
+          "id": 0,
+          "src": "../src/assets/img/products/kawaii-headset/kawaii-headset-baby-blue.png",
+          "alt": "Kawaii Headset Baby Blue"
+        },
+        {
+          "id": 1,
+          "src": "../src/assets/img/products/kawaii-headset/kawaii-headset-baby-pink.png",
+          "alt": "Kawaii Headset Baby Pink"
+        },
+        {
+          "id": 3,
+          "src": "../src/assets/img/products/kawaii-headset/kawaii-headset-white.png",
+          "alt": "Kawaii Headset White"
+        },
+        {
+          "id": 2,
+          "src": "../src/assets/img/products/kawaii-headset/kawaii-headset-red.png",
+          "alt": "Kawaii Headset Red"
+        }
+      ],
+      "colors": [
+        { "name": "Blue", "class": "bg-blue-300", "selectedClass": "ring-blue-300" },
+        { "name": "Pink", "class": "bg-pink-300", "selectedClass": "ring-pink-300" },
+        { "name": "White", "class": "bg-gray-200", "selectedClass": "ring-gray-200" },
+        { "name": "Red", "class": "bg-red-500", "selectedClass": "ring-red-500" }
+      ],
+     "accessories": [
+       { "name": "Headset", "inStock": true },
+       { "name": "Headphone", "inStock": true }
+      ],
+      "description":
+        "The Kawaii Headset is the perfect blend of quality, comfort, and a delightful look, ideal for gamers and kawaii culture enthusiasts!",
+      "highlights": [
+        "🎧 Absolute Comfort – Soft ear cushions ensure a perfect fit, providing hours of use without discomfort.",
+        "🎤 Adjustable Microphone – Flexible and precise, ideal for clear communication in calls, online gaming, and recordings.",
+        "🔊 Immersive Audio – Deep bass and crystal-clear highs for a balanced and engaging sound experience."
+      ],
+      "details": [
+        "🎧 Kawaii Headset – A premium headset with a cute design and high-quality sound.",
+        "🎤 Adjustable Microphone – Clear and precise voice capture, ideal for calls, recordings, and online gaming.",
+        "🔌 Detachable Cable – Flexible and durable, ensuring practicality and mobility during use.",
+        "🛡️ Protective Case – A sturdy case for safe storage and convenient transportation.",
+        "📄 User Manual – Detailed instructions for setup and optimal use of the headset."
+      ]
+    },
+    {
+      "id": "earbud-id",
+      "name": "This Product is currently out of stock",
+      "category": "earbud",
+      "breadcrumbs": [
+        { "id": 3, "name": "Earbud", "category": "earbud" }
+      ]
+    }
+  ],
+  "cartItems": [
+    {
+      "id": "headset-unicorn-id",
+      "name": "Headset Unicorn",
+      "color": "Pink",
+      "price": "$80.00",
+      "quantity": 2,
+      "src": "../src/assets/img/products/headset-unicorn/headset-unicorn-pink.png",
+      "alt": "Headset Unicorn Pink"
+    },
+    {
+      "id": "gold-exp-headphone-id",
+      "name": "Gold Exp Headphone",
+      "color": "Blue",
+      "price": "$20.00",
+      "quantity": 1,
+      "src": "../src/assets/img/products/gold-exp-headphone/gold-exp-headphone-blue.png",
+      "alt": "Gold EXP Headphone Blue"
+    }
+  ]
+}

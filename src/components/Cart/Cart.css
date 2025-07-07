@@ -4,16 +4,8 @@
     @apply relative z-10;
 }
 
-.dialog-backdrop {
-    @apply fixed inset-0 bg-gray-500/75 transition-opacity duration-500 ease-in-out data-closed:opacity-0;
-}
-
 .fixedOvHidden {
-    @apply fixed inset-0 overflow-hidden;
-}
-
-.absOvHidden {
-    @apply absolute inset-0 overflow-hidden;
+    @apply fixed inset-y-0 right-0 flex max-w-full;
 }
 
 .fixedPointerNone {

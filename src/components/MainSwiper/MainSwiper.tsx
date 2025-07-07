@@ -51,7 +51,8 @@ const ArrivalsSwiper = ({ products }: any) => {
               ) : null}
               <img src={p.src} alt={p.alt} />
 
-              <BtnCart className="cart-btn" />
+              <BtnCart className="cart-btn"
+              product={p} />
               
               <div className="like">
                 <Heart fill={p.like === false ? "transparent" : "red"} />

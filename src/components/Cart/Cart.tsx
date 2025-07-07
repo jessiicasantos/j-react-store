@@ -2,13 +2,19 @@
 
 import { Dialog, DialogBackdrop, DialogPanel, DialogTitle } from '@headlessui/react';
 import { XMarkIcon } from '@heroicons/react/24/outline';
-import { cartItems } from "../../data.json";
 import "./Cart.css";
+import { useCart } from './CartContext';
 
-export default function Cart({ open, setOpen }: any) {
+export default function Cart() {
+  const { cart, dispatch, isOpen, setIsOpen } = useCart();
+
+  const handleRemove = (id: string) => {
+    dispatch({ type: "REMOVE_FROM_CART", payload: id });
+  };
+
   return (
     <div>
-      <Dialog open={open} onClose={setOpen} className="shop-cart">
+      <Dialog open={isOpen} onClose={setIsOpen} className="shop-cart">
         <DialogBackdrop
           transition
           className="dialog-backdrop"
@@ -27,7 +33,7 @@ export default function Cart({ open, setOpen }: any) {
                       <div className="close-btn-wrapper">
                         <button
                           type="button"
-                          onClick={() => setOpen(false)}
+                          onClick={() => setIsOpen(false)}
                         >
                           <span className="absolute -inset-0.5" />
                           <span className="sr-only">Close panel</span>
@@ -39,7 +45,7 @@ export default function Cart({ open, setOpen }: any) {
                     <div className="products">
                       <div className="flow-root">
                         <ul role="list" className="divider-gray">
-                          {cartItems.map((c) => (
+                          {cart.items.map((c) => (
                             <li key={c.id}>
                               <div className="img-wrapper">
                                 <img alt={c.alt} src={c.src} />
@@ -56,10 +62,8 @@ export default function Cart({ open, setOpen }: any) {
                                 </div>
                                 <div className="qty-remove">
                                   <p>Qty {c.quantity}</p>
-                                  <div className="flex">
-                                    <button type="button" className="btn-remove">
-                                      Remove
-                                    </button>
+                                  <div key={c.id} className="flex">
+                                    <button onClick={() => handleRemove(c.id)} className="btn-remove">Remove</button>
                                   </div>
                                 </div>
                               </div>
@@ -88,7 +92,7 @@ export default function Cart({ open, setOpen }: any) {
                         or{' '}
                         <button
                           type="button"
-                          onClick={() => setOpen(false)}
+                          onClick={() => setIsOpen(false)}
                         >
                           Continue Shopping
                           <span aria-hidden="true"> &rarr;</span>

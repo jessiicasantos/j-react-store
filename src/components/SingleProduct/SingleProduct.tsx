@@ -198,7 +198,7 @@ export default function SingleProduct() {
               </fieldset>
             </div>
 
-            <BtnCart className="add-cart" />
+            {product && <BtnCart className="add-cart" product={product} />}
           </form>
         </div>
 

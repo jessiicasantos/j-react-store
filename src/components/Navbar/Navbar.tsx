@@ -1,7 +1,8 @@
 import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react';
 import { Bars3Icon, ChevronDownIcon, XMarkIcon } from '@heroicons/react/24/outline';
 import Glass from '../../assets/img/glass.svg';
-import { logoLorem, navigation, userProfile } from '../../data.json';
+import { navigation, userProfile } from '../../data.json';
+import config from "./config.js";
 import "./Navbar.css";
 import { Link, NavLink } from "react-router";
 
@@ -23,13 +24,13 @@ const Navbar = () => {
         </div>
         <div className="logo-wrapper">
           <Link 
-            to={logoLorem.href}
+            to={config.logoLorem.href}
             className="link-item"
           >
             <span>Lorem</span>
             <img
-              alt={logoLorem.alt}
-              src={logoLorem.src}
+              alt={config.logoLorem.alt}
+              src={config.logoLorem.src}
             
             />
           </Link>

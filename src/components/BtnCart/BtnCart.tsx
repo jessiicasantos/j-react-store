@@ -1,26 +1,28 @@
-import { useState } from "react";
-import Cart from "../Cart/Cart";
 import "./BtnCart.css";
+import { useCart } from "../Cart/CartContext";
 
-const BtnCart = ({ className }: any) => {
-  const [open, setOpen] = useState<any>(false);
+const BtnCart = ({ className, product }: any) => {
+  const { dispatch, setIsOpen } = useCart();
   
-  const handleOpen = (e: any) => {
+  const handleAdd = (e: any) => {
     e.preventDefault();
+
+    dispatch({
+      type: "ADD_TO_CART",
+      payload: { ...product, quantity: 1 }
+    });
     
-    setOpen(true);
-  }
+    setIsOpen(true)
+  };
   
   return (
     <>
       <button
         className={className}
-        onClick={handleOpen}
+        onClick={handleAdd}
       >
         Add to cart
       </button>
-      
-      <Cart open={open} setOpen={setOpen} />
     </>
   );
 };

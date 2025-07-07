@@ -1,9 +1,11 @@
- import { useEffect, useState } from "react";
+ import { useEffect, useRef, useState } from "react";
  import TimeBox from "./TimeBox";
  import "./Countdown.css";
 
  const Countdown = () => {
-     const deadline: any = new Date('Dec 24 2025');  // prazo final, target date
+     const deadlineRef = useRef(new Date('July 15 2025'));  // Armazena a data final sem recriar
+     const intervalRef = useRef<number | null>(null);
+
      const [ days, setDays ] = useState(0);
      const [ timer, setTimer ] = useState({
          hours: 0,
@@ -16,23 +18,29 @@
      Calcula a diferença entre a hora atual e o prazo final, e em seguida, converte essa diferença em dias, horas, minutos e segundos
      */
     const calculateTimeLeft = () => {
-        const currentDate = new Date();
-        const timeLeft = deadline.getTime() - currentDate.getTime();
+        const now = new Date();
+        const timeLeft = deadlineRef.current.getTime() - now.getTime();
+
 
         const days = Math.floor(timeLeft / (24 * 60 * 60 * 1000));
-        const hours = 23 - currentDate.getHours();
-        const minutes = 59 - currentDate.getMinutes();
-        const seconds = 59 - currentDate.getSeconds();
+        const hours = 23 - now.getHours();
+        const minutes = 59 - now.getMinutes();
+        const seconds = 59 - now.getSeconds();
+
 
         setDays(days);
         setTimer({ hours, minutes, seconds });
     };
 
      useEffect(() => {
-         calculateTimeLeft();
-         const intervalId = setInterval(calculateTimeLeft, 1000);
+        calculateTimeLeft();
+        intervalRef.current = window.setInterval(calculateTimeLeft, 1000);
 
-         return () => clearInterval(intervalId);
+       return () => {
+            if (intervalRef.current) {
+                clearInterval(intervalRef.current);
+            }
+        };
      }, []);
     
      return (
