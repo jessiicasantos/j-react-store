@@ -24,6 +24,7 @@ export default function SingleProduct() {
   const { productId } = useParams();
   const product = singleProduct.find((product: any) => product.id === productId);
   const { name, price, breadcrumbs, images, colors, accessories, description, highlights, details } = product || {};
+  const selectedImage = product?.images?.find(img => img.id === selectedColor?.imageId);
   
   return (
     <div className="single-product">
@@ -198,7 +199,17 @@ export default function SingleProduct() {
               </fieldset>
             </div>
 
-            {product && <BtnCart className="add-cart" product={product} />}
+            {product && <BtnCart className="add-cart" 
+              product={{
+                ...product,
+                color: selectedColor?.name,
+                alt: selectedImage?.alt,
+                src: selectedImage?.src,
+                quantity: 1,
+                acessory: selectedAcessory?.name
+              }} 
+            />
+            }
           </form>
         </div>
 

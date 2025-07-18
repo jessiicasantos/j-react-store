@@ -3,27 +3,29 @@ import { useCart } from "../Cart/CartContext";
 
 const BtnCart = ({ className, product }: any) => {
   const { dispatch, setIsOpen } = useCart();
-  
-  const handleAdd = (e: any) => {
+
+  const addToCart = (e: any) => {
     e.preventDefault();
 
-    dispatch({
-      type: "ADD_TO_CART",
-      payload: { ...product, quantity: 1 }
-    });
+    const item = {
+      id: product.id,
+      src: product.src,
+      alt: product.alt,
+      color: product.color,
+      name: product.name,
+      price: parseFloat(product.price.replace("$", "")),
+      quantity: product.quantity || 1,
+    };
+
+    dispatch({ type: "ADD_ITEM", payload: item });
     
-    setIsOpen(true)
+    setIsOpen(true);
   };
-  
+
   return (
-    <>
-      <button
-        className={className}
-        onClick={handleAdd}
-      >
-        Add to cart
-      </button>
-    </>
+    <button className={className} onClick={addToCart}>
+      Add to cart
+    </button>
   );
 };
 

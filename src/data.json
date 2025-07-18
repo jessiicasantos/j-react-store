@@ -519,10 +519,10 @@
         }
       ],
       "colors": [
-        { "name": "Blue", "class": "bg-blue-400", "selectedClass": "ring-blue-400" },
-        { "name": "Green", "class": "bg-green-700", "selectedClass": "ring-green-700" },
-        { "name": "Red", "class": "bg-red-500", "selectedClass": "ring-red-500" },
-        { "name": "Purple", "class": "bg-pink-700", "selectedClass": "ring-pink-700" }
+        { "name": "Blue", "class": "bg-blue-400", "selectedClass": "ring-blue-400", "imageId": 0 },
+        { "name": "Green", "class": "bg-green-700", "selectedClass": "ring-green-700", "imageId": 1 },
+        { "name": "Red", "class": "bg-red-500", "selectedClass": "ring-red-500", "imageId": 2 },
+        { "name": "Purple", "class": "bg-pink-700", "selectedClass": "ring-pink-700", "imageId": 3 }
       ],
       "accessories": [
         { "name": "Headset", "inStock": true },
@@ -578,10 +578,10 @@
         }
       ],
       "colors": [
-        { "name": "White", "class": "bg-gray-200", "selectedClass": "ring-gray-400" },
-        { "name": "Gray", "class": "bg-gray-800", "selectedClass": "ring-yellow-500" },
-        { "name": "Brown", "class": "bg-linear-to-r from-gray-300 to-yellow-500", "selectedClass": "ring-gray-400" },
-        { "name": "Gold", "class": "bg-red-900", "selectedClass": "ring-gray-900" }
+        { "name": "White", "class": "bg-gray-200", "selectedClass": "ring-gray-400", "imageId": 0 },
+        { "name": "Gray", "class": "bg-gray-800", "selectedClass": "ring-yellow-500", "imageId": 1 },
+        { "name": "Gold", "class": "bg-linear-to-r from-gray-300 to-yellow-500", "selectedClass": "ring-gray-400", "imageId": 2 },
+        { "name": "Brown", "class": "bg-red-900", "selectedClass": "ring-gray-900", "imageId": 3 }
       ],
      "accessories": [
         { "name": "Headset", "inStock": true },
@@ -638,10 +638,10 @@
         }
       ],
       "colors": [
-        { "name": "White", "class": "bg-blue-300", "selectedClass": "ring-gray-400" },
-        { "name": "Gray", "class": "bg-yellow-300", "selectedClass": "ring-yellow-500" },
-        { "name": "Brown", "class": "bg-pink-300", "selectedClass": "ring-gray-400" },
-        { "name": "Gold", "class": "bg-pink-600", "selectedClass": "ring-gray-900" }
+        { "name": "Blue", "class": "bg-blue-300", "selectedClass": "ring-gray-400", "imageId": 0 },
+        { "name": "Yellow", "class": "bg-yellow-300", "selectedClass": "ring-yellow-500", "imageId": 1 },
+        { "name": "Baby pink", "class": "bg-pink-300", "selectedClass": "ring-gray-400", "imageId": 2 },
+        { "name": "Pink", "class": "bg-pink-600", "selectedClass": "ring-gray-900", "imageId": 3 }
       ],
      "accessories": [
         { "name": "Headset", "inStock": true },
@@ -699,10 +699,10 @@
         }
       ],
       "colors": [
-        { "name": "White", "class": "bg-blue-300", "selectedClass": "ring-gray-400" },
-        { "name": "Gray", "class": "bg-yellow-300", "selectedClass": "ring-yellow-500" },
-        { "name": "Brown", "class": "bg-pink-300", "selectedClass": "ring-gray-400" },
-        { "name": "Gold", "class": "bg-pink-600", "selectedClass": "ring-gray-900" }
+        { "name": "Blue", "class": "bg-blue-300", "selectedClass": "ring-gray-400", "imageId": 0 },
+        { "name": "Gold", "class": "bg-yellow-300", "selectedClass": "ring-yellow-500", "imageId": 1 },
+        { "name": "Green", "class": "bg-green-300", "selectedClass": "ring-green-400", "imageId": 2 },
+        { "name": "Red", "class": "bg-red-600", "selectedClass": "ring-red-600", "imageId": 3 }
       ],
      "accessories": [
         { "name": "Headset", "inStock": true },
@@ -756,10 +756,10 @@
         }
       ],
       "colors": [
-        { "name": "Orange", "class": "bg-orange-600", "selectedClass": "ring-orange-600" },
-        { "name": "Pink", "class": "bg-blue-300", "selectedClass": "ring-blue-300" },
-        { "name": "Purple", "class": "bg-pink-500", "selectedClass": "ring-pink-500" },
-        { "name": "Yellow", "class": "bg-orange-400", "selectedClass": "ring-orange-400" }
+        { "name": "Orange", "class": "bg-orange-600", "selectedClass": "ring-orange-600", "imageId": 0 },
+        { "name": "Blue", "class": "bg-blue-300", "selectedClass": "ring-blue-300", "imageId": 1 },
+        { "name": "Pink", "class": "bg-pink-500", "selectedClass": "ring-pink-500", "imageId": 2 },
+        { "name": "Yellow", "class": "bg-orange-400", "selectedClass": "ring-orange-400", "imageId": 3 }
       ],
      "accessories": [
         { "name": "Headset", "inStock": true },
@@ -812,10 +812,10 @@
         }
       ],
       "colors": [
-        { "name": "Gold", "class": "bg-yellow-200", "selectedClass": "ring-yellow-200" },
-        { "name": "Blue", "class": "bg-blue-500", "selectedClass": "ring-blue-500" },
-        { "name": "Brown", "class": "bg-yellow-900", "selectedClass": "ring-yellow-900" },
-        { "name": "Red", "class": "bg-red-400", "selectedClass": "ring-red-400" }
+        { "name": "Gold", "class": "bg-yellow-200", "selectedClass": "ring-yellow-200", "imageId": 0 },
+        { "name": "Blue", "class": "bg-blue-500", "selectedClass": "ring-blue-500", "imageId": 1 },
+        { "name": "Brown", "class": "bg-yellow-900", "selectedClass": "ring-yellow-900", "imageId": 2 },
+        { "name": "Red", "class": "bg-red-400", "selectedClass": "ring-red-400", "imageId": 3 }
       ],
      "accessories": [
        { "name": "Headphone", "inStock": true },
@@ -868,10 +868,10 @@
         }
       ],
       "colors": [
-        { "name": "Blue", "class": "bg-blue-500", "selectedClass": "ring-blue-500" },
-        { "name": "Green", "class": "bg-green-600", "selectedClass": "ring-green-600" },
-        { "name": "Red", "class": "bg-red-500", "selectedClass": "ring-red-500" },
-        { "name": "Brown", "class": "bg-yellow-500", "selectedClass": "ring-yellow-500" }
+        { "name": "Blue", "class": "bg-blue-500", "selectedClass": "ring-blue-500", "imageId": 0 },
+        { "name": "Green", "class": "bg-green-600", "selectedClass": "ring-green-600", "imageId": 1 },
+        { "name": "Red", "class": "bg-red-500", "selectedClass": "ring-red-500", "imageId": 2 },
+        { "name": "Brown", "class": "bg-yellow-500", "selectedClass": "ring-yellow-500", "imageId": 3 }
       ],
      "accessories": [
        { "name": "Headphone", "inStock": true },
@@ -926,10 +926,10 @@
         }
       ],
       "colors": [
-        { "name": "Blue", "class": "bg-blue-300", "selectedClass": "ring-blue-300" },
-        { "name": "Pink", "class": "bg-pink-300", "selectedClass": "ring-pink-300" },
-        { "name": "White", "class": "bg-gray-200", "selectedClass": "ring-gray-200" },
-        { "name": "Red", "class": "bg-red-500", "selectedClass": "ring-red-500" }
+        { "name": "Blue", "class": "bg-blue-300", "selectedClass": "ring-blue-300", "imageId": 0 },
+        { "name": "Pink", "class": "bg-pink-300", "selectedClass": "ring-pink-300", "imageId": 1 },
+        { "name": "Red", "class": "bg-red-500", "selectedClass": "ring-red-500", "imageId": 2 },
+        { "name": "White", "class": "bg-gray-200", "selectedClass": "ring-gray-200", "imageId": 3 }
       ],
      "accessories": [
        { "name": "Headset", "inStock": true },
@@ -957,26 +957,6 @@
       "breadcrumbs": [
         { "id": 3, "name": "Earbud", "category": "earbud" }
       ]
-    }
-  ],
-  "cartItems": [
-    {
-      "id": "headset-unicorn-id",
-      "name": "Headset Unicorn",
-      "color": "Pink",
-      "price": "$80.00",
-      "quantity": 2,
-      "src": "../src/assets/img/products/headset-unicorn/headset-unicorn-pink.png",
-      "alt": "Headset Unicorn Pink"
-    },
-    {
-      "id": "gold-exp-headphone-id",
-      "name": "Gold Exp Headphone",
-      "color": "Blue",
-      "price": "$20.00",
-      "quantity": 1,
-      "src": "../src/assets/img/products/gold-exp-headphone/gold-exp-headphone-blue.png",
-      "alt": "Gold EXP Headphone Blue"
     }
   ]
 }

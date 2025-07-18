@@ -14,9 +14,12 @@ import Heart from "../../assets/img/heart";
 import Star from '../../assets/img/star';
 import { Link } from 'react-router-dom';
 import BtnCart from '../BtnCart/BtnCart';
+import { ArrivalsSwiperProps } from '../../types/Product';
 
-const ArrivalsSwiper = ({ products }: any) => {
+const ArrivalsSwiper: React.FC<ArrivalsSwiperProps> = ({ products }) => {
+
   return (
+    <>
     <Swiper
       slidesPerView={4.5}
       spaceBetween={15}
@@ -51,8 +54,10 @@ const ArrivalsSwiper = ({ products }: any) => {
               ) : null}
               <img src={p.src} alt={p.alt} />
 
-              <BtnCart className="cart-btn"
-              product={p} />
+              <BtnCart 
+                className="cart-btn"
+                product={p}
+              />
               
               <div className="like">
                 <Heart fill={p.like === false ? "transparent" : "red"} />
@@ -78,8 +83,8 @@ const ArrivalsSwiper = ({ products }: any) => {
       ))}
 
       <div className="swiper-pagination" />
-
     </Swiper>
+    </>
   );
 };
 

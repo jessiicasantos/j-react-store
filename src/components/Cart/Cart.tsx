@@ -1,20 +1,16 @@
 'use client'
 
-import { Dialog, DialogBackdrop, DialogPanel, DialogTitle } from '@headlessui/react';
 import { XMarkIcon } from '@heroicons/react/24/outline';
 import "./Cart.css";
+import { Dialog, DialogBackdrop, DialogPanel, DialogTitle } from '@headlessui/react';
 import { useCart } from './CartContext';
 
 export default function Cart() {
-  const { cart, dispatch, isOpen, setIsOpen } = useCart();
-
-  const handleRemove = (id: string) => {
-    dispatch({ type: "REMOVE_FROM_CART", payload: id });
-  };
+  const { state, dispatch, isOpen, setIsOpen } = useCart();
 
   return (
     <div>
-      <Dialog open={isOpen} onClose={setIsOpen} className="shop-cart">
+      <Dialog open={isOpen} onClose={setIsOpen} className="shop-cart">        
         <DialogBackdrop
           transition
           className="dialog-backdrop"
@@ -44,9 +40,12 @@ export default function Cart() {
 
                     <div className="products">
                       <div className="flow-root">
+                        {state.items.length === 0 && 
+                          <p>Seu carrinho está vazio.</p>
+                        }
                         <ul role="list" className="divider-gray">
-                          {cart.items.map((c) => (
-                            <li key={c.id}>
+                          {state.items.map((c) => (
+                            <li key={`${c.id}-${c.color}-${c.accessory}`}>
                               <div className="img-wrapper">
                                 <img alt={c.alt} src={c.src} />
                               </div>
@@ -56,14 +55,51 @@ export default function Cart() {
                                     <h3>
                                       <a href={`../../products/${c.id}`}>{c.name}</a>
                                     </h3>
-                                    <p>{c.price}</p>
+                                    <p>
+                                      {c.price.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}
+                                    </p>
                                   </div>
-                                  <p>{c.color}</p>
+                                  <p className="text-lg">{c.color}</p>
                                 </div>
-                                <div className="qty-remove">
-                                  <p>Qty {c.quantity}</p>
+                                <div className="qty-remove my-3">
+                                  <div className="incDecBtns">
+                                    <button 
+                                      className="incBtn"
+                                      onClick={() => dispatch({ 
+                                        type: "INCREMENT_QUANTITY", payload: {
+                                          id: c.id,
+                                          color: c.color,
+                                          accessory: c.accessory
+                                        }
+                                      })}
+                                    >+</button>
+                                    <span>
+                                      {c.quantity}
+                                    </span>
+                                    <button
+                                      className="decBtn"
+                                      onClick={() => dispatch({ 
+                                        type: "DECREMENT_QUANTITY", 
+                                        payload: {
+                                          id: c.id,
+                                          color: c.color,
+                                          accessory: c.accessory
+                                        }
+                                      })}
+                                    >-</button>  
+                                  </div>
+
                                   <div key={c.id} className="flex">
-                                    <button onClick={() => handleRemove(c.id)} className="btn-remove">Remove</button>
+                                    <button onClick={() => dispatch({
+                                      type: "REMOVE_ITEM",
+                                      payload: {
+                                        id: c.id,
+                                        color: c.color,
+                                        accessory: c.accessory
+                                      }
+                                    })} className="btn-remove">
+                                      Remove
+                                    </button>
                                   </div>
                                 </div>
                               </div>
@@ -77,7 +113,7 @@ export default function Cart() {
                   <div className="bottom-cart">
                     <div className="subtotal">
                       <p>Subtotal</p>
-                      <p>$100.00</p>
+                      <p>{state.total.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}</p>
                     </div>
                     <p>Shipping and taxes calculated at checkout.</p>
                     <div className="checkout-wrapper">
