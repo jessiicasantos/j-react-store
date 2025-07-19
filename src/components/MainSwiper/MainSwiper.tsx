@@ -15,8 +15,19 @@ import Star from '../../assets/img/star';
 import { Link } from 'react-router-dom';
 import BtnCart from '../BtnCart/BtnCart';
 import { ArrivalsSwiperProps } from '../../types/Product';
+import { useState } from 'react';
 
 const ArrivalsSwiper: React.FC<ArrivalsSwiperProps> = ({ products }) => {
+  const [ likedItems, setLikedItems ] = useState<{[ id: string ]: boolean}>({});
+
+  const toggleLike = (id: string) => {
+    console.log(likedItems);
+
+    setLikedItems(prev => ({
+      ...prev,
+      [id]: !prev[id]
+    }));
+  };
 
   return (
     <>
@@ -59,9 +70,13 @@ const ArrivalsSwiper: React.FC<ArrivalsSwiperProps> = ({ products }) => {
                 product={p}
               />
               
-              <div className="like">
-                <Heart fill={p.like === false ? "transparent" : "red"} />
-              </div>
+              <button className="like" onClick={(e: any) => {
+                  e.preventDefault(); 
+                  toggleLike(p.id)
+                }}
+              >
+                <Heart fill={likedItems[p.id] ? "red" : "transparent"} />
+              </button>
             </div>
 
             <div className="bottom">

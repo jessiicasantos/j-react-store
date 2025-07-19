@@ -1,7 +1,7 @@
 @reference "../../index.css";
 
 .swiper .like {
-    @apply absolute top-[10px] right-[10px] bg-white rounded-full p-1 drop-shadow-xl;
+    @apply absolute top-[10px] right-[10px] bg-white rounded-full p-1 drop-shadow-xl z-40;
 }
 
 .swiper .like svg {
