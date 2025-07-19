@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { StarIcon } from '@heroicons/react/20/solid';
 import { Radio, RadioGroup } from '@headlessui/react';
 import { singleProduct } from '../../data.json';
@@ -15,16 +15,26 @@ function classNames(...classes: any) {
 }
 
 export default function SingleProduct() {
-  const [selectedColor, setSelectedColor] = useState(
-    singleProduct[0]?.colors ? singleProduct[0].colors[0] : undefined
+  const [selectedColor, setSelectedColor] = useState<any>(
+    undefined
   )
-  const [selectedAcessory, setSelectedAcessory] = useState(
-    singleProduct[0]?.accessories ? singleProduct[0].accessories[2] : undefined
+  const [selectedAcessory, setSelectedAcessory] = useState<any>(
+    undefined
   )
+
   const { productId } = useParams();
   const product = singleProduct.find((product: any) => product.id === productId);
   const { name, price, breadcrumbs, images, colors, accessories, description, highlights, details } = product || {};
   const selectedImage = product?.images?.find(img => img.id === selectedColor?.imageId);
+
+  useEffect(() => {
+    if(product?.colors?.length) {
+      setSelectedColor(product.colors[0]);
+    }
+    if(product?.accessories?.length) {
+      setSelectedAcessory(product.accessories[0]);
+    }
+  }, [product]);
   
   return (
     <div className="single-product">

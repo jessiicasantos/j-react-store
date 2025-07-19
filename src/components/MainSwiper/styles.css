@@ -8,6 +8,10 @@
     @apply size-5;
 }
 
+.swiper .like:hover > svg {
+    @apply transition duration-700 ease-in-out fill-red-500;
+}
+
 .swiper .bottom {
     @apply p-5 text-left text-black;
 }

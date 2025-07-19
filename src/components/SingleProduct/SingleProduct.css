@@ -100,6 +100,10 @@
   @apply size-8 rounded-full border border-black/10;
 }
 
+.colorSelected:hover {
+  @apply bg-blue-300;
+}
+
 .accessories {
   @apply mt-10;
 }
@@ -113,11 +117,11 @@
 }
 
 .accessories .radio-group {
-  @apply grid grid-cols-4 gap-4 sm:grid-cols-8 lg:grid-cols-4;
+  @apply grid grid-cols-4 gap-4 sm:grid-cols-8 lg:grid-cols-4 hover:border-blue-300;
 }
 
-.accessories .radio-group {
-  @apply grid grid-cols-4 gap-4 sm:grid-cols-8 lg:grid-cols-4;
+.accessories .radio-group:hover > span {
+  @apply hover:ring-indigo-500 hover:ring-1;
 }
 
 .accessories .active {
