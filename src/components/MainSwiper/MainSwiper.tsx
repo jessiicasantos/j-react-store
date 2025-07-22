@@ -15,19 +15,35 @@ import Star from '../../assets/img/star';
 import { Link } from 'react-router-dom';
 import BtnCart from '../BtnCart/BtnCart';
 import { ArrivalsSwiperProps } from '../../types/Product';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { useAuth } from '../Login/AuthContext';
 
 const ArrivalsSwiper: React.FC<ArrivalsSwiperProps> = ({ products }) => {
+  const { user } = useAuth();
   const [ likedItems, setLikedItems ] = useState<{[ id: string ]: boolean}>({});
 
-  const toggleLike = (id: string) => {
-    console.log(likedItems);
+const toggleLike = (id: string) => {
+  setLikedItems(prev => {
+    const updated = { ...prev, [id]: !prev[id] };
 
-    setLikedItems(prev => ({
-      ...prev,
-      [id]: !prev[id]
-    }));
-  };
+    if (user?.id) {
+      localStorage.setItem(`likes-${user.id}`, JSON.stringify(updated));
+    }
+
+    return updated;
+  });
+
+  console.log(likedItems);
+};
+
+useEffect(() => {
+  if(user?.id && Object.keys(likedItems).length === 0) {
+    const stored = localStorage.getItem(`likes-${user.id}`);
+    if(stored) {
+      setLikedItems(JSON.parse(stored));
+    }
+  }
+}, [user?.id])
 
   return (
     <>
@@ -66,7 +82,7 @@ const ArrivalsSwiper: React.FC<ArrivalsSwiperProps> = ({ products }) => {
               <img src={p.src} alt={p.alt} />
 
               <BtnCart 
-                className="cart-btn"
+                className="cart-btn btn-gray-800"
                 product={p}
               />
               

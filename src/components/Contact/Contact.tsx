@@ -4,18 +4,46 @@ import { userValidationSchema } from "../../validation/userValidation";
 import { ChevronDownIcon } from '@heroicons/react/16/solid';
 import ContactUpload from "./ContactUpload";
 import "./Contact.css";
+import axios from "axios";
+import { useNotification } from "../NotificationContext/NotificationContext";
 
 const Contact = () => {
-  const { register, handleSubmit, formState: { errors } } = useForm({
+    const { setNotification } = useNotification();
+  const { register, handleSubmit, reset, formState: { errors } } = useForm({
     resolver: yupResolver(userValidationSchema)
   });
-  
-  const onSubmit = (data: any) => {
-    data.preventDefault();
-    
-    console.log(data);
+
+  const onSubmit = async (data: any) => {
+    try {
+      const formData = new FormData();
+
+      formData.append("firstname", data.firstname);
+      formData.append("lastname", data.lastname);
+      formData.append("email", data.email);
+      formData.append("phone", data.phone);
+      formData.append("subject", data.subject);
+      formData.append("message", data.message);
+      formData.append("contactAgreement", data.contactAgreement ? "true" : "false");
+
+      if(data.upload?.[0]) {
+        formData.append("upload", data.upload[0]);
+      }
+
+      const response = await axios.post("http://localhost:5000/api/form", formData, {
+        headers: {
+          "Content-Type": "multipart/form-data"
+        }  
+      })
+
+      console.log(response);
+      
+      setNotification({ message: 'Success!', type: 'success' });
+    } catch(error) {
+      console.error("Erro no envio: ", error);
+      setNotification({ message: 'Error', type: 'error' });
+    }
   };
-  
+
   return (
     <div className="contact-us container">
       <h2>Contact Us</h2>
@@ -75,53 +103,60 @@ const Contact = () => {
             </label>
           </div>
 
-          <ContactUpload />
+          <ContactUpload register={register} errors={errors} />
 
-          <fieldset className="agree-wrapper">
-            <div>
-              <div className="check-wrapper group">
-                <input
-                  id="contact-agreement"
-                  name="contact-agreement"
-                  type="checkbox"
-                  aria-describedby="contact-agreement-description"
-                />
-                <svg
-                  fill="none"
-                  viewBox="0 0 14 14"
-                  className="pointer-events-none col-start-1 row-start-1 size-3.5 self-center justify-self-center stroke-white group-has-disabled:stroke-gray-950/25"
-                >
-                  <path
-                    d="M3 8L6 11L11 3.5"
-                    strokeWidth={2}
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="opacity-0 group-has-checked:opacity-100"
+          <div className="agree">
+            <fieldset className="agree-wrapper">
+              <div>
+                <div className="check-wrapper group">
+                  <input
+                    id="contactAgreement"
+                    {...register("contactAgreement")}
+                    type="checkbox"
+                    aria-describedby="contact-agreement-description"
                   />
-                  <path
-                    d="M3 7H11"
-                    strokeWidth={2}
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="opacity-0 group-has-indeterminate:opacity-100"
-                  />
-                </svg>
+                  <svg
+                    fill="none"
+                    viewBox="0 0 14 14"
+                    className="pointer-events-none col-start-1 row-start-1 size-3.5 self-center justify-self-center stroke-white group-has-disabled:stroke-gray-950/25"
+                  >
+                    <path
+                      d="M3 8L6 11L11 3.5"
+                      strokeWidth={2}
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="opacity-0 group-has-checked:opacity-100"
+                    />
+                    <path
+                      d="M3 7H11"
+                      strokeWidth={2}
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="opacity-0 group-has-indeterminate:opacity-100"
+                    />
+                  </svg>
+                </div>
+                <label id="contact-description">
+                  I agree to be contacted by email or phone.
+                </label>
               </div>
-              <label id="contact-description">
-                I agree to be contacted by email or phone.
-              </label>
-              {/* <p>{errors.upload?.message}</p> */}
-            </div>
-          </fieldset>
+              <div>
+              </div>
+            </fieldset>
+            <p>{errors.contactAgreement?.message}</p>
+          </div>
         </div>
 
         <div className="cancel">
-          <button type="button" className="text-sm/6 font-semibold text-gray-900">
+          <button 
+            type="button" 
+            onClick={() => reset()}
+            className="text-sm/6 font-semibold text-gray-900">
             Cancel
           </button>
           <button
             type="submit"
-            className="save"
+            className="save btn-orange"
           >
             Save
           </button>

@@ -25,5 +25,5 @@
 }
 
 .promotions > .right > a {
-  @apply bg-black text-white p-3 rounded-md block mt-6 w-fit px-10 text-center;
+  @apply mt-6 w-fit px-10;
 }

@@ -66,10 +66,6 @@ nav .submenu svg {
   @apply -mr-1 size-5 text-gray-400;
 }
 
-nav .submenu-items {
-  @apply absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white ring-1 shadow-lg ring-black/5 transition focus:outline-hidden data-closed:scale-95 data-closed:transform data-closed:opacity-0 data-enter:duration-100 data-enter:ease-out data-leave:duration-75 data-leave:ease-in;
-}
-
 nav .submenu-items > div {
   @apply py-1;
 }
@@ -79,7 +75,7 @@ nav .submenu-items {
 }
 
 nav .submenu .submenu-items .link-item {
-  @apply block px-4 py-2 text-sm data-focus:bg-gray-100 data-focus:outline-hidden;
+  @apply block m-0 text-sm data-focus:outline-hidden;
 }
 
 nav .nav-right {
@@ -124,7 +120,7 @@ nav .profile-menu {
 }
 
 nav .profile-menu button {
-  @apply relative flex rounded-full bg-gray-800 text-sm focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800 focus:outline-hidden cursor-pointer;
+  @apply text-orange-hover font-semibold w-full hover:font-extrabold text-sm focus:ring-2 focus:ring-white focus:outline-hidden cursor-pointer;
 }
 
 nav .profile-menu img {
@@ -136,7 +132,7 @@ nav .profile-menu > div {
 }
 
 nav .profile-menu h3 {
-  @apply block px-4 py-2 text-sm text-light-blue-200 m-0;
+  @apply block px-4 py-2 text-sm text-gray-800 m-0;
 }
 
 nav .profile-menu a {
@@ -163,16 +159,21 @@ nav .mb-nav .submenu-group > div {
   @apply py-1;
 }
 
-nav .link-item,
-.menubtn {
-  @apply font-medium text-[var(--color-light-blue-100)] hover:text-[var(--color-light-blue-200)] decoration-inherit;
+nav .submenu .chevronDownIcon {
+  @apply w-4 h-4 my-auto;
 }
 
-nav .menubtn {
-  @apply inline-flex w-full justify-center gap-x-1.5 rounded-md px-3 py-2 shadow-xs text-base font-medium hover:bg-gray-700 cursor-pointer data-active:bg-gray-900;
+nav .link-item,
+.menubtn {
+  @apply font-medium text-[var(--color-orange-authentic)] hover:text-[var(--color-orange-authentic)] decoration-inherit;
+}
+
+nav .menubtn,
+nav .links-wrapper .link-item {
+  @apply inline-flex w-full justify-center gap-x-1.5 rounded-md p-2 shadow-xs text-base font-medium mx-2 w-auto cursor-pointer hover:bg-orange-authentic hover:text-[#fafafa];
 }
 
 nav .link-item.active,
 nav .menubtn.active {
-  @apply bg-gray-900 hover:bg-gray-700 rounded-md px-3 py-2 mx-[5px] block;
+  @apply bg-orange-authentic text-[#fafafa] block;
 }

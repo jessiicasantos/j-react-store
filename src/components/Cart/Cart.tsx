@@ -52,19 +52,17 @@ export default function Cart() {
                               <div className="content">
                                 <div>
                                   <div className="name-price">
-                                    <h3>
-                                      <a href={`../../products/${c.id}`}>{c.name}</a>
-                                    </h3>
-                                    <p>
+                                    <a href={`../../products/${c.id}`}>{c.name}</a>
+                                    <span>
                                       {c.price.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}
-                                    </p>
+                                    </span>
                                   </div>
                                   <p className="text-lg">{c.color}</p>
                                 </div>
                                 <div className="qty-remove my-3">
                                   <div className="incDecBtns">
                                     <button 
-                                      className="incBtn"
+                                      className="incBtn btn-gray-800"
                                       onClick={() => dispatch({ 
                                         type: "INCREMENT_QUANTITY", payload: {
                                           id: c.id,
@@ -77,7 +75,7 @@ export default function Cart() {
                                       {c.quantity}
                                     </span>
                                     <button
-                                      className="decBtn"
+                                      className="decBtn btn-gray-800"
                                       onClick={() => dispatch({ 
                                         type: "DECREMENT_QUANTITY", 
                                         payload: {

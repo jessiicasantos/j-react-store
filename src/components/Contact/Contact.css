@@ -1,12 +1,6 @@
 
 @reference "../../index.css";
 
-.contact-us input,
-.contact-us select,
-.contact-us textarea {
-  @apply block w-full rounded-md text-base text-gray-900 placeholder:text-gray-400 sm:text-sm/6;
-}
-
 .contact-us input:not([type="checkbox"]) {
   @apply bg-gray-50 px-3 py-1.5 outline-1 -outline-offset-1 outline-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600;
 }
@@ -25,12 +19,6 @@
 
 .contact-us .select-wrapper {
   @apply grid grid-cols-1;
-}
-
-.contact-us input + p,
-.contact-us textarea + p,
-.contact-us .select-wrapper + p {
-  @apply text-red-500;
 }
 
 .contact-us .form-wrapper {
@@ -54,19 +42,27 @@
 }
 
 .upload {
-  @apply col-span-full border-b border-light-blue-100 mb-2 pb-12;
+  @apply col-span-full border-b border-orange-authentic mb-2 pb-12;
 }
 
 .file-upload-wrapper {
-  @apply mt-4 flex text-sm/6 text-gray-600;
+  @apply mt-4 flex justify-center text-sm/6 text-gray-600;
 }
 
 .file-upload-wrapper > label > span {
-  @apply text-light-blue-200 cursor-pointer;
+  @apply text-orange-authentic cursor-pointer;
 }
 
 .file-upload-wrapper > p {
   @apply pl-1;
+}
+
+.uploaded-name {
+  @apply mt-3 text-sm
+}
+
+.uploaded-name strong {
+  @apply text-green-700
 }
 
 .subject > label {

@@ -11,10 +11,8 @@ const Hero = () => {
   const getHero = async () => {
     try {
       let response = await axios.get('http://localhost:5000/api/hero');
-      console.log(response);
 
       let data = await response.data;
-      console.log(data);
 
       setData(data);
     } catch(error) {
@@ -40,7 +38,7 @@ const Hero = () => {
               </h1>
               <Link
                 to={`category/${h.category}`}
-                className="shopnow"
+                className="shopnow btn-orange"
               >
                 {h.hrefText}
                 <ArrowLongRight />

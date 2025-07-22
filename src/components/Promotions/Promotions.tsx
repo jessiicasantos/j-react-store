@@ -19,7 +19,7 @@ const Promotions = () => {
                 {/* TIMER */}
                 <Countdown />
                 
-                <Link to={p.href}>{p.hrefText}</Link>
+                <Link to={p.href} className="btn-black">{p.hrefText}</Link>
             </div>
         </div>
       ))}    

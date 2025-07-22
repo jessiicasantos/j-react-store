@@ -1,9 +1,9 @@
 @reference "../../index.css";
 
 .cart-btn {
-  @apply absolute bottom-[10px] left-1/2 transform -translate-x-1/2 bg-gray-800 p-2 w-[90%] rounded-lg text-white text-sm z-40 hover:bg-light-blue-200;
+  @apply absolute bottom-[10px] left-1/2 transform -translate-x-1/2 p-2 w-[90%] text-sm z-40;
 }
 
 .add-cart {
-  @apply  mt-10 flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-8 py-3 text-base font-medium text-white hover:bg-indigo-700 focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:outline-hidden;
+  @apply mt-10 w-full px-8 py-3 focus:ring-2 focus:ring-orange-hover focus:ring-offset-2 focus:outline-hidden;
 }

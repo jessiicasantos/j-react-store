@@ -16,7 +16,7 @@ const ShopCollection = () => {
                   {c.id == 0 &&
                     <div className="left-wrapper">
                       <img src={c.src} alt={c.alt} />
-                      <Link to={`category/${c.category}`}>
+                      <Link to={`category/${c.category}`} className="btn-gray-800">
                         {c.category}
                       </Link>
                     </div>
@@ -30,7 +30,7 @@ const ShopCollection = () => {
                   {c.id !== 0 &&
                     <div className="right-wrapper">
                       <img src={c.src} alt={c.alt} />
-                      <Link to={`category/${c.category}`}>
+                      <Link to={`category/${c.category}`} className="btn-gray-800">
                         {c.category}
                       </Link>
                     </div>

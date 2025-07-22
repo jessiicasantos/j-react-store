@@ -21,7 +21,7 @@ footer .left > div {
 }
 
 footer .left a {
-  @apply flex items-center;
+  @apply flex items-center hover:text-gray-100;
 }
 
 footer .left img {
@@ -66,4 +66,13 @@ footer .right a > svg {
 
 footer .right {
   @apply hover:underline;
+}
+
+footer .left a,
+footer .right a {
+  @apply transition duration-700 ease-in-out;
+}
+
+footer .right a:hover img {
+  @apply brightness-[0] invert-[1];
 }

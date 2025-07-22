@@ -4,10 +4,6 @@
   @apply flex flex-col justify-center items-center mx-auto py-12 px-6 lg:px-8 w-full max-w-2xl lg:max-w-7xl;
 }
 
-.shopCollection {
-  @apply flex flex-col justify-center items-center mx-auto py-12 px-6 lg:px-8 w-full max-w-2xl lg:max-w-7xl;
-}
-
 .shopGrid {
   @apply grid grid-cols-1 md:grid-cols-2 md:gap-x-4 md:gap-x-8 w-full;
 }
@@ -23,7 +19,6 @@
 .shopGrid img {
   @apply rounded-lg;
 }
-
 
 .shopGrid .left-wrapper {
   @apply relative flex justify-center items-center h-full w-full;
@@ -58,5 +53,5 @@
 }
 
 .shopGrid .right .right-wrapper > a {
-  @apply dark:bg-gray-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400 bottom-4 z-10 absolute text-base font-medium leading-none text-gray-800 py-3 w-36 bg-white;
+  @apply rounded-sm absolute bottom-4 z-10 text-base font-medium py-3 w-36;
 }

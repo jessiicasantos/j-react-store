@@ -14,7 +14,7 @@
 }
 
 .socials h6 {
-  @apply text-base/7 font-semibold text-indigo-600 uppercase;
+  @apply text-base/7 font-semibold text-orange-hover uppercase;
 }
 
 .socials h4 {

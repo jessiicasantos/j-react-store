@@ -6,15 +6,14 @@
   font-weight: 400;
 }
 
-#root > div {
+#root nav + div {
   flex: 1;
 }
 
 @theme {
   --font-display: "Inter", sans-serif;
-  --color-light-blue-100: #646cff;
-  --color-light-blue-200: #535bf2;
   --color-orange-authentic: #FF5630;
+  --color-orange-hover: #ff2f00;
 }
 
 @utility container {
@@ -40,11 +39,23 @@ h3 {
 }
 
 button {
-  @apply cursor-pointer;
+  @apply cursor-pointer flex items-center justify-center;
 }
 
-.shopnow {
-  @apply flex mb-15 rounded-xl px-3.5 py-2.5 text-sm font-semibold text-gray-50 shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 w-fit bg-orange-authentic text-gray-50;
+.btn-orange {
+  @apply flex rounded-xl px-3.5 py-2.5 text-sm font-semibold text-gray-50 shadow-xs hover:bg-orange-hover focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 w-fit bg-orange-authentic text-gray-50;
+}
+
+.btn-gray-800 {
+  @apply bg-gray-800 text-white text-base font-medium hover:bg-orange-hover rounded-md px-8 py-3;
+}
+
+.btn-remove {
+    @apply font-medium text-gray-800 hover:text-orange-hover;
+}
+
+.btn-black {
+  @apply bg-black text-white p-3 rounded-md;
 }
 
 .grid-four-columns {
@@ -87,6 +98,10 @@ button {
   @apply mt-1 text-lg font-medium text-black;
 }
 
+.img-title {
+    @apply sm:mx-auto sm:w-full sm:max-w-sm;
+}
+
 .one-col {
   @apply sm:col-span-full w-full;
 }
@@ -96,31 +111,19 @@ button {
 }
 
 .agree-wrapper > div {
-  @apply flex shrink-0 items-center;
-}
-
-.agree-wrapper > div {
-  @apply flex shrink-0 items-center;
+  @apply flex;
 }
 
 .check-wrapper {
-  @apply grid grid-cols-1;
-}
-
-.check-wrapper > input {
-  @apply col-start-1 row-start-1 appearance-none rounded-sm border border-light-blue-100 bg-white outline-2 outline-light-blue-200 checked:bg-light-blue-100 forced-colors:appearance-auto p-2 cursor-pointer;
-}
-
-.agree-wrapper > div {
-  @apply flex shrink-0 items-center;
-}
-
-.check-wrapper {
-  @apply grid grid-cols-1;
+  @apply grid grid-cols-1 w-[20px] h-[20px];
 }
 
 .check-wrapper input {
-  @apply col-start-1 row-start-1 appearance-none rounded-sm border border-light-blue-100 bg-white outline-2 outline-light-blue-200 checked:bg-light-blue-100 forced-colors:appearance-auto p-2 cursor-pointer;
+  @apply col-start-1 row-start-1 appearance-none rounded-md border border-orange-authentic bg-white outline-2 outline-orange-authentic checked:bg-orange-authentic forced-colors:appearance-auto cursor-pointer;
+}
+
+.agree {
+  @apply col-span-full;
 }
 
 .agree-wrapper > div > label {
@@ -132,11 +135,11 @@ button {
 }
 
 .save {
-  @apply rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600;
+  @apply rounded-md px-3 py-2;
 }
 
 .box {
-  @apply mt-2 flex justify-center rounded-lg border border-dashed border-gray-400 outline-1 -outline-offset-1 outline-gray-400 px-6 py-10 w-[50%] mx-auto;
+  @apply mt-2 flex flex-col justify-center rounded-lg border border-dashed border-gray-400 outline-1 -outline-offset-1 outline-gray-400 px-6 py-10 w-[50%] mx-auto;
 }
 
 .box > div {
@@ -159,12 +162,8 @@ button {
   @apply text-xs/5 text-gray-600;
 }
 
-.breadcrumb {
-  @apply bg-light-blue-200;
-}
-
 .breadcrumb svg {
-  @apply h-5 w-4 text-gray-400;
+  @apply h-5 w-4 text-orange-authentic;
 }
 
 .breadcrumb ol {
@@ -176,13 +175,25 @@ button {
 }
 
 .breadcrumb ol > li > a {
-  @apply mr-2 text-sm font-medium text-gray-300;
+  @apply mr-2 text-sm font-medium text-orange-authentic hover:text-orange-hover;
 }
 
 .breadcrumb ol > li > a:last-child {
-  @apply font-extrabold text-gray-100 hover:text-gray-200;
+  @apply font-extrabold text-orange-authentic hover:text-orange-hover;
 }
 
-.breadcrumb ol > li > a:last-child {
-  @apply font-extrabold text-gray-100 hover:text-gray-200;
+form p {
+  @apply text-red-500 text-sm font-medium my-2;
+}
+
+form .box p {
+  @apply my-0 text-gray-600 text-sm;
+}
+
+.shopCollection > a,
+.shopCollection .shopGrid .left a,
+.shopCollection .shopGrid .right a,
+.promotions > .right > a,
+.newsletter form button {
+  @apply transition duration-700 ease-in-out hover:bg-orange-hover;
 }

@@ -3,7 +3,7 @@
  import "./Countdown.css";
 
  const Countdown = () => {
-     const deadlineRef = useRef(new Date('July 15 2025'));  // Armazena a data final sem recriar
+     const deadlineRef = useRef(new Date('August 15 2025'));  // Armazena a data final sem recriar
      const intervalRef = useRef<number | null>(null);
 
      const [ days, setDays ] = useState(0);

@@ -209,7 +209,7 @@ export default function SingleProduct() {
               </fieldset>
             </div>
 
-            {product && <BtnCart className="add-cart" 
+            {product && <BtnCart className="add-cart btn-orange" 
               product={{
                 ...product,
                 color: selectedColor?.name,

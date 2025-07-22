@@ -34,7 +34,7 @@ const Newsletter = () => {
             
             <button
               type="submit"
-            
+              className="btn-orange"
             >
               Subscribe
             </button>

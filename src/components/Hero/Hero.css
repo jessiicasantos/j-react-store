@@ -63,3 +63,7 @@
 .customersCircle .txt p {
   @apply text-gray-900 font-bold leading-none;
 }
+
+.shopnow {
+  @apply mb-15;
+}
