@@ -1,11 +1,11 @@
-import { useState } from "react";
+import React, { useState } from "react";
 
 
 const ValidateInput = () => {
   const [ inputValue, setInputValue ] = useState('');
   const [ inputError, setInputError ] = useState<null | string>(null);
 
-  const handleInputChange = (event: any) => {
+  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const value = event.target.value;
     setInputValue(value);
 

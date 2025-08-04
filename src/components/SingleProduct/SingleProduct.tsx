@@ -16,10 +16,10 @@ function classNames(...classes: any) {
 
 export default function SingleProduct() {
   const [selectedColor, setSelectedColor] = useState<any>(
-    undefined
+    ""
   )
   const [selectedAcessory, setSelectedAcessory] = useState<any>(
-    undefined
+    ""
   )
 
   const { productId } = useParams();
@@ -137,7 +137,7 @@ export default function SingleProduct() {
               <h3>Color</h3>
 
               <fieldset aria-label="Choose a color">
-                <RadioGroup value={selectedColor} onChange={setSelectedColor} className="radiogroup">
+                <RadioGroup value={selectedColor || ""} onChange={setSelectedColor} className="radiogroup">
                   {colors?.map((color: any) => (
                     <Radio
                       key={color.name}
@@ -213,11 +213,11 @@ export default function SingleProduct() {
               product={{
                 ...product,
                 color: selectedColor?.name,
+                acessory: selectedAcessory?.name,
                 alt: selectedImage?.alt,
                 src: selectedImage?.src,
                 quantity: 1,
-                acessory: selectedAcessory?.name
-              }} 
+              }}
             />
             }
           </form>

@@ -3,7 +3,7 @@ export interface CartItem {
     src: string;
     alt: string;
     color: string;
-    accessory?: string;
+    accessory: string;
     name: string;
     price: number;
     quantity: number;

@@ -1,10 +1,11 @@
 import "./BtnCart.css";
 import { useCart } from "../Cart/CartContext";
+import React from "react";
 
 const BtnCart = ({ className, product }: any) => {
   const { dispatch, setIsOpen } = useCart();
 
-  const addToCart = (e: any) => {
+  const addToCart = (e: React.FormEvent) => {
     e.preventDefault();
 
     const item = {
@@ -12,6 +13,7 @@ const BtnCart = ({ className, product }: any) => {
       src: product.src,
       alt: product.alt,
       color: product.color,
+      accessory: product.accessory,
       name: product.name,
       price: parseFloat(product.price.replace("$", "")),
       quantity: product.quantity || 1,

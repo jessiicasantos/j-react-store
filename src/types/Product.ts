@@ -6,6 +6,7 @@ export interface swiperProductType {
     category: string;
     price: string | number;
     color: string;
+    accessory: string;
     reviews: number;
     new: boolean;
     like: boolean;

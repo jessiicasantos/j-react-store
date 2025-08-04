@@ -58,6 +58,7 @@ export default function Cart() {
                                     </span>
                                   </div>
                                   <p className="text-lg">{c.color}</p>
+                                  <p className="text-lg">{c.accessory}</p>
                                 </div>
                                 <div className="qty-remove my-3">
                                   <div className="incDecBtns">

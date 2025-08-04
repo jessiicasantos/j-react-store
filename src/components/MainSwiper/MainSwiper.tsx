@@ -15,7 +15,7 @@ import Star from '../../assets/img/star';
 import { Link } from 'react-router-dom';
 import BtnCart from '../BtnCart/BtnCart';
 import { ArrivalsSwiperProps } from '../../types/Product';
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useAuth } from '../Login/AuthContext';
 
 const ArrivalsSwiper: React.FC<ArrivalsSwiperProps> = ({ products }) => {
@@ -39,6 +39,7 @@ const toggleLike = (id: string) => {
 useEffect(() => {
   if(user?.id && Object.keys(likedItems).length === 0) {
     const stored = localStorage.getItem(`likes-${user.id}`);
+    
     if(stored) {
       setLikedItems(JSON.parse(stored));
     }
@@ -86,7 +87,7 @@ useEffect(() => {
                 product={p}
               />
               
-              <button className="like" onClick={(e: any) => {
+              <button className="like" onClick={(e: React.FormEvent) => {
                   e.preventDefault(); 
                   toggleLike(p.id)
                 }}
