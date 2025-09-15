@@ -1,6 +1,6 @@
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm } from "react-hook-form";
-import { userValidationSchema } from "../../validation/userValidation";
+import { contactValidationSchema } from "../../validation/userValidation";
 import { ChevronDownIcon } from '@heroicons/react/16/solid';
 import ContactUpload from "./ContactUpload";
 import "./Contact.css";
@@ -8,9 +8,9 @@ import axios from "axios";
 import { useNotification } from "../NotificationContext/NotificationContext";
 
 const Contact = () => {
-    const { setNotification } = useNotification();
+  const { setNotification } = useNotification();
   const { register, handleSubmit, reset, formState: { errors } } = useForm({
-    resolver: yupResolver(userValidationSchema)
+    resolver: yupResolver(contactValidationSchema)
   });
 
   const onSubmit = async (data: any) => {
@@ -24,17 +24,18 @@ const Contact = () => {
       formData.append("subject", data.subject);
       formData.append("message", data.message);
       formData.append("contactAgreement", data.contactAgreement ? "true" : "false");
-
+      
       if(data.upload?.[0]) {
-        formData.append("upload", data.upload[0]);
+        formData.append("upload", data.upload[0]);        
       }
-
+      
       const response = await axios.post("http://localhost:5000/api/form", formData, {
         headers: {
           "Content-Type": "multipart/form-data"
         }  
       })
-
+      
+      console.log(formData);
       console.log(response);
       
       setNotification({ message: 'Success!', type: 'success' });

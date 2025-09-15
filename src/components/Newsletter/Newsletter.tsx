@@ -1,12 +1,12 @@
 import { useForm } from "react-hook-form";
 import { newsLetter } from "../../data.json";
 import { yupResolver } from "@hookform/resolvers/yup";
-import { userValidationSchema } from "../../validation/userValidation";
+import { contactValidationSchema } from "../../validation/userValidation";
 import "./Newsletter.css";
 
 const Newsletter = () => {
   const { register, handleSubmit, formState: { errors } } = useForm({
-    resolver: yupResolver(userValidationSchema)
+    resolver: yupResolver(contactValidationSchema)
   });
 
   const onSubmit = (data: any) => {

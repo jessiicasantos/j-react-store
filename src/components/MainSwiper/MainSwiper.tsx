@@ -10,7 +10,7 @@ import '../../../node_modules/swiper/modules/pagination.scss';
 
 import './styles.css';
 
-import Heart from "../../assets/img/heart";
+import Heart from '../../assets/img/heart';
 import Star from '../../assets/img/star';
 import { Link } from 'react-router-dom';
 import BtnCart from '../BtnCart/BtnCart';
@@ -22,29 +22,29 @@ const ArrivalsSwiper: React.FC<ArrivalsSwiperProps> = ({ products }) => {
   const { user } = useAuth();
   const [ likedItems, setLikedItems ] = useState<{[ id: string ]: boolean}>({});
 
-const toggleLike = (id: string) => {
-  setLikedItems(prev => {
-    const updated = { ...prev, [id]: !prev[id] };
+  const toggleLike = (id: string) => {
+    setLikedItems(prev => {
+      const updated = { ...prev, [id]: !prev[id] };
 
-    if (user?.id) {
-      localStorage.setItem(`likes-${user.id}`, JSON.stringify(updated));
+      if (user?.id) {
+        localStorage.setItem(`likes-${user.id}`, JSON.stringify(updated));
+      }
+
+      return updated;
+    });
+
+    console.log(likedItems);
+  };
+
+  useEffect(() => {
+    if(user?.id && Object.keys(likedItems).length === 0) {
+      const stored = localStorage.getItem(`likes-${user.id}`);
+      
+      if(stored) {
+        setLikedItems(JSON.parse(stored));
+      }
     }
-
-    return updated;
-  });
-
-  console.log(likedItems);
-};
-
-useEffect(() => {
-  if(user?.id && Object.keys(likedItems).length === 0) {
-    const stored = localStorage.getItem(`likes-${user.id}`);
-    
-    if(stored) {
-      setLikedItems(JSON.parse(stored));
-    }
-  }
-}, [user?.id])
+  }, [user?.id])
 
   return (
     <>
@@ -84,7 +84,14 @@ useEffect(() => {
 
               <BtnCart 
                 className="cart-btn btn-gray-800"
-                product={p}
+                product={{
+                  ...p,
+                  color: p.color,
+                  accessory: p.accessory,
+                  alt: p.alt,
+                  src: p.src,
+                  quantity: 1
+                }}
               />
               
               <button className="like" onClick={(e: React.FormEvent) => {

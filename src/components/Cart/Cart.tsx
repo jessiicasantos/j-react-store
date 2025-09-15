@@ -57,8 +57,7 @@ export default function Cart() {
                                       {c.price.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}
                                     </span>
                                   </div>
-                                  <p className="text-lg">{c.color}</p>
-                                  <p className="text-lg">{c.accessory}</p>
+                                  <p className="text-lg">{c.color} / {c.accessory}</p>
                                 </div>
                                 <div className="qty-remove my-3">
                                   <div className="incDecBtns">

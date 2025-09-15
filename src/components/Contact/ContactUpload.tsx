@@ -4,15 +4,15 @@ import "../../index.css";
 import "./Contact.css";
 
 const ContactUpload = ({ register, errors }: {register: any, errors: any}) => {
-  const [ fileName, setFileName ] = useState('');
+  const [ selectedFile, setSelectedFile ] = useState('');
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
 
     if(file) {
-      setFileName(file.name);
+      setSelectedFile(file.name);
     } else {
-      setFileName("");
+      setSelectedFile("");
     }
   }
 
@@ -40,9 +40,9 @@ const ContactUpload = ({ register, errors }: {register: any, errors: any}) => {
           </div>
           <p>PNG, JPG, GIF up to 10MB</p>
         </div>
-        {fileName && (
+        {selectedFile && (
           <p className="uploaded-name">
-            Arquivo selecionado: <strong>{fileName}</strong>
+            Arquivo selecionado: <strong>{selectedFile}</strong>
           </p>
         )}
       </div>

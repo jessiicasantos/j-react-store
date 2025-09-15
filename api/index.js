@@ -1,8 +1,10 @@
 const express = require('express')
 const cors = require('cors')
+const multer  = require('multer')
 const app = express()
 const port = 5000
 const mock = require("./mock/data.json")
+const upload = multer({ dest: 'uploads/'});
 
 app.use(cors());
 app.use(express.json());
@@ -17,16 +19,18 @@ app.get('/api/hero', (req, res) => {
   res.send(mock);
 });
 
-app.post('/api/form', (req, res) => {
-  // console.log('Dados recebidos: ', req.body);
+app.post('/api/form', upload.single('upload'), (req, res) => {
+  const formData = req.body;
+  const file = req.file;
+
+  console.log('Dados recebidos: ', formData);
+  console.log('Arquivo recebido: ', file);
   
-  res.status(200).send({ message: 'Formulário recebido com sucesso!' });
+  res.status(200).json({ message: 'Formulário recebido com sucesso!', formData, file });
 });
 
 app.post('/api/login', (req, res) => {
   const { email, password } = req.body;
-
-  // console.log('req.body', req.body);
 
   if(email === 'user@user.com' && password === '123456') {
     return res.json({

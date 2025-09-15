@@ -19,8 +19,6 @@ export const Login = () => {
     const { setNotification } = useNotification();
 
     const onSubmit = async (data: any) => {
-        console.log('data: ', data);
-
         try {
             const res = await axios.post('http://localhost:5000/api/login', {
                 email: data.email,
@@ -30,12 +28,9 @@ export const Login = () => {
             login(res.data.user);
             localStorage.setItem('token', res.data.token);
             
-            // console.log('res.data:', res.data);
-            
             navigate("/");
             window.scrollTo({ top: 0, behavior: "smooth" });
             setNotification({ message: 'You’ve successfully logged in!' , type: 'success' });
-            
         } catch(error: any) {
             if(error.response?.status === 401) {
                 console.error('Login failed!',  error);

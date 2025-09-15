@@ -166,24 +166,24 @@ export default function SingleProduct() {
 
               <fieldset aria-label="Choose a size">
                 <RadioGroup
-                  value={selectedAcessory}
+                  value={selectedAcessory || ""}
                   onChange={setSelectedAcessory}
                   className="radio-group"
                 >
-                  {accessories?.map((acessorie: any) => (
+                  {accessories?.map((accessory: any) => (
                     <Radio
-                      key={acessorie.name}
-                      value={acessorie}
-                      disabled={!acessorie.inStock}
+                      key={accessory.name}
+                      value={accessory}
+                      disabled={!accessory.inStock}
                       className={classNames(
-                        acessorie.inStock
+                        accessory.inStock
                           ? 'active'
                           : 'inactive',
                         'group relative flex items-center justify-center rounded-md border px-4 py-3 text-sm font-medium uppercase hover:bg-gray-50 focus:outline-hidden data-focus:ring-2 data-focus:ring-indigo-500 sm:flex-1 sm:py-6',
                       )}
                     >
-                      <span>{acessorie.name}</span>
-                      {acessorie.inStock ? (
+                      <span>{accessory.name}</span>
+                      {accessory.inStock ? (
                         <span
                           aria-hidden="true"
                           className="pointer-events-none absolute -inset-px rounded-md border-2 border-transparent group-data-checked:border-indigo-500 group-data-focus:border"
@@ -213,7 +213,7 @@ export default function SingleProduct() {
               product={{
                 ...product,
                 color: selectedColor?.name,
-                acessory: selectedAcessory?.name,
+                accessory: selectedAcessory?.name,
                 alt: selectedImage?.alt,
                 src: selectedImage?.src,
                 quantity: 1,
