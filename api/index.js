@@ -29,6 +29,14 @@ app.post('/api/form', upload.single('upload'), (req, res) => {
   res.status(200).json({ message: 'Formulário recebido com sucesso!', formData, file });
 });
 
+app.post('/api/email', (req, res) => {
+  const formData = req.body;
+
+  console.log('Dados recebidos: ', formData);
+  
+  res.status(200).json({ message: 'E-mail enviado com sucesso!', formData });
+});
+
 app.post('/api/login', (req, res) => {
   const { email, password } = req.body;
 

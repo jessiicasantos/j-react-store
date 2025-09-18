@@ -1,17 +1,28 @@
 import { useForm } from "react-hook-form";
 import { newsLetter } from "../../data.json";
 import { yupResolver } from "@hookform/resolvers/yup";
-import { contactValidationSchema } from "../../validation/userValidation";
+import { emailValidationSchema } from "../../validation/fieldsValidation";
 import "./Newsletter.css";
+import axios from "axios";
+import { useNotification } from "../NotificationContext/NotificationContext";
 
 const Newsletter = () => {
+  const { setNotification } = useNotification();
   const { register, handleSubmit, formState: { errors } } = useForm({
-    resolver: yupResolver(contactValidationSchema)
+    resolver: yupResolver(emailValidationSchema)
   });
 
-  const onSubmit = (data: any) => {
-    // axios
-    console.log(data)
+  const onSubmit = async (data: any) => {
+    try {
+      const response = await axios.post("http://localhost:5000/api/email", {
+        email: data.email
+      });
+
+      setNotification({ message: 'Subscribe success!', type: 'success' });
+    } catch(error) { 
+      console.error('Erro no envio: ', error);
+      setNotification({ message: 'Error', type: 'error' });
+    }
   };
 
   return (
@@ -27,8 +38,8 @@ const Newsletter = () => {
             {n.text}
           </p>
           <form onSubmit={handleSubmit(onSubmit)}>
-            <label htmlFor="email">
-              <input id="email" type="email" placeholder="Email address" {...register("email", { required: true })} />
+            <label id="emailNews" htmlFor="email">
+              <input type="email" placeholder="Email address" {...register("email")} />
             </label>
             <p>{errors.email?.message}</p>
             
