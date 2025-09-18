@@ -1,5 +1,16 @@
 import * as Yup from "yup";
 
+export const loginValidationSchema = Yup.object().shape({
+    email: Yup.string().email("Invalid email format").required("Email is required"),
+    password: Yup.string().required("Password is required")
+});
+
+export const emailValidationSchema = Yup.object().shape({
+    email: Yup.string()
+    .email('Formato de e-mail inválido')
+    .required('O e-mail é obrigatório')
+});
+
 export const contactValidationSchema = Yup.object().shape({
     firstname: Yup.string().required("First name is required"),
     lastname: Yup.string().required("Last name is required"),
@@ -23,8 +34,3 @@ export const contactValidationSchema = Yup.object().shape({
         .boolean()
         .oneOf([true], "You must accept to continue.")    
 });
-
-export const loginValidationSchema = Yup.object().shape({
-    email: Yup.string().email("Invalid email format").required("Email is required"),
-    password: Yup.string().required("Password is required")
-})

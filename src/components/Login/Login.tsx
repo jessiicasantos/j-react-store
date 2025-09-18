@@ -1,7 +1,7 @@
 import "./Login.css";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
-import { loginValidationSchema } from "../../validation/userValidation";
+import { loginValidationSchema } from "../../validation/fieldsValidation";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "./AuthContext";

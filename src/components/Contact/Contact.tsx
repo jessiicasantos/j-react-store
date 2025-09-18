@@ -1,6 +1,6 @@
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm } from "react-hook-form";
-import { contactValidationSchema } from "../../validation/userValidation";
+import { contactValidationSchema } from "../../validation/fieldsValidation";
 import { ChevronDownIcon } from '@heroicons/react/16/solid';
 import ContactUpload from "./ContactUpload";
 import "./Contact.css";
@@ -32,11 +32,8 @@ const Contact = () => {
       const response = await axios.post("http://localhost:5000/api/form", formData, {
         headers: {
           "Content-Type": "multipart/form-data"
-        }  
+        }
       })
-      
-      console.log(formData);
-      console.log(response);
       
       setNotification({ message: 'Success!', type: 'success' });
     } catch(error) {
