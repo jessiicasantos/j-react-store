@@ -15,16 +15,71 @@ app.get('/', (req, res) => {
   res.send('Test response!');
 });
 
-app.get('/api/hero', (req, res) => {
-  res.send(mock);
+app.get('/api/nav', (req, res) => {
+  res.json(mock.navigation);
 });
 
-app.post('/api/form', upload.single('upload'), (req, res) => {
+app.get('/api/footer', (req, res) => {
+  res.json(mock.footer);
+});
+
+app.get('/api/socials', (req, res) => {
+  res.json(mock.socials);
+});
+
+app.get('/api/hero', (req, res) => {
+  res.json(mock.hero);
+});
+
+app.get('/api/partners', (req, res) => {
+  res.json(mock.partners);
+});
+
+app.get('/api/arrivals', (req, res) => {
+  res.json(mock.arrivals);
+});
+
+app.get('/api/shop', (req, res) => {
+  res.json(mock.shop);
+});
+
+app.get('/api/bestseller', (req, res) => {
+  res.json(mock.bestseller);
+});
+
+app.get('/api/promotions', (req, res) => {
+  res.json(mock.promotions);
+});
+
+app.get('/api/iconcards', (req, res) => {
+  res.json(mock.iconCards);
+});
+
+app.get('/api/newspeed', (req, res) => {
+  res.json(mock.newSpeed);
+});
+
+app.get('/api/newsletter', (req, res) => {
+  res.json(mock.newsLetter);
+});
+
+app.get('/api/products/:id', (req, res) => {
+  const { id } = req.params;
+  const product = mock.singleProduct.find(p => p.id === id );
+  
+  if(!product) {
+    return res.status(404).json({ error: 'Product not found' });
+  }
+
+  res.json(product);
+});
+
+app.post('/api/contact', upload.single('upload'), (req, res) => {
   const formData = req.body;
   const file = req.file;
 
-  console.log('Dados recebidos: ', formData);
-  console.log('Arquivo recebido: ', file);
+  // console.log('Dados recebidos: ', formData);
+  // console.log('Arquivo recebido: ', file);
   
   res.status(200).json({ message: 'Formulário recebido com sucesso!', formData, file });
 });

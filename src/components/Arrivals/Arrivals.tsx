@@ -1,11 +1,18 @@
 import ArrivalsSwiper from "../MainSwiper/MainSwiper";
-import { arrivals } from "../../data.json";
 import './Arrivals.css';
+import { useFetch } from "../../hooks/useFetch";
+
+interface ArrivalsType {
+  title: string;
+  swiperList: [];
+}
 
 const Arrivals = () => {
+  const arrivalsData = useFetch<ArrivalsType[]>('arrivals');
+
   return (
     <>
-      {arrivals.map((a: any, i: number) => (
+      {arrivalsData?.map((a: ArrivalsType, i: number) => (
         <div key={`a-${i}`} className="arrivals">
           <h3>{a.title}</h3>
           

@@ -1,17 +1,33 @@
-import { shop } from "../../data.json";
 import { Link } from "react-router-dom";
 import "./ShopCollection.css";
+import { useFetch } from "../../hooks/useFetch";
+
+interface ShopType {
+  id: number;
+  title?: string;
+  src: string;
+  alt: string;
+  category: string;
+  shopCollection?: {
+      id: number;
+      category: string;
+      src: string;
+      alt: string;
+  }[]
+}
 
 const ShopCollection = () => {
+  const shopData = useFetch<ShopType[]>('shop');
+
   return (
     <>
-      {shop.map((s: any) => (
+      {shopData?.map((s: ShopType) => (
         <div key={`s-${s.id}`} className="shopCollection">
           <h3>{s.title}</h3>
 
           <div className="shopGrid">
             <div className="left">
-              {s.shopCollection?.map((c: any, i: number) => (
+              {s.shopCollection?.map((c: ShopType, i: number) => (
                 <div key={`c-${i}`}>
                   {c.id == 0 &&
                     <div className="left-wrapper">
@@ -25,7 +41,7 @@ const ShopCollection = () => {
               ))}
             </div>
             <div className="right">
-              {s.shopCollection?.map((c: any, i: number) => (
+              {s.shopCollection?.map((c: ShopType, i: number) => (
                 <div key={`c-${i}`}>
                   {c.id !== 0 &&
                     <div className="right-wrapper">

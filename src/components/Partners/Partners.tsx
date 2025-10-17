@@ -1,20 +1,29 @@
 import { Link } from 'react-router-dom';
-import { partners } from '../../data.json';
 import "./Partners.css";
+import { useFetch } from '../../hooks/useFetch';
+
+interface PartnersType {
+  id: number;
+  src: string;
+  alt: string;
+  href: string;
+}
 
 const Partners = () => {
+  const partnersData = useFetch<PartnersType[]>('partners');
+
   return (
     <div className="partners">
       <div>
-        {partners.map((l: any, i: any) => (
+        {partnersData?.map((p: PartnersType, i: number) => (
           <Link 
-            key={`l-${i}`}
-            to={l.href}
+            key={`p-${i}`}
+            to={p.href}
             target="_blank"
           >
             <img
-              alt={l.alt}
-              src={l.src}
+              alt={p.alt}
+              src={p.src}
               width={158}
               height={48}
             />

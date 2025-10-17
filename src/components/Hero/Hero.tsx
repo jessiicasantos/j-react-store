@@ -1,32 +1,33 @@
-// import { hero } from "../../data.json";
 import ArrowLongRight from '../../assets/img/arrow-long-right';
 import { Link } from "react-router-dom";
+import { useFetch } from '../../hooks/useFetch';
 import "./Hero.css";
-import { useEffect, useState } from "react";
-import axios from "axios";
+
+interface HeroType {
+  id: number;
+  subTitle: string;
+  title: string;
+  category: string;
+  hrefText: string;
+  text: string;
+  customers: {
+    id: number;
+    src: string;
+    alt: string;
+  }[];
+  banner: {
+    id: number;
+    src: string;
+    alt: string;
+  }[];
+}
 
 const Hero = () => {
-  const [data, setData] = useState<any>([]);
-
-  const getHero = async () => {
-    try {
-      let response = await axios.get('http://localhost:5000/api/hero');
-
-      let data = await response.data;
-
-      setData(data);
-    } catch(error) {
-      console.error('Erroo!', error);
-    }
-  }
-
-  useEffect(() => {
-    getHero();
-  }, []);
+  const heroData = useFetch<HeroType[]>('hero');
 
   return (
     <>
-      {data?.hero?.map((h: any, i: number) => (
+      {heroData?.map((h: HeroType, i: number) => (
         <div key={`h-${i}`} className="hero-bg">
           <div className="hero">
             <div key={h.id} className="left">
@@ -45,7 +46,7 @@ const Hero = () => {
               </Link>
               <div className="customersCircle">
                 <div className="persons">
-                  {h.customers?.map((c: any) => (
+                  {h.customers?.map((c: HeroType) => (
                     <img key={c.id} src={c.src} alt={c.alt} />
                   ))}
                   <p>+</p>
@@ -56,7 +57,7 @@ const Hero = () => {
               </div>
             </div>
             <div className="right">
-              {h.banner?.map((b: any) => (
+              {h.banner?.map((b: HeroType) => (
                 <img key={b.id} src={b.src} alt={b.alt} className={b.id === 0 ? "imgTop" : b.id === 1 ? "imgBottom" : b.id === 2 ? "imgCenter" : ""} />
               ))}
             </div>

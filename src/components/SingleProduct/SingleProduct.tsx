@@ -3,27 +3,28 @@
 import { useEffect, useState } from 'react';
 import { StarIcon } from '@heroicons/react/20/solid';
 import { Radio, RadioGroup } from '@headlessui/react';
-import { singleProduct } from '../../data.json';
 import { Link, useParams } from 'react-router-dom';
 import BtnCart from '../BtnCart/BtnCart';
 import "./SingleProduct.css";
+import { useFetch } from '../../hooks/useFetch';
+import { AccessoryType, BreadcrumbsType, ColorsType, ImagesType, ProductType } from '../../types/Product';
 
 const reviews = { href: '#', average: 4, totalCount: 117 }
 
-function classNames(...classes: any) {
+function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(' ')
 }
 
 export default function SingleProduct() {
-  const [selectedColor, setSelectedColor] = useState<any>(
-    ""
+  const [selectedColor, setSelectedColor] = useState<ColorsType | null>(
+    null
   )
-  const [selectedAcessory, setSelectedAcessory] = useState<any>(
-    ""
+  const [selectedAcessory, setSelectedAcessory] = useState<AccessoryType | null>(
+    null
   )
 
   const { productId } = useParams();
-  const product = singleProduct.find((product: any) => product.id === productId);
+  const product = useFetch<ProductType | null>(`products/${productId}`);
   const { name, price, breadcrumbs, images, colors, accessories, description, highlights, details } = product || {};
   const selectedImage = product?.images?.find(img => img.id === selectedColor?.imageId);
 
@@ -40,7 +41,7 @@ export default function SingleProduct() {
     <div className="single-product">
       <nav aria-label="Breadcrumb" className="breadcrumb">
         <ol role="list">
-          {breadcrumbs?.map((b: any) => (
+          {breadcrumbs?.map((b: BreadcrumbsType) => (
             <li key={b.id}>
               <Link to={`../category/${b.category}`}>
                 {b.name}
@@ -67,7 +68,7 @@ export default function SingleProduct() {
 
       {/* Image gallery */}
       <div className="product-gallery">
-        {images && images?.map((image, ind): any => (
+        {images && images?.map((image: ImagesType, ind: number)  => (
           <div className="product-img" key={image.id}>
             {ind === 0 ? (
               <img
@@ -137,8 +138,8 @@ export default function SingleProduct() {
               <h3>Color</h3>
 
               <fieldset aria-label="Choose a color">
-                <RadioGroup value={selectedColor || ""} onChange={setSelectedColor} className="radiogroup">
-                  {colors?.map((color: any) => (
+                <RadioGroup value={selectedColor} onChange={setSelectedColor} className="radiogroup">
+                  {colors?.map((color: ColorsType) => (
                     <Radio
                       key={color.name}
                       value={color}
@@ -166,11 +167,11 @@ export default function SingleProduct() {
 
               <fieldset aria-label="Choose a size">
                 <RadioGroup
-                  value={selectedAcessory || ""}
+                  value={selectedAcessory}
                   onChange={setSelectedAcessory}
                   className="radio-group"
                 >
-                  {accessories?.map((accessory: any) => (
+                  {accessories?.map((accessory: AccessoryType) => (
                     <Radio
                       key={accessory.name}
                       value={accessory}
@@ -238,7 +239,7 @@ export default function SingleProduct() {
 
             <div className="content">
               <ul role="list">
-                {highlights?.map((highlight: any) => (
+                {highlights?.map((highlight) => (
                   <li key={highlight}>
                     <span>{highlight}</span>
                   </li>

@@ -1,10 +1,20 @@
-import { iconCards } from "../../data.json";
+import { useFetch } from "../../hooks/useFetch";
 import "./IconCards.css";
-  
+
+interface IconCardsType {
+  id: number;
+  title: string;
+  src: string;
+  alt: string;
+  text: string;
+}
+
 const IconCards = () => {
+  const iconCardsData = useFetch<IconCardsType[]>('iconCards');
+
   return (
     <div className="iconCards">
-      {iconCards.map((i: any) => (
+      {iconCardsData?.map((i: IconCardsType) => (
         <article key={i.id}>
           <div className="icon">
             <img alt={i.alt} src={i.src} />

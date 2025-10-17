@@ -2,8 +2,19 @@ import React, { useState } from "react";
 import ArrowUpTrayIcon from "../../assets/img/arrow-up-tray.svg";
 import "../../index.css";
 import "./Contact.css";
+import { FieldError, UseFormRegister } from "react-hook-form";
+import { ContactType } from "./Contact";
 
-const ContactUpload = ({ register, errors }: {register: any, errors: any}) => {
+export interface ContactUploadType {
+  register: UseFormRegister<ContactType>;
+  errors: FieldError &{
+    upload?: {
+      message?: string;
+    }
+  };
+}
+
+const ContactUpload = ({ register, errors }: ContactUploadType) => {
   const [ selectedFile, setSelectedFile ] = useState('');
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {

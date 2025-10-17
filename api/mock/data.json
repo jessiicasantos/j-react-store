@@ -264,7 +264,7 @@
       ]
     }
   ],
-  "bestSeller": [
+  "bestseller": [
     {
       "title": "Best Seller",
       "bestSellerList": [
@@ -431,53 +431,57 @@
       ]
     }
   ],
-  "logoFooter": [
+  "footer": [
     {
-      "href": "https://flowbite.com",
-      "src": "https://flowbite.com/docs/images/logo.svg",
-      "text": "Flowbite"
-    }
-  ],
-  "linksFooter": [
-    {
-      "href": "https://tailwindcss.com/",
-      "text": "Home"
-    },
-    {
-      "href": "https://discord.gg/4eeurUVvTy",
-      "text": "Headphones"
-    },
-    {
-      "href": "/test-1",
-      "text": "Earbuds"
-    },
-    {
-      "href": "/test-3",
-      "text": "Contact us"
-    }
-  ],
-  "allRights": {
-    "date": "© 2024",
-    "href": "https://flowbite.com",
-    "company": "Flowbite™",
-    "text": "All Rights Reserved."
-  },
-  "socials": [
-    {
-      "href": "https://facebook.com/",
-      "svg": "../src/assets/img/facebook.svg"
-    },
-    {
-      "href": "https://www.instagram.com/",
-      "svg": "../src/assets/img/instagram.svg"
-    },
-    {
-      "href": "https://x.com/",
-      "svg": "../src/assets/img/twitter.svg"
-    },
-    {
-      "href": "https://github.com/",
-      "svg": "../src/assets/img/github.svg"
+      "logoFooter": [
+        {
+          "href": "https://flowbite.com",
+          "src": "https://flowbite.com/docs/images/logo.svg",
+          "text": "Flowbite"
+        }
+      ],
+      "linksFooter": [
+        {
+          "href": "https://tailwindcss.com/",
+          "text": "Home"
+        },
+        {
+          "href": "https://discord.gg/4eeurUVvTy",
+          "text": "Headphones"
+        },
+        {
+          "href": "/test-1",
+          "text": "Earbuds"
+        },
+        {
+          "href": "/test-3",
+          "text": "Contact us"
+        }
+      ],
+      "allRights": {
+        "date": "© 2024",
+        "href": "https://flowbite.com",
+        "company": "Flowbite™",
+        "text": "All Rights Reserved."
+      },
+      "socials": [
+        {
+          "href": "https://facebook.com/",
+          "svg": "../src/assets/img/facebook.svg"
+        },
+        {
+          "href": "https://www.instagram.com/",
+          "svg": "../src/assets/img/instagram.svg"
+        },
+        {
+          "href": "https://x.com/",
+          "svg": "../src/assets/img/twitter.svg"
+        },
+        {
+          "href": "https://github.com/",
+          "svg": "../src/assets/img/github.svg"
+        }
+      ]
     }
   ],
   "singleProduct": [

@@ -1,5 +1,5 @@
 import { yupResolver } from "@hookform/resolvers/yup";
-import { useForm } from "react-hook-form";
+import { FieldError, SubmitHandler, useForm } from "react-hook-form";
 import { contactValidationSchema } from "../../validation/fieldsValidation";
 import { ChevronDownIcon } from '@heroicons/react/16/solid';
 import ContactUpload from "./ContactUpload";
@@ -7,13 +7,24 @@ import "./Contact.css";
 import axios from "axios";
 import { useNotification } from "../NotificationContext/NotificationContext";
 
+export interface ContactType {
+  firstname: string;
+  lastname: string;
+  email: string;
+  phone: string;
+  subject: string;
+  message: string;
+  upload: FileList | undefined;
+  contactAgreement: boolean | undefined;
+}
+
 const Contact = () => {
   const { setNotification } = useNotification();
-  const { register, handleSubmit, reset, formState: { errors } } = useForm({
+  const { register, handleSubmit, reset, formState: { errors } } = useForm<ContactType>({
     resolver: yupResolver(contactValidationSchema)
   });
 
-  const onSubmit = async (data: any) => {
+  const onSubmit: SubmitHandler<ContactType> = async (data) => {
     try {
       const formData = new FormData();
 
@@ -29,11 +40,13 @@ const Contact = () => {
         formData.append("upload", data.upload[0]);        
       }
       
-      const response = await axios.post("http://localhost:5000/api/form", formData, {
+      const response = await axios.post("http://localhost:5000/api/contact", formData, {
         headers: {
           "Content-Type": "multipart/form-data"
         }
-      })
+      });
+
+      console.log(response);
       
       setNotification({ message: 'Success!', type: 'success' });
     } catch(error) {

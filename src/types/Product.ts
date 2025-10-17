@@ -1,23 +1,47 @@
-export interface swiperProductType {
-    id: string;
-    name: string;
-    src: string;
-    alt: string;
-    category: string;
-    price: string | number;
-    color: string;
-    accessory: string;
-    reviews: number;
-    new: boolean;
-    like: boolean;
-    rating: number[];
+export interface BreadcrumbsType {
+  id: number;
+  category: string;
+  name: string;
 }
 
-export interface Product {
-    title?: string;
-    swiperList: swiperProductType[];
+export interface ImagesType {
+  id: number;
+  src: string;
+  alt: string;
+}
+
+export interface ColorsType {
+  name: string;
+  class: string;
+  selectedClass: string;
+  imageId: number;
+}
+
+export interface AccessoryType {
+  name: string;
+  inStock: boolean;
+}
+
+export interface ProductType {
+  id: string;
+  name: string;
+  price: string | number;
+  category: string;
+  hot?: boolean;
+  breadcrumbs?: BreadcrumbsType[];
+  ratings: number[];
+  images: ImagesType[];
+  colors?: ColorsType[];
+  accessories?: AccessoryType[];
+  description: string;
+  highlights: string[];
+  details: string[];
+  new: boolean;
+  like: boolean;
+  rating: number[];
 }
 
 export interface ArrivalsSwiperProps {
-    products: swiperProductType[];
+    title?: string;
+    products: ProductType[];
 }
