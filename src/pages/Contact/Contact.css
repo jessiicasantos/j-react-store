@@ -1,0 +1,70 @@
+
+@reference "../../index.css";
+
+.contact-us input:not([type="checkbox"]) {
+  @apply bg-gray-50 px-3 py-1.5 outline-1 -outline-offset-1 outline-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600;
+}
+
+.contact-us input[type="text"],
+.contact-us input[type="email"],
+.contact-us input[type="tel"],
+.contact-us select, 
+.contact-us textarea {
+  @apply block w-full rounded-md bg-gray-50 px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-400 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6;
+}
+
+.contact-us label {
+  @apply block text-sm/6 font-medium text-gray-900;
+}
+
+.contact-us .select-wrapper {
+  @apply grid grid-cols-1;
+}
+
+.contact-us .form-wrapper {
+  @apply space-y-5 mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6;
+}
+
+.contact-us .two-cols {
+  @apply sm:col-span-3;
+}
+
+.contact-us .three-cols {
+  @apply sm:col-span-2;
+}
+
+.contact-us .select-wrapper > select {
+  @apply col-start-1 row-start-1 w-full appearance-none rounded-md py-1.5 pr-8 pl-3 text-base text-gray-900 sm:text-sm/6;
+}
+
+.contact-us .select-wrapper > select + svg {
+  @apply pointer-events-none col-start-1 row-start-1 mr-2 size-5 self-center justify-self-end text-gray-500 sm:size-4;
+}
+
+.upload {
+  @apply col-span-full border-b border-orange-authentic mb-2 pb-12;
+}
+
+.file-upload-wrapper {
+  @apply mt-4 flex justify-center text-sm/6 text-gray-600;
+}
+
+.file-upload-wrapper > label > span {
+  @apply text-orange-authentic cursor-pointer;
+}
+
+.file-upload-wrapper > p {
+  @apply pl-1;
+}
+
+.uploaded-name {
+  @apply mt-3 text-sm
+}
+
+.uploaded-name strong {
+  @apply text-green-700
+}
+
+.subject > label {
+  @apply h-full;
+}
