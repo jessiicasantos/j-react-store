@@ -14,18 +14,17 @@ import Heart from '../../assets/img/heart';
 import Star from '../../assets/img/star';
 import { Link } from 'react-router-dom';
 import BtnCart from '../BtnCart/BtnCart';
-import { ArrivalsSwiperProps } from '../../types/Product';
+import { ArrivalsSwiperProps, SwiperProductType } from '../../types/Product';
 import React, { useEffect, useState } from 'react';
-import { useAuth } from '../Login/AuthContext';
+import { useAuth } from '../../pages/Login/AuthContext';
 
 const ArrivalsSwiper: React.FC<ArrivalsSwiperProps> = ({ products }) => {
   const { user } = useAuth();
-  const [ likedItems, setLikedItems ] = useState<{[ id: string ]: boolean}>({});
+  const [ likedItems, setLikedItems ] = useState<{[ id: number ]: boolean}>({});
 
-  const toggleLike = (id: string) => {
+  const toggleLike = (id: number) => {
     setLikedItems(prev => {
       const updated = { ...prev, [id]: !prev[id] };
-
       if (user?.id) {
         localStorage.setItem(`likes-${user.id}`, JSON.stringify(updated));
       }
@@ -73,7 +72,7 @@ const ArrivalsSwiper: React.FC<ArrivalsSwiperProps> = ({ products }) => {
       }}
       className="arrivalsSwiper"
     >
-      {products?.map((p: any) => (
+      {products?.map((p: SwiperProductType) => (
         <SwiperSlide key={p.id}>
           <Link to={`/products/${p.id}`}>
             <div className="top">
@@ -105,7 +104,7 @@ const ArrivalsSwiper: React.FC<ArrivalsSwiperProps> = ({ products }) => {
 
             <div className="bottom">
               <div className="rating">                    
-                {p?.rating.map((r: any) => (
+                {p?.rating?.map((r) => (
                   <Star key={`r-${r}`} fill="yellow" stroke="gray" />
                 ))}
                 <h6>{p.reviews} avaliações</h6>

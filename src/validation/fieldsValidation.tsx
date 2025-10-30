@@ -23,7 +23,7 @@ export const contactValidationSchema = Yup.object().shape({
     subject: Yup.string().required("Subject is required"),
     message: Yup.string().min(10, "Message must be at least 10 characters").required("Message is required"),
     upload: Yup
-        .mixed<FileList | undefined>()
+        .mixed<FileList>()
         .nullable()
         .test("required", "Upload is required", (value) => {
             const files = value as FileList | undefined;

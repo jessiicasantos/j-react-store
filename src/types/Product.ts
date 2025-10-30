@@ -23,25 +23,33 @@ export interface AccessoryType {
 }
 
 export interface ProductType {
-  id: string;
-  name: string;
-  price: string | number;
-  category: string;
+  id: number;
+  name?: string;
+  price?: string | number;
+  category?: string;
   hot?: boolean;
   breadcrumbs?: BreadcrumbsType[];
-  ratings: number[];
-  images: ImagesType[];
+  images?: ImagesType[];
   colors?: ColorsType[];
   accessories?: AccessoryType[];
-  description: string;
-  highlights: string[];
-  details: string[];
-  new: boolean;
-  like: boolean;
-  rating: number[];
+  description?: string;
+  highlights?: string[];
+  details?: string[];
+  new?: boolean;
+  like?: boolean;
+  rating?: number[] | undefined;
+  reviews?: number | undefined;
 }
 
 export interface ArrivalsSwiperProps {
     title?: string;
     products: ProductType[];
+}
+
+export interface SwiperProductType extends ProductType {
+  src?: string;
+  alt?: string;
+  color?: string;
+  accessory?: string;
+  quantity?: number;
 }

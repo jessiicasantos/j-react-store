@@ -1,5 +1,8 @@
 export interface NavItem {
+    id: number;
     href: string;
     name: string;
-    children?: any;
+    children?: NavItem[];
+    category?: string;
+    product?: string;
 }

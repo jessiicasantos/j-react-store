@@ -5,7 +5,7 @@ import userIcon from '../../assets/img/user-icon.svg';
 import config from "./config";
 import "./Navbar.css";
 import { Link, NavLink } from "react-router-dom";
-import { useAuth } from '../Login/AuthContext.js';
+import { useAuth } from '../../pages/Login/AuthContext.js';
 import { useNotification } from '../NotificationContext/NotificationContext.js';
 import { useFetch } from '../../hooks/useFetch.js';
 import { NavItem } from '../../types/Nav.js';
