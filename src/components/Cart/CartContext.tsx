@@ -42,7 +42,7 @@ export const cartReducer = (state: CartState, action: CartAction): CartState => 
             return {
                 ...state,
                 items: [...state.items, newItem],
-                total: state.total + (newItem.price * newItem.quantity)
+                total: state.total + (Number(newItem.price) * newItem.quantity)
             };
         case 'REMOVE_ITEM':
             const filteredItems = state.items.filter(item => 
@@ -51,7 +51,7 @@ export const cartReducer = (state: CartState, action: CartAction): CartState => 
                     item.accessory === action.payload.accessory 
                 )
             );
-            const updatedTotal = filteredItems.reduce((acc, item) => acc + item.price * item.quantity, 0)
+            const updatedTotal = filteredItems.reduce((acc, item) => acc + Number(item.price) * item.quantity, 0)
 
             return { items: filteredItems, total: updatedTotal };
         case 'INCREMENT_QUANTITY': {
@@ -62,7 +62,7 @@ export const cartReducer = (state: CartState, action: CartAction): CartState => 
                     ? { ...item, quantity: item.quantity + 1 }
                     : item
             );
-            const updatedTotal = updatedItems.reduce((acc, item) => acc + item.price * item.quantity, 0);
+            const updatedTotal = updatedItems.reduce((acc, item) => acc + Number(item.price) * item.quantity, 0);
 
             return { items: updatedItems, total: updatedTotal };
         }
@@ -77,7 +77,7 @@ export const cartReducer = (state: CartState, action: CartAction): CartState => 
                 return item;
             }).filter(item => item !== null) as CartItem[];
 
-            const updatedTotal = updatedItems.reduce((acc, item) => acc + item.price * item.quantity, 0);
+            const updatedTotal = updatedItems.reduce((acc, item) => acc + Number(item.price) * item.quantity, 0);
 
             return { items: updatedItems, total: updatedTotal };
         }

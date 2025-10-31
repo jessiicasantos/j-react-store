@@ -5,8 +5,10 @@ export interface CartItem {
     color: string;
     accessory: string;
     name: string;
-    price: number;
+    price: string | number;
     quantity: number;
+    className?: string;
+    product?: {[key: string]: any};
 }
 
 export interface CartContextType {
