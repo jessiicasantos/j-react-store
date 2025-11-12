@@ -1,6 +1,11 @@
 import "./TimeBox.css";
 
-const TimeBox = ({ label, value }: any) => (
+export interface TimeBoxType {
+    label: string;
+    value: number;
+}
+
+const TimeBox = ({ label, value }: TimeBoxType) => (
     <div className="timebox">
         <p>{value}</p>
         <span>{label}</span>

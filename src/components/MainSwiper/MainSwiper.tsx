@@ -85,10 +85,12 @@ const ArrivalsSwiper: React.FC<ArrivalsSwiperProps> = ({ products }) => {
                 className="cart-btn btn-gray-800"
                 product={{
                   ...p,
-                  color: p.color,
-                  accessory: p.accessory,
-                  alt: p.alt,
-                  src: p.src,
+                  id: p.id ?? null,
+                  color: p.color ?? "",
+                  accessory: p.accessory ?? "",
+                  name: p.name ?? "",
+                  alt: p.alt ?? "",
+                  src: p.src ?? "",
                   quantity: 1
                 }}
               />

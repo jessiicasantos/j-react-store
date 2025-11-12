@@ -1,14 +1,19 @@
 export interface CartItem {
-    id: string;
+    id?: string | number;
     src: string;
     alt: string;
     color: string;
     accessory: string;
     name: string;
-    price: string | number;
+    price?: string | number;
     quantity: number;
     className?: string;
     product?: {[key: string]: any};
+}
+
+export interface BtnCartProps {
+    className?: string;
+    product: CartItem;
 }
 
 export interface CartContextType {
