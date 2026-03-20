@@ -1,4 +1,9 @@
-# React + TypeScript + Vite
+# M7 Store
+Electronics e-commerce project built with React + Tailwind + Prisma + Postgres
+
+![alt text](image.png)
+
+## React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
